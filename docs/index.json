@@ -1,69 +1,62 @@
 [
 {
-	"uri": "http://a-nakamura1015/web/page_1/",
+	"uri": "http://a-nakamura1015/gas-education/web/page_1/",
 	"title": "はじめに",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "http://a-nakamura1015/web/page_2/",
+	"uri": "http://a-nakamura1015/gas-education/",
+	"title": "GAS Edu",
+	"tags": [],
+	"description": "",
+	"content": "Google Apps Script ハンズオン Lorem Ipsum.\nこんにちは！\n"
+},
+{
+	"uri": "http://a-nakamura1015/gas-education/web/page_2/",
 	"title": "Web画面を表示する",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "http://a-nakamura1015/web/page_3/",
+	"uri": "http://a-nakamura1015/gas-education/web/page_3/",
 	"title": "Web画面を編集する",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "http://a-nakamura1015/web/page_4/",
+	"uri": "http://a-nakamura1015/gas-education/web/page_4/",
 	"title": "Web画面からGASの関数を実行する",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "http://a-nakamura1015/web/page_5/",
+	"uri": "http://a-nakamura1015/gas-education/web/page_5/",
 	"title": "Web画面にスプレッドシートの値を表示する",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "http://a-nakamura1015/",
-	"title": "GAS Edu",
-	"tags": [],
-	"description": "",
-	"content": "Google Apps Script ハンズオン（Webアプリ編） Lorem Ipsum.\nこんにちは！\n"
-},
-{
-	"uri": "http://a-nakamura1015/web/page_6/",
+	"uri": "http://a-nakamura1015/gas-education/web/page_6/",
 	"title": "別のWeb画面に遷移する",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "http://a-nakamura1015/content/",
-	"title": "Index",
-	"tags": [],
-	"description": "",
-	"content": "TEST  Web編  "
-},
-{
-	"uri": "http://a-nakamura1015/web/",
+	"uri": "http://a-nakamura1015/gas-education/web/",
 	"title": "Web",
 	"tags": [],
 	"description": "",
 	"content": "Chapter 1 Web編 "
 },
 {
-	"uri": "http://a-nakamura1015/tags/",
+	"uri": "http://a-nakamura1015/gas-education/tags/",
 	"title": "Tags",
 	"tags": [],
 	"description": "",
