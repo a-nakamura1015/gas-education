@@ -1,0 +1,16 @@
+baseURL = "http://a_nakamura1015.edu/"
+languageCode = "ja"
+title = "GAS Edu"
+contentDir = "content"
+disableKinds = ["RSS", "sitemap"]
+publishDir = "docs"
+theme = "hugo-theme-learn"
+
+[taxonomies]
+tag = "tags"
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+[params]
+themeVariant = "blue"
