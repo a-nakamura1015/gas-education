@@ -4,56 +4,56 @@
 	"title": "はじめに",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": "前提条件  Google アカウントがあること Google Apps Script である程度スプレッドシートを操作できること  目標のゴール  Google スプレッドシートをDBで代用したWebアプリケーションが作成できる  Webアプリケーションとは それではWebアプリ編のハンズオンをはじめましょう。\n"
 },
 {
 	"uri": "http://a-nakamura1015/gas-education/",
 	"title": "GAS Edu",
 	"tags": [],
 	"description": "",
-	"content": "Google Apps Script ハンズオン Lorem Ipsum.\nこんにちは！\n"
+	"content": "Google Apps Script ハンズオン コンテンツ一覧 ※ 未公開のコンテンツは随時更新予定\n   No. コンテンツ名 備考     1 Webアプリ編 公開済   2 Google スプレッドシート編 未公開   3 Google ドライブ編 未公開   4 ローカル開発編 未公開    "
 },
 {
 	"uri": "http://a-nakamura1015/gas-education/web/page_2/",
-	"title": "Web画面を表示する",
+	"title": "Web画面を表示してみよう",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": "まずは Google Apps Script でアプリケーションを作成する第一歩として、 ブラウザにWeb画面を表示してみましょう。\nスクリプトの種類 Google Apps Script には2種類のスクリプトがあります。\n Container Bound Script Standalone Script  それぞれのスクリプトの違いについて確認していきましょう。\nContainer Bound Script Google スプレッドシートやドキュメントなどの各アプリケーションのメニューから作成することができるスクリプトです。\n＜スクリプトを作成する手順＞\n Google スプレッドシートやドキュメントなどのアプリケーションを開きます。 上部メニューの|[ツール] \u0026gt; [スクリプトエディタ]を選択します。  ＜メリット＞\n バインドしているファイルを簡単に参照できる バインドしているファイルから Google Apps Script を実行できる  この方法で作成されたスクリプトと同アプリケーションはバインド（結びつく）しているため、 スプレッドシートの場合は下記のメソッドによりブラウザで開いている同スプレッドシートを操作することができます。\nvar spreadsheet = SpreadsheetApp.getActiveSpreadsheet(); var sheet = spreadsheet.getActiveSheet(); var range = sheet.getActiveRange(); また、onOpen関数を利用してアプリケーションにメニューを追加し、 そのメニューからスクリプトエディタでコーディングした関数を実行することができます。 他にも、図形にコーディングした関数を埋め込み、図形をクリック時に埋め込めんだ関数を事項することもできます。\n要約しますと、この方法で作成したスクリプトはExcelでいうVBAに近い感覚で利用することができます。\nStandalone Script Container Bound Script とは対照的に、どのアプリケーションにもバインド（結びつく）していないスクリプトです。 作成されたスクリプトは Googleドライブ に表示されます。\n＜スクリプトを作成する手順＞\n Google Chrome で Google ドライブを開きます。 Google ドライブの左上に表示されている[新規]ボタンをクリックします。  で表示されたメニュー内の[その他]をクリックします。    で表示されたメニュー内の[Google Apps Script] をクリックします。    ＜メリット＞\n 利用者にスクリプトエディタを編集されるリスクがない Google ドライブで管理がしやすい  一見、Container Bound Script でスクリプトを作成した方が始めやすく、 バインドしたファイルを簡単に参照できるメソッドも利用できるため扱いやすいです。 しかし、作成したスクリプトを他者と共有して利用したい場合は、 利用者もスクリプトエディタを編集することができてしまいます。 つまり、いつの間にか利用者によってスクリプトの内容が書き換えられてしまうことが起こる可能性があります。\n一方で、Standalone Script はスクリプトファイルを共有したアカウントのみ編集することが、ユーザーによって編集されるリスクがありません。 また、作成したスクリプトは Google ドライブに保存されているため管理がしやすいのも特徴です。\n（Container Bound Script の場合は対象のファイルを開かなければスクリプトエディタを開くことができません。また、Google ドライブにスクリプトが表示されません。）\n補足\nGoogle ドライブでは Container Bound Script を管理できないとお話ししましたが、 作成したスクリプトは下記リンク先のダッシュボードから簡単にアクセスすることができます。 https://script.google.com/home\n今回のWebアプリ編のハンズオンでは Standalone Script で進めていきます。 Container Bound Script でも問題なく行うことができますが、 後々の管理のことを考えて Standalone Script で進めていきましょう。\n HTMLファイルの作り方について Webアプリを作るには画面を作る必要がありますが、画面はHTMLファイルで作ることができます。 HTMLファイルは下記の手順で作成することができます。\n 上部メニューから[ファイル] \u0026gt; [New] \u0026gt; [HTMLファイル]　を選択する。 表示されたダイアログの入力欄にファイル名を設定して、[OK] ボタンをクリックします。 ※ ここではファイル名を「index」としてください。 スクリプトエディタ上に「index.html」が作成されます。  \u0026lt;!DOCTYPE html\u0026gt; \u0026lt;html\u0026gt; \u0026lt;head\u0026gt; \u0026lt;base target=\u0026quot;_top\u0026quot;\u0026gt; \u0026lt;/head\u0026gt; \u0026lt;body\u0026gt; \u0026lt;/body\u0026gt; \u0026lt;/html\u0026gt;  doGet関数について ユーザーが公開したWebアプリにアクセスした場合にdoGet関数は実行されます。（別のプログラムからWebアプリにHTTPのGETリクエストが送信される場合も同じく実行されます。）\nWeb画面を表示するにはdoGet関数の戻り値として HtmlServiceオブジェクト を指定する必要があります。\n下記のようにコーディングをしますと、index.htmlを表示する画面として指定することができます。\nコード.gs\nfunction doGet() { return HtmlService.createTemplateFromFile(\u0026#39;index\u0026#39;).evaluate(); } index.html\n\u0026lt;!DOCTYPE html\u0026gt; \u0026lt;html\u0026gt; \u0026lt;head\u0026gt; \u0026lt;base target=\u0026quot;_top\u0026quot;\u0026gt; \u0026lt;/head\u0026gt; \u0026lt;body\u0026gt; Hello World! \u0026lt;/body\u0026gt; \u0026lt;/html\u0026gt;  Webアプリのデプロイ方法について "
 },
 {
 	"uri": "http://a-nakamura1015/gas-education/web/page_3/",
-	"title": "Web画面を編集する",
+	"title": "Web画面を編集してみよう",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": "Webアプリを更新する方法について HTMLについて CSSについて JavaScriptについて "
 },
 {
 	"uri": "http://a-nakamura1015/gas-education/web/page_4/",
-	"title": "Web画面からGASの関数を実行する",
+	"title": "Web画面からGASの関数を実行してみましょう",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": "ここまでは主にクライアントサイドのコーディングをしてきましたが、 ここからはサーバーサイドのコーデイングをしていきましょう。 Google Apps Script のサーバーサイドは.gsファイルにコーディングします。\nGoogle Apps Script の関数の作り方について それでは.gsファイルにコーディングをしてみましょう。 今回はスプレッドシートから値を取得する関数と、スプレッドシートへ値を設定する関数を作成してみます。\nコード.gs\nvar SHEET_ID = \u0026#39;シートのID\u0026#39; var SHEET_NAME = \u0026#39;シートの名前\u0026#39; function getSheetData() { // 1. スプレッドシートを特定して取得します。  var spreadsheet = SpreadsheetApp.openById(SHEET_ID); // 2. シートを特定して取得します。  var sheet = spreadsheet.getSheetByName(SHEET_NAME); // 3. セル（範囲）を特定して取得します。  var range = sheet.getRange(\u0026#39;A1\u0026#39;); // 4. 対象のセルの入力値を返します。  return range.getValue(); } function setSheetData() { // 1. スプレッドシートを特定して取得します。  var spreadsheet = SpreadsheetApp.openById(SHEET_ID); // 2. シートを特定して取得します。  var sheet = spreadsheet.getSheetByName(SHEET_NAME); // 3. セル（範囲）を特定して取得します。  var range = sheet.getRange(\u0026#39;A1\u0026#39;); // 4. 対象のセルの入力値を返します。  range.setValue(\u0026#39;hello!\u0026#39;); }  シートのID と シートの名前 は作成した Google スプレッドシートの ID と シートの名前 を入力してください。\n これで Google Apps Script の関数は用意できました。 次は用意した関数がクライアントサイドから呼び出してみましょう。\n google.script.run について クライアントサイドでgoogle.script.runを使用すると、サーバーサイドの Google Apps Script 関数を実行することができます。\n【リファレンス】google.script.run\nそれでは、早速先ほど作成したsetSheetData()を呼び出してみましょう。\nindex.html\n\u0026lt;script\u0026gt; google.script.run.setSheetData(); \u0026lt;/script\u0026gt; 今回はクライアントサイドで関数の中から呼び出さず、scriptタグの中にコーディングしているため、 画面が表示されるタイミングで実行されます。\n画面を表示したのち、対象のシートのA1セルに hello! と表示されるかを確認してみましょう。\n引数を渡す 先ほどは 対象のシートのA1セルに hello! と表示されるようにしましたが、 クライアントサイドで表示する値を設定できるようにしてみましょう。 setSheetData()に引数を渡せるようにコードを変更します。\n変更点は次の３点です。\n クライアントサイドでsetSheetData()を呼び出す際に、引数に値（\u0026lsquo;こんにちは！'）を設定する。 サーバーサイドのsetSheetData()が引数の値を受け取ることができるように、丸括弧内に変数 (value)を設定する。 最後のrange.setValue('hello!')の丸括弧内の\u0026rsquo;hello!\u0026lsquo;を変数（value）に置き換える。  index.html\n\u0026lt;script\u0026gt; google.script.run.setSheetData('こんにちは！'); \u0026lt;/script\u0026gt; コード.gs\nfunction setSheetData(value) { // 1. スプレッドシートを特定して取得します。 var spreadsheet = SpreadsheetApp.openById(SHEET_ID); // 2. シートを特定して取得します。 var sheet = spreadsheet.getSheetByName(SHEET_NAME); // 3. セル（範囲）を特定して取得します。 var range = sheet.getRange('A1'); // 4. 対象のセルの入力値を返します。 range.setValue(value); } 変更したのちWeb画面を更新して、対象のシートのA1セルにこんにちは！と出力されているかを確認しましょう。\n画面で入力した値をスプレッドシートに出力する 先ほど実行した関数によって、クライアントサイドから値を渡すことができることを確認できました。 次はクライアントサイドで入力した値をサーバーサイドに渡してみましょう。\nindex.html\n\u0026lt;input type='txt' id='msg' onclick='output()' /\u0026gt; \u0026lt;script\u0026gt; function output() { // 1. テキストボックスに入力した値を取得します。 var value = document.getElementById('msg').value; // 2. 取得した値を setSheetData関数の引数として設定して呼び出します。 google.script.run.setSheetData(value); } \u0026lt;/script\u0026gt; 変更したのちWeb画面を更新して、対象のシートのA1セルにテキストボックスに入力した値が出力されているかを確認しましょう。\n 同期処理と非同期処理について 次はサーバーサイドから値を取得してみましょう。 先ほどコーディングしたgetSheetData()を実行してみます。 index.htmlを下記の通りに変更したのち、Web画面を更新してアラートで値が表示されるかを確認してみましょう。\nindex.html\n\u0026lt;script\u0026gt; // 1. スプレッドシートから値を取得する var result = google.script.run.getSheetData(); // 2. 取得した値をアラートで表示する alert(result); \u0026lt;/script\u0026gt; アラートにはundefinedと表示されました。 これはalert(result)で表示しようとしている変数alertの中身が空っぽということになります。\ngetSheetData()が実行されなかったのでしょうか。\n実はgetSheetData()が実行されていますが、その戻り値が返ってくる前にalert(result)が実行されているのです。\nJavaScriptのアプリケーションは「シングルスレッド」で実行されます。\n「シングルスレッド」を端的に説明すると、 一度にひとつのことを実行していく処理 ということです。\nつまり、1度に1つの処理しかできない（並列処理ができない）のです。\nしかし、非同期処理により外部に処理を任せている間に自身の処理を進めることができます。\n同期処理とは 同期処理はコーディングした処理の上から順番に実行されるという意味です。 上から順番に実行されるのでシンプルですね。\n下記のスクリプトも同期処理で動いているため、アラートは「1」、「2」、「3」と順に表示されます。\n\u0026lt;script\u0026gt; alert(1); // ① alert(2); // ② alert(3); // ③ \u0026lt;/script\u0026gt; 非同期処理とは 非同期処理は外部に処理を任せている間に自身の処理を進めることができます。\n先ほどシートの値を取得しようとしたスクリプトで確認してみましょう。\nindex.html\n\u0026lt;script\u0026gt; // 1. スプレッドシートから値を取得する var result = google.script.run.getSheetData(); // 2. 取得した値をアラートで表示する alert(result); \u0026lt;/script\u0026gt; getSheetData()でブラウザから Google サーバーに処理を行うように命令をしています。（具体的にはシートから値を取得するように命令しています。）\nしかし、このように外部（Google サーバー）に処理を行うように命令した場合は、その処理結果（戻り値）を待たずにクライアントサイドのJavaScriptは順次処理を続行してしまいます。\nこれが非同期処理です。\nだけど、GAS関数の戻り値を受けとって同期処理を行いたいですよね。 それを実現するのがwithSuccessHandlerメソッドとwithFailureHandlerメソッドです。\n withSuccessHandler と withFailureHandler について withSuccessHandlerメソッドとwithFailureHandlerメソッドの特徴は 「クライアントサイドからGAS関数を呼び出したのちの処理を設定できる」 ことです。\nこれらのメソッドを活用することでGAS関数で取得した結果をクライアントサイドに表示することができます。\nしかし、活用するには コールバック関数 を理解する必要があります。\nコールバック関数とは 日常生活でコールバックと言いますと、「かかってきた電話にたいして電話をかけ直す（折り返し電話をする）」という意味で使われますね。 JavaScriptでコールバックは「後々呼び出すために定義した関数」という意味で使われます。 ただ、このコールバックされる関数は特別なことは何もなく、普通のJavaScriptの関数です。 では、具体的にどのように使用するのかを下記のようにHTMLを修正して確認してみましょう。\n\u0026lt;script\u0026gt; // 数値の2を返す関数（後々呼び出すためにコーディングされた関数） function getNumber() { return 2; } // 1. アラートで「1」を表示する。 alert(1); // 2. アラートで「getNumber関数の戻り値」を表示する。 alert(getNumber()); // 3. アラートで「3」を表示する。 alert(3); \u0026lt;/script\u0026gt; 上記ではgetNumber関数というコールバック関数をコーディングしています。 このコールバック関数をalert(getNumber());で呼び出して実行しています。 このように 即時実行するのではなく、後々実行するための関数を定義することができます。\nこれがwithSuccessHandlerメソッドとwithFailureHandlerメソッドとどのように関係があるのか？といいますと、 これらのメソッドは　クライアントサイドからGAS関数を呼び出したのちの処理を設定できる のですが、 GAS関数を呼び出したのちの処理をコールバック関数で定義することができるのです。\nwithSuccessHandlerとは GAS関数（サーバーサイドの関数）が 正常に完了 して戻り値が返ってきた場合に、 実行する関数を定義することができます。 コーディングの仕方は下記の通りです。\ngoogle.script.run.withSuccessHandler(コールバック関数).GAS関数() それでは、シートから値を取得するgetSheetData()を同期処理で取得してアラートでその値を表示してみましょう。 先ほどはundefinedと返ってきましたが、シートのA1セルの値が表示されれば成功です。\n\u0026lt;script\u0026gt; function outputResult(result) { alert(result); } google.script.run.withSuccessHandler(outputResult).getSheetData(); \u0026lt;/script\u0026gt; 上記のコードは下記のようにコールバック関数をwithSuccessHandlerメソッドの引数として設定してコーディングすることができます。\n（少しコードの量が少なくなりますね！）\n\u0026lt;script\u0026gt; google.script.run.withSuccessHandler(function(result){ alert(result); }).getSheetData(); \u0026lt;/script\u0026gt; withFailureHandlerとは "
 },
 {
 	"uri": "http://a-nakamura1015/gas-education/web/page_5/",
-	"title": "Web画面にスプレッドシートの値を表示する",
+	"title": "Web画面にスプレッドシートの値を表示してみましょう",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": "Scriptletについて google.script.run との違い Standard scriptlets Printing scriptlets スプレッドシートの値を表示する "
 },
 {
 	"uri": "http://a-nakamura1015/gas-education/web/page_6/",
-	"title": "別のWeb画面に遷移する",
+	"title": "別画面に遷移してみましょう",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": "doGet関数で画面遷移ができるようにする パラメータで遷移先のページを指定できるようにする。 "
 },
 {
 	"uri": "http://a-nakamura1015/gas-education/web/",
-	"title": "Web",
+	"title": "Webアプリ編",
 	"tags": [],
 	"description": "",
-	"content": "Chapter 1 Web編 "
+	"content": "Chapter 1 Webアプリ編 Google Apps Script で Webアプリを作ってみよう！ "
 },
 {
 	"uri": "http://a-nakamura1015/gas-education/tags/",
