@@ -1,14 +1,14 @@
 ---
 title: "Webアプリ編"
 date: 2020-07-24T22:49:08+09:00
-pre: "<b>1. </b>"
+pre: "<b>2. </b>"
 hidden: false
 chapter: true
-disabaleToc: "false"
-weight: 0
+disabaleToc: false
+weight: 2
 ---
 
-### Chapter 1
+### Chapter 2
 
 # Webアプリ編
 
