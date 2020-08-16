@@ -1,14 +1,14 @@
 ---
 title: "関数を学ぼう"
 date: 2020-08-10T13:49:04+09:00
-pre: "<b>3. </b>"
+pre: "<b>4. </b>"
 hidden: false
 chapter: true
 disabaleToc: false
-weight: 3
+weight: 4
 ---
 
-### Chapter 2 - 3
+### Chapter 2 - 4
 
 # JavaScriptの関数
 
