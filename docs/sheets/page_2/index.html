@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/gas-education/images/favicon.png" type="image/png">
 
-    <title>配列 :: GAS Edu</title>
+    <title>Spreadsheetサービス :: GAS Edu</title>
 
     
     <link href="/gas-education/css/nucleus.css?1597702337" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/gas-education/javascript_bases/basic_syntax/page_2_1_6/">
+  <body class="" data-url="/gas-education/sheets/page_2/">
     <nav id="sidebar" class="">
 
 
@@ -236,7 +236,7 @@
   
     
     <li data-nav-id="/gas-education/javascript_bases/" title="JavaScript基礎編" class="dd-item 
-        parent
+        
         
         
         ">
@@ -286,7 +286,7 @@
   
     
     <li data-nav-id="/gas-education/javascript_bases/basic_syntax/" title="基本構文を学ぼう" class="dd-item 
-        parent
+        
         
         
         ">
@@ -417,7 +417,7 @@
  
   
     
-      <li data-nav-id="/gas-education/javascript_bases/basic_syntax/page_2_1_6/" title="配列" class="dd-item active">
+      <li data-nav-id="/gas-education/javascript_bases/basic_syntax/page_2_1_6/" title="配列" class="dd-item ">
         <a href="/gas-education/javascript_bases/basic_syntax/page_2_1_6/">
         <b>6. </b>配列
         
@@ -878,7 +878,7 @@
   
     
     <li data-nav-id="/gas-education/sheets/" title="スプレッドシート編" class="dd-item 
-        
+        parent
         
         
         ">
@@ -925,7 +925,7 @@
  
   
     
-      <li data-nav-id="/gas-education/sheets/page_2/" title="Spreadsheetサービス" class="dd-item ">
+      <li data-nav-id="/gas-education/sheets/page_2/" title="Spreadsheetサービス" class="dd-item active">
         <a href="/gas-education/sheets/page_2/">
         <b>2. </b>Spreadsheetサービス
         
@@ -1237,13 +1237,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='/gas-education/'>GAS Edu</a> > <a href='/gas-education/javascript_bases/'>JavaScript基礎編</a> > <a href='/gas-education/javascript_bases/basic_syntax/'>基本構文を学ぼう</a> > 配列
-          
-        
+            <a href='/gas-education/'>GAS Edu</a> > <a href='/gas-education/sheets/'>スプレッドシート編</a> > Spreadsheetサービス
           
         
           
@@ -1258,9 +1252,10 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#配列とは">配列とは</a>
+    <li>
       <ul>
-        <li></li>
+        <li><a href="#spreadsheetサービスとは">Spreadsheetサービスとは</a></li>
+        <li><a href="#spreadsheetappクラスとは">SpreadsheetAppクラスとは</a></li>
       </ul>
     </li>
   </ul>
@@ -1280,89 +1275,115 @@
           
             <h1>
               
-              配列
+              Spreadsheetサービス
             </h1>
           
 
         
 
 
-<h2 id="配列とは">配列とは</h2>
-<p>これまでは変数や定数に値を一つずつ代入して扱ってきましたが、複数のデータを1つにまとめたくなるケースもあります。</p>
-<p>例えば、果物の名前を変数で管理したい場合は下記の通りになります。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">fruitsName_1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;apple&#39;</span>;
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">fruitsName_2</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;grape&#39;</span>;
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">fruitsName_3</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;orange&#39;</span>;
-</code></pre></div><p>このように一つずつ変数を初期化して扱うことは可能ですが、非常に管理がしづらい問題が発生します。</p>
-<p>（さらに果物の名前の変数を作りたいとなった場合、fruiteName_Xの形式で変数名を作ることになりますが、今回の果物が何個目の果物なのかをわざわざ確認しないといけないですよね。）</p>
-<p>このように、複数のデータをまとめて集合として扱うことができるデータを <em><strong>配列</strong></em> といいます。</p>
-<p>配列はカンマで値と区切り、全体を角括弧（[]）で囲むことで表現することができます。（これを <em><strong>配列リテラル</strong></em> といいます。）</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">[<span style="color:#a6e22e">値1</span>, <span style="color:#a6e22e">値2</span>, ...]
-</code></pre></div><p>配列は下記の図のように、複数の箱が連結しているような構造になっています。</p>
-<p>それぞれの入れ物には番号が順番に割りふられており、番号は「0」から始まります。</p>
-<p>この番号は <em><strong>インデックス</strong></em> といい、配列に格納されている値を <em><strong>要素</strong></em> といいます。</p>
-<p>また、配列は変数に代入することもできます。</p>
-<p>下記のサンプルは果物の名前を配列で管理した場合のコードとなります。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">outputArray_1</span>() {
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">fruits</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;grape&#39;</span>, <span style="color:#e6db74">&#39;orange&#39;</span>];
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">fruits</span>); <span style="color:#75715e">// &#39;apple&#39;, &#39;grape&#39;, &#39;orange&#39;
-</span><span style="color:#75715e"></span>}
-</code></pre></div><h4 id="配列の要素の参照と代入">配列の要素の参照と代入</h4>
-<p>配列から特定の要素を取り出す場合はインデックスを用います。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">配列名</span>[<span style="color:#a6e22e">インデックス</span>]
-</code></pre></div><p>下記のサンプルは配列fruitsからインデックスが1の要素をログに出力しています。</p>
-<p>インデックスは0から始まるため、インデックスが1の要素は先頭から2番目の要素なので、「grape」が出力されます。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">outputArray_2</span>() {
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">fruits</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;grape&#39;</span>, <span style="color:#e6db74">&#39;orange&#39;</span>];
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">fruits</span>[<span style="color:#ae81ff">1</span>]); <span style="color:#75715e">// &#39;grape&#39;
-</span><span style="color:#75715e"></span>}
-</code></pre></div><p>また、配列内の特定の要素を代入で更新することもできます。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">配列名</span>[<span style="color:#a6e22e">インデックス</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">値</span>;
-</code></pre></div><p>配列内に指定したインデックスの要素が存在する場合は上書きされます。</p>
-<p>逆に、配列内に指定したインデックスの要素が存在しない場合は要素の追加がなされます。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">outputArray_3</span>() {
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">fruits</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;grape&#39;</span>, <span style="color:#e6db74">&#39;orange&#39;</span>];
-  <span style="color:#a6e22e">fruits</span>[<span style="color:#ae81ff">4</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;peach&#39;</span>;
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">fruits</span>); <span style="color:#75715e">// &#39;apple&#39;, &#39;grape&#39;, &#39;orange&#39;, null, peach
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">fruits</span>[<span style="color:#ae81ff">3</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;berry&#39;</span>;
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">fruits</span>); <span style="color:#75715e">// &#39;apple&#39;, &#39;grape&#39;, &#39;orange&#39;, berry, peach
-</span><span style="color:#75715e"></span>}
-</code></pre></div><h4 id="二次元配列">二次元配列</h4>
-<p>先ほどは配列の要素をインデックスで指定して値を取り出したり、上書きしたりしました。</p>
-<p>実はこの要素には配列を設定することができ、配列の中に配列がある <em><strong>二次元配列</strong></em> を作ることができます。</p>
-<p>二次元配列は下記のように記述することで初期化することができます。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">foods</span> <span style="color:#f92672">=</span> [[<span style="color:#e6db74">&#39;beef&#39;</span>, <span style="color:#e6db74">&#39;pork&#39;</span>, <span style="color:#e6db74">&#39;chicken&#39;</span>], [<span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;grape&#39;</span>], [<span style="color:#e6db74">&#39;tuna&#39;</span>]];
-</code></pre></div><p>二次元配列は要素が多くなるほど構造が複雑になりイメージがしづらいかもしれません。</p>
-<p>そのようなときは下図のように箱の中に箱があるとイメージすると考えやすくなるでしょう。</p>
+<h3 id="spreadsheetサービスとは">Spreadsheetサービスとは</h3>
+<p><em><strong>Spreadsheetサービス</strong></em> は、GASdeスプレッドシートを操作するためのクラスとメンバーを提供するサービスです。</p>
+<p>Spreadsheetサービスの中で最もよく使うグループを下記にまとめています。</p>
+<table>
+<thead>
+<tr>
+<th>クラス名</th>
+<th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SpreadsheetApp</td>
+<td>Spreadsheetサービスのグローバルオブジェクト</td>
+</tr>
+<tr>
+<td>Spreadsheet</td>
+<td>スプレッドシートを操作する機能を提供する</td>
+</tr>
+<tr>
+<td>Sheet</td>
+<td>シートを操作する機能を提供する</td>
+</tr>
+<tr>
+<td>Range</td>
+<td>セルを操作せする機能を提供する</td>
+</tr>
+</tbody>
+</table>
+<p>Spreadsheetサービスの各クラスは、SpreadsheetApp → Spreadsheet → Sheet → Range という階層構造になっています。</p>
+<p>各クラスにはそのオブジェクトを操作するメンバーとともに、その配下のオブジェクトを取得するメンバーが用意されています。</p>
+<p>これはスプレッドシートに限らず、他のサービスでもオブジェクトを操作する際の基本的な流れとなります。</p>
 
-<div class="notices note" ><p>二次元配列に対して、「入れ子」になっていない通常の配列を一次元配列といいます。</p>
+<div class="notices info" ><p>GASのオブジェクト操作の基本動作は、グローバルオブジェクトから辿って目的のオブジェクトを取得し、操作をすることです。</p>
 </div>
 
-<p>二次元配列から特定の要素を取り出す場合もインデックスを用います。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">outputArray_4</span>() {
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">foods</span> <span style="color:#f92672">=</span> [[<span style="color:#e6db74">&#39;beef&#39;</span>, <span style="color:#e6db74">&#39;pork&#39;</span>, <span style="color:#e6db74">&#39;chicken&#39;</span>], [<span style="color:#e6db74">&#39;apple&#39;</span>, <span style="color:#e6db74">&#39;grape&#39;</span>], [<span style="color:#e6db74">&#39;tuna&#39;</span>]];
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">foods</span>[<span style="color:#ae81ff">0</span>]); <span style="color:#75715e">// &#39;beef&#39;, &#39;pork&#39;, &#39;chicken&#39;
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">foods</span>[<span style="color:#ae81ff">2</span>] <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;carrot&#39;</span>];
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">foods</span>); <span style="color:#75715e">// [&#39;beef&#39;, &#39;pork&#39;, &#39;chicken&#39;], [&#39;apple&#39;, &#39;grape&#39;], [&#39;carrot&#39;]
+<p>また、GASのクラスに対して new演算子でインスタンスを生成することはありません。</p>
+<p>スプレッドシートは、GASの開発においてGoogleフォームからのデータ蓄積を始め、簡易的なデータベースとして使用することもできるため、Spreadsheetサービスの操作はぜひマスターしましょう。</p>
+<hr>
+<h3 id="spreadsheetappクラスとは">SpreadsheetAppクラスとは</h3>
+<p><em><strong>SpreadsheetAppクラス</strong></em> はSpreadsheetサービスの最上位に位置するグローバルオブジェクトです。</p>
+<p>Spreadsheetサービスが提供する機能を利用するには、まずSpreadsheetAppクラスからアクセスすることになります。</p>
+<p>SpreadsheetAppクラスでは、直下のオブジェクトであるスプレッドシートを取得するメソッドや、現在アクティブになっているシートやセル範囲を取得するメソッドが用意されています。</p>
+<h4 id="スプレッドシートを取得する">スプレッドシートを取得する</h4>
+<p>スプレッドシートを操作するには、スプレッドシートを取得する必要があります。</p>
+<p>GASでスプレッドシートを取得する主な方法は下記の通りです。</p>
+<ul>
+<li>アクティブなスプレッドシートを取得する</li>
+<li>IDでスプレッドシートを特定して取得する</li>
+<li>URLでスプレッドシートを特定して取得する</li>
+</ul>
+<p>アクティブなスプレッドシートとは、スクリプトにバインドされているスプレッドシートを指します。</p>
+<p>スプレッドシートのコンテナバインドスクリプトであれば、次の構文でスプレッドシートを取得することができます。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">SpreadhsheetApp</span>.<span style="color:#a6e22e">getActiveSpreadsheet</span>()
+</code></pre></div>
+<div class="notices info" ><p>getActiveSpreadsheetメソッドをはじめ、「アクティブ」なオブジェクトを取得するメソッドは、コンテナバインドスクリプトでのみ使用できます。</p>
+</div>
+
+<p>そのため、バインドされていないスプレッドシートを取得する場合は、別の方法で取得する必要があります。</p>
+<p>その方法としては、IDで特定して取得するopenByIdメソッドと、URLで特定して取得するopenByUrlメソッドがあります。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">SpreaadsheetApp</span>.<span style="color:#a6e22e">openById</span>(<span style="color:#a6e22e">スプレッドシートのID</span>);
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">SpreadsheetApp</span>.<span style="color:#a6e22e">openByUrl</span>(<span style="color:#a6e22e">スプレッドシートのURL</span>);
+</code></pre></div><p>スプレッドシートをはじめ Google Apps のファイルは一意のURLが定められています。</p>
+<p>ブラウザではそのURLにアクセスすることで、そのファイルを開くことができます。</p>
+<p>GASでも同じように、そのURLがわかればスクリプトからスプレッドシートを特定して取得することができます。</p>
+<p>また、IDも一意に定められており、このIDはURLの一部を構成しています。以下の{ID}の部分がIDです。</p>
+<pre><code>https://docs.google.com/Spreadsheets/d/{ID}/edit#gid=0
+</code></pre><p>このように、URLがわかればIDを取得することが可能です。</p>
+<p>では、実際にスクリプトでスプレッドシートを取得してみましょう。</p>
+<p>まずは、新規のスプレッドシートを作成して「別のスプレッドシート」と名前をつけてください。</p>
+<p>先ほどの手順で作成した「別のスプレッドシート」のURLとIDを確認した上で、下記のサンプルを記述して実行してください。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">spreadsheet_1</span>() {
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">spreadsheet</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">SpreadsheetApp</span>.<span style="color:#a6e22e">getActiveSpreadsheet</span>();
+  <span style="color:#a6e22e">SpreaadsheetApp</span>.<span style="color:#a6e22e">openById</span>(<span style="color:#a6e22e">スプレッドシートのID</span>) <span style="color:#75715e">// はじめてのGAS
+</span><span style="color:#75715e"></span>
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://docs.google.com/Spreadsheets/d/XXXX/edit#gid=0&#39;</span>;
+  <span style="color:#a6e22e">spreadsheet</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">SpreadsheetApp</span>.<span style="color:#a6e22e">openByUrl</span>(<span style="color:#a6e22e">url</span>);
+  <span style="color:#a6e22e">SpreaadsheetApp</span>.<span style="color:#a6e22e">openById</span>(<span style="color:#a6e22e">スプレッドシートのID</span>); <span style="color:#75715e">// 別のスプレッドシート
+</span><span style="color:#75715e"></span>
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">id</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;XXXX&#39;</span>;
+  <span style="color:#a6e22e">spreadhsheet</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">SpreaadsheetApp</span>.<span style="color:#a6e22e">openById</span>(<span style="color:#a6e22e">id</span>); <span style="color:#75715e">// 別のスプレッドシート
 </span><span style="color:#75715e"></span>}
-</code></pre></div><p>二次元配列の内側の要素を取り出すには、外側のインデックスに続けて内側のインデックスも指定します。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">配列名</span>[<span style="color:#a6e22e">インデックス1</span>][<span style="color:#a6e22e">インデックス2</span>]
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">配列名</span>[<span style="color:#a6e22e">インデックス1</span>][<span style="color:#a6e22e">インデックス2</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">値</span>;
-</code></pre></div><p>二次元配列の内側の要素の参照、代入および追加は下記のサンプルのように記述することができます。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">outputArray_5</span>() {
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">number</span> <span style="color:#f92672">=</span> [[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>], [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>], [<span style="color:#ae81ff">100</span>]];
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">number</span>[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>]); <span style="color:#75715e">// 1
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">number</span>[<span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">0</span>]); <span style="color:#75715e">// 10
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">number</span>[<span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">1</span>]); <span style="color:#75715e">// 20
-</span><span style="color:#75715e"></span>}
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">outputArray_6</span>() {
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">number</span> <span style="color:#f92672">=</span> [[<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>], [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>], [<span style="color:#ae81ff">100</span>]];
-  <span style="color:#a6e22e">number</span>[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;   <span style="color:#75715e">// 要素への代入
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">number</span>[<span style="color:#ae81ff">2</span>][<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">200</span>; <span style="color:#75715e">// 要素の追加
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">number</span>); <span style="color:#75715e">// [0, 2, 3], [10, 20], [100, 200]
-</span><span style="color:#75715e"></span>}
-</code></pre></div><p>GASではスプレッドシートのシートの行列のデータを利用する際にこの二次元配列を扱います。</p>
-<p>一次元配列だけでなく二次元配列についても十分に理解しておく必要があります。</p>
+</code></pre></div><pre><code>はじめてのGAS
+別のスプレッドシート
+別のスプレッドシート
+</code></pre><h4 id="アクティブなシートを取得する">アクティブなシートを取得する</h4>
+<p>GASでスプレッドシートを操作する場合、シートやセルを操作対象とすることが多いでしょう。</p>
+<p>その度に、SpreadsheetApp → Spreadsheet → Sheetと辿っていくのは手間に感じるかもしれません。</p>
+<p>また、メソッド実行による Google Apps へのアクセスは実行時間が遅いという事実があります。</p>
+<p>GASには実行時間に関する制限がありますので、<em><strong>処理速度を落とさないためにも Google Apps へアクセスするメソッドの実行回数はできる限り減らしたほうがよいです。</strong></em></p>
+<p>コンテナバインドスクリプトであれば、そのような場合にアクティブなシートを取得する方法として <em><strong>getActiveSheetメソッド</strong></em> を使用できます。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">SpreadsheetApp</span>.<span style="color:#a6e22e">getActiveSheet</span>()
+</code></pre></div><p>SpreadsheetAppから直接取得できるので、次のサンプルのように簡潔に記述することができます。また、スプレッドシートへアクセスするメソッドの実行回数が減らすこともできます。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">spreadsheet_2</span>() {
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sheet</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">SpreadsheetApp</span>.<span style="color:#a6e22e">getActiveSheet</span>();
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getName</span>());
+}
+</code></pre></div><pre><code>シート1
+</code></pre>
+<div class="notices tip" ><p>Google Apps へのアクセスは事項時間が遅いので、できる限りアクセスするメソッドの実行回数は少なくなるようにしましょう。</p>
+</div>
+
 
 
 <footer class="footline">
@@ -1499,7 +1520,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1514,9 +1534,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1534,7 +1551,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1547,9 +1563,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1631,7 +1644,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1647,9 +1659,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1945,6 +1954,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1957,6 +1967,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1974,6 +1987,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1989,6 +2003,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2173,10 +2190,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/gas-education/javascript_bases/basic_syntax/page_2_1_5/" title="データ型"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/gas-education/sheets/page_1/" title="はじめに"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/gas-education/javascript_bases/basic_syntax/page_2_1_7/" title="オブジェクト" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/gas-education/sheets/page_3/" title="スプレッドシートを操作する" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

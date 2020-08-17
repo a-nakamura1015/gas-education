@@ -1,5 +1,12 @@
 [
 {
+	"uri": "http://a-nakamura1015/gas-education/sheets/page_1/",
+	"title": "はじめに",
+	"tags": [],
+	"description": "",
+	"content": "前提条件  GASの開発環境が整備されていること（Chapter1が完了していること） JavaScriptの基礎を理解していること（Chapter2が完了していること）  目標のゴール  GASでスプレッドシートを操作できるようになること  それではスプレッドシート編のハンズオンをはじめましょう。\n"
+},
+{
 	"uri": "http://a-nakamura1015/gas-education/javascript_bases/object_mechanism/page_2_4_1/",
 	"title": "オブジェクト",
 	"tags": [],
@@ -54,6 +61,13 @@
 	"tags": [],
 	"description": "",
 	"content": "前提条件  Google アカウントがあること Google Apps Script である程度スプレッドシートを操作できること  目標のゴール  Google スプレッドシートをDBで代用したWebアプリケーションが作成できる  Webアプリケーションとは それではWebアプリ編のハンズオンをはじめましょう。\n"
+},
+{
+	"uri": "http://a-nakamura1015/gas-education/sheets/page_2/",
+	"title": "Spreadsheetサービス",
+	"tags": [],
+	"description": "",
+	"content": "Spreadsheetサービスとは Spreadsheetサービス は、GASdeスプレッドシートを操作するためのクラスとメンバーを提供するサービスです。\nSpreadsheetサービスの中で最もよく使うグループを下記にまとめています。\n   クラス名 概要     SpreadsheetApp Spreadsheetサービスのグローバルオブジェクト   Spreadsheet スプレッドシートを操作する機能を提供する   Sheet シートを操作する機能を提供する   Range セルを操作せする機能を提供する    Spreadsheetサービスの各クラスは、SpreadsheetApp → Spreadsheet → Sheet → Range という階層構造になっています。\n各クラスにはそのオブジェクトを操作するメンバーとともに、その配下のオブジェクトを取得するメンバーが用意されています。\nこれはスプレッドシートに限らず、他のサービスでもオブジェクトを操作する際の基本的な流れとなります。\nGASのオブジェクト操作の基本動作は、グローバルオブジェクトから辿って目的のオブジェクトを取得し、操作をすることです。\n また、GASのクラスに対して new演算子でインスタンスを生成することはありません。\nスプレッドシートは、GASの開発においてGoogleフォームからのデータ蓄積を始め、簡易的なデータベースとして使用することもできるため、Spreadsheetサービスの操作はぜひマスターしましょう。\n SpreadsheetAppクラスとは SpreadsheetAppクラス はSpreadsheetサービスの最上位に位置するグローバルオブジェクトです。\nSpreadsheetサービスが提供する機能を利用するには、まずSpreadsheetAppクラスからアクセスすることになります。\nSpreadsheetAppクラスでは、直下のオブジェクトであるスプレッドシートを取得するメソッドや、現在アクティブになっているシートやセル範囲を取得するメソッドが用意されています。\nスプレッドシートを取得する スプレッドシートを操作するには、スプレッドシートを取得する必要があります。\nGASでスプレッドシートを取得する主な方法は下記の通りです。\n アクティブなスプレッドシートを取得する IDでスプレッドシートを特定して取得する URLでスプレッドシートを特定して取得する  アクティブなスプレッドシートとは、スクリプトにバインドされているスプレッドシートを指します。\nスプレッドシートのコンテナバインドスクリプトであれば、次の構文でスプレッドシートを取得することができます。\nSpreadhsheetApp.getActiveSpreadsheet()  getActiveSpreadsheetメソッドをはじめ、「アクティブ」なオブジェクトを取得するメソッドは、コンテナバインドスクリプトでのみ使用できます。\n そのため、バインドされていないスプレッドシートを取得する場合は、別の方法で取得する必要があります。\nその方法としては、IDで特定して取得するopenByIdメソッドと、URLで特定して取得するopenByUrlメソッドがあります。\nSpreaadsheetApp.openById(スプレッドシートのID); SpreadsheetApp.openByUrl(スプレッドシートのURL); スプレッドシートをはじめ Google Apps のファイルは一意のURLが定められています。\nブラウザではそのURLにアクセスすることで、そのファイルを開くことができます。\nGASでも同じように、そのURLがわかればスクリプトからスプレッドシートを特定して取得することができます。\nまた、IDも一意に定められており、このIDはURLの一部を構成しています。以下の{ID}の部分がIDです。\nhttps://docs.google.com/Spreadsheets/d/{ID}/edit#gid=0 このように、URLがわかればIDを取得することが可能です。\nでは、実際にスクリプトでスプレッドシートを取得してみましょう。\nまずは、新規のスプレッドシートを作成して「別のスプレッドシート」と名前をつけてください。\n先ほどの手順で作成した「別のスプレッドシート」のURLとIDを確認した上で、下記のサンプルを記述して実行してください。\nfunction spreadsheet_1() { var spreadsheet = SpreadsheetApp.getActiveSpreadsheet(); SpreaadsheetApp.openById(スプレッドシートのID) // はじめてのGAS  var url = \u0026#39;https://docs.google.com/Spreadsheets/d/XXXX/edit#gid=0\u0026#39;; spreadsheet = SpreadsheetApp.openByUrl(url); SpreaadsheetApp.openById(スプレッドシートのID); // 別のスプレッドシート  var id = \u0026#39;XXXX\u0026#39;; spreadhsheet = SpreaadsheetApp.openById(id); // 別のスプレッドシート } はじめてのGAS 別のスプレッドシート 別のスプレッドシート アクティブなシートを取得する GASでスプレッドシートを操作する場合、シートやセルを操作対象とすることが多いでしょう。\nその度に、SpreadsheetApp → Spreadsheet → Sheetと辿っていくのは手間に感じるかもしれません。\nまた、メソッド実行による Google Apps へのアクセスは実行時間が遅いという事実があります。\nGASには実行時間に関する制限がありますので、処理速度を落とさないためにも Google Apps へアクセスするメソッドの実行回数はできる限り減らしたほうがよいです。\nコンテナバインドスクリプトであれば、そのような場合にアクティブなシートを取得する方法として getActiveSheetメソッド を使用できます。\nSpreadsheetApp.getActiveSheet() SpreadsheetAppから直接取得できるので、次のサンプルのように簡潔に記述することができます。また、スプレッドシートへアクセスするメソッドの実行回数が減らすこともできます。\nfunction spreadsheet_2() { var sheet = SpreadsheetApp.getActiveSheet(); console.log(sheet.getName()); } シート1  Google Apps へのアクセスは事項時間が遅いので、できる限りアクセスするメソッドの実行回数は少なくなるようにしましょう。\n "
 },
 {
 	"uri": "http://a-nakamura1015/gas-education/javascript_bases/object_mechanism/page_2_4_2/",
@@ -112,6 +126,13 @@
 	"content": "まずは Google Apps Script でアプリケーションを作成する第一歩として、 ブラウザにWeb画面を表示してみましょう。\nスクリプトの種類 Google Apps Script には2種類のスクリプトがあります。\n Container Bound Script Standalone Script  それぞれのスクリプトの違いについて確認していきましょう。\nContainer Bound Script Google スプレッドシートやドキュメントなどの各アプリケーションのメニューから作成することができるスクリプトです。\n＜スクリプトを作成する手順＞\n Google スプレッドシートやドキュメントなどのアプリケーションを開きます。 上部メニューの|[ツール] \u0026gt; [スクリプトエディタ]を選択します。  ＜メリット＞\n バインドしているファイルを簡単に参照できる バインドしているファイルから Google Apps Script を実行できる  この方法で作成されたスクリプトと同アプリケーションはバインド（結びつく）しているため、 スプレッドシートの場合は下記のメソッドによりブラウザで開いている同スプレッドシートを操作することができます。\nvar spreadsheet = SpreadsheetApp.getActiveSpreadsheet(); var sheet = spreadsheet.getActiveSheet(); var range = sheet.getActiveRange(); また、onOpen関数を利用してアプリケーションにメニューを追加し、 そのメニューからスクリプトエディタでコーディングした関数を実行することができます。 他にも、図形にコーディングした関数を埋め込み、図形をクリック時に埋め込めんだ関数を事項することもできます。\n要約しますと、この方法で作成したスクリプトはExcelでいうVBAに近い感覚で利用することができます。\nStandalone Script Container Bound Script とは対照的に、どのアプリケーションにもバインド（結びつく）していないスクリプトです。 作成されたスクリプトは Googleドライブ に表示されます。\n＜スクリプトを作成する手順＞\n Google Chrome で Google ドライブを開きます。 Google ドライブの左上に表示されている[新規]ボタンをクリックします。  で表示されたメニュー内の[その他]をクリックします。    で表示されたメニュー内の[Google Apps Script] をクリックします。    ＜メリット＞\n 利用者にスクリプトエディタを編集されるリスクがない Google ドライブで管理がしやすい  一見、Container Bound Script でスクリプトを作成した方が始めやすく、 バインドしたファイルを簡単に参照できるメソッドも利用できるため扱いやすいです。 しかし、作成したスクリプトを他者と共有して利用したい場合は、 利用者もスクリプトエディタを編集することができてしまいます。 つまり、いつの間にか利用者によってスクリプトの内容が書き換えられてしまうことが起こる可能性があります。\n一方で、Standalone Script はスクリプトファイルを共有したアカウントのみ編集することが、ユーザーによって編集されるリスクがありません。 また、作成したスクリプトは Google ドライブに保存されているため管理がしやすいのも特徴です。\n（Container Bound Script の場合は対象のファイルを開かなければスクリプトエディタを開くことができません。また、Google ドライブにスクリプトが表示されません。）\n補足\nGoogle ドライブでは Container Bound Script を管理できないとお話ししましたが、 作成したスクリプトは下記リンク先のダッシュボードから簡単にアクセスすることができます。 https://script.google.com/home\n今回のWebアプリ編のハンズオンでは Standalone Script で進めていきます。 Container Bound Script でも問題なく行うことができますが、 後々の管理のことを考えて Standalone Script で進めていきましょう。\n HTMLファイルの作り方について Webアプリを作るには画面を作る必要がありますが、画面はHTMLファイルで作ることができます。 HTMLファイルは下記の手順で作成することができます。\n 上部メニューから[ファイル] \u0026gt; [New] \u0026gt; [HTMLファイル]　を選択する。 表示されたダイアログの入力欄にファイル名を設定して、[OK] ボタンをクリックします。 ※ ここではファイル名を「index」としてください。 スクリプトエディタ上に「index.html」が作成されます。  \u0026lt;!DOCTYPE html\u0026gt; \u0026lt;html\u0026gt; \u0026lt;head\u0026gt; \u0026lt;base target=\u0026quot;_top\u0026quot;\u0026gt; \u0026lt;/head\u0026gt; \u0026lt;body\u0026gt; \u0026lt;/body\u0026gt; \u0026lt;/html\u0026gt;  doGet関数について ユーザーが公開したWebアプリにアクセスした場合にdoGet関数は実行されます。（別のプログラムからWebアプリにHTTPのGETリクエストが送信される場合も同じく実行されます。）\nWeb画面を表示するにはdoGet関数の戻り値として HtmlServiceオブジェクト を指定する必要があります。\n下記のようにコーディングをしますと、index.htmlを表示する画面として指定することができます。\nコード.gs\nfunction doGet() { return HtmlService.createTemplateFromFile(\u0026#39;index\u0026#39;).evaluate(); } index.html\n\u0026lt;!DOCTYPE html\u0026gt; \u0026lt;html\u0026gt; \u0026lt;head\u0026gt; \u0026lt;base target=\u0026quot;_top\u0026quot;\u0026gt; \u0026lt;/head\u0026gt; \u0026lt;body\u0026gt; Hello World! \u0026lt;/body\u0026gt; \u0026lt;/html\u0026gt;  Webアプリのデプロイ方法について "
 },
 {
+	"uri": "http://a-nakamura1015/gas-education/sheets/page_3/",
+	"title": "スプレッドシートを操作する",
+	"tags": [],
+	"description": "",
+	"content": "Spreadsheetクラスとは Spreadsheetクラス は、文字通りスプレッドシートを操作する機能を提供するクラスです。\nスプレッドシート自体の情報を取得するメソッドや、シートを取得したり作成したりするメソッドなどが提供されています。\nでは、Spreadsheetクラスのメンバーを使って、スプレッドシートの様々な情報を取得してみましょう。\n次のサンプルはスプレッドシートのID、スプレッドシート名、URLがログに出力されます。\nfunction spreadsheet_3() { var spreadsheet = SpreadsheetApp.getActiveSpreadsheet(); console.log(spreadsheet.getId()); // スプレッドシートのID  console.log(spreadsheet.getName()); // スプレッドシートの名前  console.log(spreadsheet.getURL()); // スプレッドシートのURL } シートを取得する Spreadsheetクラスはその配下であるシートを取得することができます。\nシートの取得方法は次のような方法があります。\n アクティブなシートを取得する シート名で特定して取得する インデックスで配列からシートを特定して取得する  アクティブなシートは先ほど説明した通りコンテナバインドスクリプトに限り、SpreadsheetAppクラスから直接取得することができます。\n別な方法として、getSheetByNameメソッド を使用してシート名で特定して取得する方法があります。 シート名で取得するのは簡単ではありますが、シート名が変わると取得できなくなる点に注意です。\nSpreadsheetオブジェクト.getSheetByName(シート名) 他にも、getSheetsメソッド でシートを配列として取得した上で、インデックスでシートを特定する方法もあります。\nSpreadsheetオブジェクト.getSheets() getSheetsメソッドは、スプレッドシートに含まれるシートのうち最も左に位置するシートのインデックスを0として、そこから右方向に順番にシートを配列に格納して取得します。\n戻り値が配列になりますので、全てのシートに処理を行いたい場合などに便利です。\nしかし、インデックスは並び順に依存しているため、特定のシートのみ処理をしたい（例えば左から2つめのシートのみ処理したい）場合はシートの並び順が変更された場合は意図したシートが処理されないことになります。\nそれでは、次のサンプルを実行して確認してみましょう。\nfunction spreadsheet_4() { var spreadsheet = SpreadsheetApp.getActiveSpreadsheet(); var sheet = spreadsheet.getSheetByName(\u0026#39;シート1\u0026#39;); conosole.log(sheet.getName()); var sheets = spreadsheetApp.getSheets(); console.log(sheet[0].getName()); console.log(sheet[1].getName()); } getNameメソッド はシート名を取得するメソッドです。getSheetsメソッドはシートを配列として取得するため、角括弧内にインデックスを用いて各シートを取り出すことができます。\n"
+},
+{
 	"uri": "http://a-nakamura1015/gas-education/sheets/",
 	"title": "スプレッドシート編",
 	"tags": [],
@@ -168,6 +189,13 @@
 	"content": "Webアプリを更新する方法について HTMLについて CSSについて JavaScriptについて "
 },
 {
+	"uri": "http://a-nakamura1015/gas-education/sheets/page_4/",
+	"title": "シートを操作する",
+	"tags": [],
+	"description": "",
+	"content": "Sheetクラスとは Sheetクラス は、シートを操作する機能を提供するクラスです。\nシートの情報を取得するメソッドや行・列の操作、シート上のセルを取得するなどのメソッドが提供されています。\n早速、次のサンプルを実行し、シートの様々な情報を取得してみましょう。\nfunction spreadsheet_5() { var sheet = SpreadsheetApp.getActiveSheet(); console.log(sheet.getIndex()); // シートのインデックス  console.log(sheet.getName());　// シートの名前 } セルを取得する Sheetクラスはセルを取得する機能が備わっていることが大きな特徴です。\nセルを取得するいくつかのメソッドが用意されていますが、その中でも最もスタンダードなメソッドが getRangeメソッド です。\ngetRangeメソッドは引数の数によって様々なパターンのセルを取得することができます。\n一番シンプルなのは、引数に「A1」や「A1:C3」のようなセルのアドレスを文字列で渡して取得する方法です。\nSheetオブジェクト.getRange(アドレス) 他のパターンとしては、行番号・列番号・行数・列数を引数に指定することでセルを取得する方法です。\nSheetオブジェクト.getRange(行番号, 列番号[, 行数, 列数]) ※ []は任意のため省略可能です。\n行番号から行数分、列番号から列数分の範囲を指定して取得することができます。行数と列数は省略することができ、省略した場合はそれぞれの値は1となります。\n各値は数値で設定するため、セルを動的に取得したい場合はこの方法を用います。\nそれでは、次のサンプルを実行してセルを取得できているか確認してみましょう。\nfunction spreadsheet_6() { var sheet = SpreadsheetApp.getActiveSheet(); console.log(sheet.getRange(\u0026#39;A1\u0026#39;).getA1Notation()); // A1  console.log(sheet.getRange(\u0026#39;B2:D5\u0026#39;).getA1Notation()); // B2:D5  console.log(sheet.getRange(\u0026#39;2:2\u0026#39;).getA1Notation()); // 2:2  console.log(sheet.getRange(\u0026#39;B:B\u0026#39;).getA1Notation()); // B:B  console.log(sheet.getRange(3, 3).getA1Notation()); // C3  console.log(sheet.getRange(3, 3, 2).getA1Notation()); // C3:C4  console.log(sheet.getRange(3, 3, 2, 2).getA1Notation()); // C3:D4 } サンプル内で実行しているgetA1Notationメソッドはセル範囲のアドレスをA1形式で取得するメソッドです。\nアドレスの指定では、行または列全体のしても可能です。\nまた、行番号・列番号・行数・列数は変数で指定することも可能です。\nシートのデータ範囲を取得する アドレスや行番号、列番号がわからない場合や、シートに値が追加されていって取得するセル範囲が変化する場合はどのようにして取得するとよいでしょう？\nこのようなときに getDataRangeメソッド は非常に便利で、シート上のデータが存在する範囲をすべて取得してくれます。\nSheetオブジェクト.getDataRange() また、セルの範囲ではなく、データが存在する最後の行番号を取得する getLastRowメソッド や、データが存在する最後の列を取得する getLastColumメソッド も便利なメソッドです。\nSheetオブジェクト.getLastRow() Sheetオブジェクト.getLastColumn() これらのメソッドの使用例を次のサンプルで確認してみましょう。\nfunction spreadsheet_7() { var sheet = SpreadsheetApp.getActiveSheet(); console.log(sheet.getDataRange().getA1Notation()); console.log(sheet.getlastRow()); console.log(sheet.getlastColumn()); } getDataRangeメソッドの取得範囲の起点はA1セルで、そこからデータが入っている最終行および最終列までの範囲を取得します。\n"
+},
+{
 	"uri": "http://a-nakamura1015/gas-education/javascript_bases/control_syntax/page_2_2_4/",
 	"title": "最後に",
 	"tags": [],
@@ -217,6 +245,13 @@
 	"content": "Chapter 4 Webアプリ編 Google Apps Script で Webアプリを作ってみよう！ "
 },
 {
+	"uri": "http://a-nakamura1015/gas-education/sheets/page_5/",
+	"title": "セル範囲を操作する",
+	"tags": [],
+	"description": "",
+	"content": "Rangeクラスとは Rangeクラス は、セル範囲を操作する機能を提供するクラスです。\nセルの値や数式の取得や設定、セル範囲の情報の取得、書式の設定、並べ替えなどのメンバーが用意されています。\n試しに、セル範囲の様々な情報を取得するサンプルを実行してみましょう。\nfunction spreadsheet_8() { var range = SpreadsheetApp.getActiveSheet().getRange(\u0026#39;A2:C5\u0026#39;); console.log(range.getRow()); // 2  console.log(range.getColumn()); // 1  console.log(range.getNumRows()); // 4  console.log(range.getNumColumns()); // 3  console.log(range.getLastRow()); // 5  console.log(range.getLastColumn()); // 3 } 値を取得・設定する Rangeクラスのメンバーで最も基本的な操作はセルからの値の取得・設定といえます。\n単体セルの値を取得する getValueメソッド と単体セルの値を設定する setValueメソッド の構文を確認していきましょう。\nRangeオブジェクト.getValue() Rangeオブジェクト.setValue(値) このメソッドには注意すべきことがありまして、セルを1つ1つに処理していくため、そのセルの数の分だけスプレッドシートへのアクセス回数がかさんでしまいます。 そのため、セル範囲が対象の場合は、セル範囲の値を取得する getValuesメソッド を、セル範囲の値を設定する setValuesメソッド を使用するようにしましょう。\nRangeオブジェクト.getValues() Rangeオブジェクト.setValues(配列)  setValuesメソッドでは、対象となるセル範囲の「行数×列数」と、引数の二次元配列の「要素数×要素数」が一致している必要があります。\n function spreadsheet_9() { var sheet = SpreadsheetApp.getActiveSheet(); sheet.getRange(\u0026#39;A1\u0026#39;).setValue(\u0026#39;Google\u0026#39;); console.log(sheet.getRange(\u0026#39;A1\u0026#39;).getValue()); // google  var values = [ [\u0026#39;Taro\u0026#39;, 22, \u0026#39;東京\u0026#39;], [\u0026#39;Hanako\u0026#39;, 25, \u0026#39;大阪\u0026#39;] ]; sheet.getRange(\u0026#39;A2:C3\u0026#39;).setValues(values); console.log(sheet.getRange(\u0026#39;A2:C3\u0026#39;).getValues()); // [\u0026#39;Taro\u0026#39;, 22, \u0026#39;東京\u0026#39;],[\u0026#39;Hanako\u0026#39;, 25, \u0026#39;大阪\u0026#39;] } "
+},
+{
 	"uri": "http://a-nakamura1015/gas-education/javascript_bases/object_mechanism/",
 	"title": "オブジェクトの仕組みを学ぼう",
 	"tags": [],
@@ -243,6 +278,13 @@
 	"tags": [],
 	"description": "",
 	"content": "Scriptletについて google.script.run との違い Standard scriptlets Printing scriptlets スプレッドシートの値を表示する "
+},
+{
+	"uri": "http://a-nakamura1015/gas-education/sheets/page_6/",
+	"title": "最後に",
+	"tags": [],
+	"description": "",
+	"content": "GASでのスプレッドシートの操作、およびSpreadsheetサービスの基本となるクラスについて解説してきました。\nスプレッドシートはGASによるシステムではデータベースとしての役割を果たしますので、ぜひ活用してください。\nいよいよ、次はGASでWebアプリケーションを作ってみましょう。\n"
 },
 {
 	"uri": "http://a-nakamura1015/gas-education/javascript_bases/page_3/",
