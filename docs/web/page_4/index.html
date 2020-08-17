@@ -12,21 +12,21 @@
     <title>Web画面からGASの関数を実行してみましょう :: GAS Edu</title>
 
     
-    <link href="/gas-education/css/nucleus.css?1597702337" rel="stylesheet">
-    <link href="/gas-education/css/fontawesome-all.min.css?1597702337" rel="stylesheet">
-    <link href="/gas-education/css/hybrid.css?1597702337" rel="stylesheet">
-    <link href="/gas-education/css/featherlight.min.css?1597702337" rel="stylesheet">
-    <link href="/gas-education/css/perfect-scrollbar.min.css?1597702337" rel="stylesheet">
-    <link href="/gas-education/css/auto-complete.css?1597702337" rel="stylesheet">
-    <link href="/gas-education/css/atom-one-dark-reasonable.css?1597702337" rel="stylesheet">
-    <link href="/gas-education/css/theme.css?1597702337" rel="stylesheet">
-    <link href="/gas-education/css/hugo-theme.css?1597702337" rel="stylesheet">
+    <link href="/gas-education/css/nucleus.css?1597704253" rel="stylesheet">
+    <link href="/gas-education/css/fontawesome-all.min.css?1597704253" rel="stylesheet">
+    <link href="/gas-education/css/hybrid.css?1597704253" rel="stylesheet">
+    <link href="/gas-education/css/featherlight.min.css?1597704253" rel="stylesheet">
+    <link href="/gas-education/css/perfect-scrollbar.min.css?1597704253" rel="stylesheet">
+    <link href="/gas-education/css/auto-complete.css?1597704253" rel="stylesheet">
+    <link href="/gas-education/css/atom-one-dark-reasonable.css?1597704253" rel="stylesheet">
+    <link href="/gas-education/css/theme.css?1597704253" rel="stylesheet">
+    <link href="/gas-education/css/hugo-theme.css?1597704253" rel="stylesheet">
     
-    <link href="/gas-education/css/theme-blue.css?1597702337" rel="stylesheet">
+    <link href="/gas-education/css/theme-blue.css?1597704253" rel="stylesheet">
     
     
 
-    <script src="/gas-education/js/jquery-3.3.1.min.js?1597702337"></script>
+    <script src="/gas-education/js/jquery-3.3.1.min.js?1597704253"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -71,14 +71,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/gas-education/js/lunr.min.js?1597702337"></script>
-<script type="text/javascript" src="/gas-education/js/auto-complete.js?1597702337"></script>
+<script type="text/javascript" src="/gas-education/js/lunr.min.js?1597704253"></script>
+<script type="text/javascript" src="/gas-education/js/auto-complete.js?1597704253"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/a-nakamura1015\/gas-education";
     
 </script>
-<script type="text/javascript" src="/gas-education/js/search.js?1597702337"></script>
+<script type="text/javascript" src="/gas-education/js/search.js?1597704253"></script>
 
     
   </div>
@@ -1106,30 +1106,9 @@
  
   
     
-      <li data-nav-id="/gas-education/web/page_3/" title="Web画面を編集してみよう" class="dd-item ">
-        <a href="/gas-education/web/page_3/">
-        <b>3. </b>Web画面を編集してみよう
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
       <li data-nav-id="/gas-education/web/page_4/" title="Web画面からGASの関数を実行してみましょう" class="dd-item active">
         <a href="/gas-education/web/page_4/">
-        <b>4. </b>Web画面からGASの関数を実行してみましょう
+        <b>3. </b>Web画面からGASの関数を実行してみましょう
         
         </a>
     </li>
@@ -1150,28 +1129,7 @@
     
       <li data-nav-id="/gas-education/web/page_5/" title="Web画面にスプレッドシートの値を表示してみましょう" class="dd-item ">
         <a href="/gas-education/web/page_5/">
-        <b>5. </b>Web画面にスプレッドシートの値を表示してみましょう
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/gas-education/web/page_6/" title="別画面に遷移してみましょう" class="dd-item ">
-        <a href="/gas-education/web/page_6/">
-        <b>6. </b>別画面に遷移してみましょう
+        <b>4. </b>Web画面にスプレッドシートの値を表示してみましょう
         
         </a>
     </li>
@@ -1257,7 +1215,7 @@
         <li><a href="#google-apps-script-の関数の作り方について">Google Apps Script の関数の作り方について</a></li>
         <li><a href="#googlescriptrun-について">google.script.run について</a></li>
         <li><a href="#同期処理と非同期処理について">同期処理と非同期処理について</a></li>
-        <li><a href="#withsuccesshandler-と-withfailurehandler-について">withSuccessHandler と withFailureHandler について</a></li>
+        <li><a href="#withsuccesshandler-について">withSuccessHandler について</a></li>
       </ul>
     </li>
   </ul>
@@ -1418,8 +1376,8 @@ Google Apps Script のサーバーサイドは<code>.gsファイル</code>にコ
 <p>だけど、GAS関数の戻り値を受けとって同期処理を行いたいですよね。
 それを実現するのが<code>withSuccessHandler</code>メソッドと<code>withFailureHandler</code>メソッドです。</p>
 <hr>
-<h3 id="withsuccesshandler-と-withfailurehandler-について">withSuccessHandler と withFailureHandler について</h3>
-<p><code>withSuccessHandler</code>メソッドと<code>withFailureHandler</code>メソッドの特徴は <em><strong>「クライアントサイドからGAS関数を呼び出したのちの処理を設定できる」</strong></em> ことです。</p>
+<h3 id="withsuccesshandler-について">withSuccessHandler について</h3>
+<p><code>withSuccessHandler</code>メソッドの特徴は <em><strong>「クライアントサイドからGAS関数を呼び出したのちの処理を設定できる」</strong></em> ことです。</p>
 <p>これらのメソッドを活用することでGAS関数で取得した結果をクライアントサイドに表示することができます。</p>
 <p>しかし、活用するには <em><strong>コールバック関数</strong></em> を理解する必要があります。</p>
 <h4 id="コールバック関数とは">コールバック関数とは</h4>
@@ -1442,7 +1400,7 @@ JavaScriptでコールバックは「後々呼び出すために定義した関�
 </code></pre><p>上記では<code>getNumber</code>関数というコールバック関数をコーディングしています。
 このコールバック関数を<code>alert(getNumber());</code>で呼び出して実行しています。
 このように <em><strong>即時実行するのではなく、後々実行するための関数を定義することができます。</strong></em></p>
-<p>これが<code>withSuccessHandler</code>メソッドと<code>withFailureHandler</code>メソッドとどのように関係があるのか？といいますと、
+<p>これが<code>withSuccessHandler</code>メソッドとどのように関係があるのか？といいますと、
 これらのメソッドは　<em><strong>クライアントサイドからGAS関数を呼び出したのちの処理を設定できる</strong></em> のですが、
 GAS関数を呼び出したのちの処理をコールバック関数で定義することができるのです。</p>
 <h4 id="withsuccesshandlerとは">withSuccessHandlerとは</h4>
@@ -1465,8 +1423,7 @@ GAS関数を呼び出したのちの処理をコールバック関数で定義�
     alert(result);
   }).getSheetData();
 &lt;/script&gt;
-</code></pre><h4 id="withfailurehandlerとは">withFailureHandlerとは</h4>
-
+</code></pre>
 
 <footer class="footline">
 	
@@ -2197,22 +2154,6 @@ GAS関数を呼び出したのちの処理をコールバック関数で定義�
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -2232,22 +2173,6 @@ GAS関数を呼び出したのちの処理をコールバック関数で定義�
                     
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -2272,7 +2197,7 @@ GAS関数を呼び出したのちの処理をコールバック関数で定義�
 	 
 	 
 		
-			<a class="nav nav-prev" href="/gas-education/web/page_3/" title="Web画面を編集してみよう"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/gas-education/web/page_2/" title="Web画面を表示してみよう"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/gas-education/web/page_5/" title="Web画面にスプレッドシートの値を表示してみましょう" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -2285,19 +2210,19 @@ GAS関数を呼び出したのちの処理をコールバック関数で定義�
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/gas-education/js/clipboard.min.js?1597702337"></script>
-    <script src="/gas-education/js/perfect-scrollbar.min.js?1597702337"></script>
-    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1597702337"></script>
-    <script src="/gas-education/js/jquery.sticky.js?1597702337"></script>
-    <script src="/gas-education/js/featherlight.min.js?1597702337"></script>
-    <script src="/gas-education/js/highlight.pack.js?1597702337"></script>
+    <script src="/gas-education/js/clipboard.min.js?1597704253"></script>
+    <script src="/gas-education/js/perfect-scrollbar.min.js?1597704253"></script>
+    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1597704253"></script>
+    <script src="/gas-education/js/jquery.sticky.js?1597704253"></script>
+    <script src="/gas-education/js/featherlight.min.js?1597704253"></script>
+    <script src="/gas-education/js/highlight.pack.js?1597704253"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1597702337"></script>
-    <script src="/gas-education/js/learn.js?1597702337"></script>
-    <script src="/gas-education/js/hugo-learn.js?1597702337"></script>
+    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1597704253"></script>
+    <script src="/gas-education/js/learn.js?1597704253"></script>
+    <script src="/gas-education/js/hugo-learn.js?1597704253"></script>
 
-    <link href="/gas-education/mermaid/mermaid.css?1597702337" rel="stylesheet" />
-    <script src="/gas-education/mermaid/mermaid.js?1597702337"></script>
+    <link href="/gas-education/mermaid/mermaid.css?1597704253" rel="stylesheet" />
+    <script src="/gas-education/mermaid/mermaid.js?1597704253"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -1,8 +1,8 @@
 ---
 title: "Web画面からGASの関数を実行してみましょう"
 date: 2020-07-24T23:57:40+09:00
-pre: "<b>4. </b>"
-weight: 4
+pre: "<b>3. </b>"
+weight: 3
 ---
 ここまでは主にクライアントサイドのコーディングをしてきましたが、
 ここからはサーバーサイドのコーデイングをしていきましょう。
@@ -186,8 +186,8 @@ index.html
 それを実現するのが`withSuccessHandler`メソッドと`withFailureHandler`メソッドです。
 
 ---
-### withSuccessHandler と withFailureHandler について
-`withSuccessHandler`メソッドと`withFailureHandler`メソッドの特徴は ***「クライアントサイドからGAS関数を呼び出したのちの処理を設定できる」*** ことです。
+### withSuccessHandler について
+`withSuccessHandler`メソッドの特徴は ***「クライアントサイドからGAS関数を呼び出したのちの処理を設定できる」*** ことです。
 
 これらのメソッドを活用することでGAS関数で取得した結果をクライアントサイドに表示することができます。
 
@@ -216,7 +216,7 @@ JavaScriptでコールバックは「後々呼び出すために定義した関�
 このコールバック関数を`alert(getNumber());`で呼び出して実行しています。
 このように ***即時実行するのではなく、後々実行するための関数を定義することができます。***
 
-これが`withSuccessHandler`メソッドと`withFailureHandler`メソッドとどのように関係があるのか？といいますと、
+これが`withSuccessHandler`メソッドとどのように関係があるのか？といいますと、
 これらのメソッドは　***クライアントサイドからGAS関数を呼び出したのちの処理を設定できる*** のですが、
 GAS関数を呼び出したのちの処理をコールバック関数で定義することができるのです。
 
@@ -249,5 +249,3 @@ google.script.run.withSuccessHandler(コールバック関数).GAS関数()
   }).getSheetData();
 </script>
 ```
-
-#### withFailureHandlerとは
