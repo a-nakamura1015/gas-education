@@ -14,3 +14,9 @@ home = ["HTML", "RSS", "JSON"]
 
 [params]
 themeVariant = "blue"
+customCSS = ["css/custom-font.css", "css/custom-table.css"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      hardWraps = true
