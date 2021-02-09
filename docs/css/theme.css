@@ -700,16 +700,17 @@ hr {
     background: inherit;
 }
 table {
-    border: 1px solid #eaeaea;
+    border: 1px solid #adacac;
     table-layout: auto;
 }
 th {
-    background: #f7f7f7;
+    background: #cccccc;
+    border: 1px solid #adacac;
     padding: 0.5rem;
 }
 td {
     padding: 0.5rem;
-    border: 1px solid #eaeaea;
+    border: 1px solid #adacac;
 }
 .button {
     background: #9c6fb6;

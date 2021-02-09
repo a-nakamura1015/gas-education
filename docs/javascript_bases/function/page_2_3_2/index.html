@@ -12,21 +12,21 @@
     <title>引数と戻り値 :: GAS Edu</title>
 
     
-    <link href="/gas-education/css/nucleus.css?1603606337" rel="stylesheet">
-    <link href="/gas-education/css/fontawesome-all.min.css?1603606337" rel="stylesheet">
-    <link href="/gas-education/css/hybrid.css?1603606337" rel="stylesheet">
-    <link href="/gas-education/css/featherlight.min.css?1603606337" rel="stylesheet">
-    <link href="/gas-education/css/perfect-scrollbar.min.css?1603606337" rel="stylesheet">
-    <link href="/gas-education/css/auto-complete.css?1603606337" rel="stylesheet">
-    <link href="/gas-education/css/atom-one-dark-reasonable.css?1603606337" rel="stylesheet">
-    <link href="/gas-education/css/theme.css?1603606337" rel="stylesheet">
-    <link href="/gas-education/css/hugo-theme.css?1603606337" rel="stylesheet">
+    <link href="/gas-education/css/nucleus.css?1612092594" rel="stylesheet">
+    <link href="/gas-education/css/fontawesome-all.min.css?1612092594" rel="stylesheet">
+    <link href="/gas-education/css/hybrid.css?1612092594" rel="stylesheet">
+    <link href="/gas-education/css/featherlight.min.css?1612092594" rel="stylesheet">
+    <link href="/gas-education/css/perfect-scrollbar.min.css?1612092594" rel="stylesheet">
+    <link href="/gas-education/css/auto-complete.css?1612092594" rel="stylesheet">
+    <link href="/gas-education/css/atom-one-dark-reasonable.css?1612092594" rel="stylesheet">
+    <link href="/gas-education/css/theme.css?1612092594" rel="stylesheet">
+    <link href="/gas-education/css/hugo-theme.css?1612092594" rel="stylesheet">
     
-    <link href="/gas-education/css/theme-blue.css?1603606337" rel="stylesheet">
+    <link href="/gas-education/css/theme-blue.css?1612092594" rel="stylesheet">
     
     
 
-    <script src="/gas-education/js/jquery-3.3.1.min.js?1603606337"></script>
+    <script src="/gas-education/js/jquery-3.3.1.min.js?1612092594"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -71,14 +71,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/gas-education/js/lunr.min.js?1603606337"></script>
-<script type="text/javascript" src="/gas-education/js/auto-complete.js?1603606337"></script>
+<script type="text/javascript" src="/gas-education/js/lunr.min.js?1612092594"></script>
+<script type="text/javascript" src="/gas-education/js/auto-complete.js?1612092594"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/a-nakamura1015\/gas-education";
     
 </script>
-<script type="text/javascript" src="/gas-education/js/search.js?1603606337"></script>
+<script type="text/javascript" src="/gas-education/js/search.js?1612092594"></script>
 
     
   </div>
@@ -186,9 +186,9 @@
  
   
     
-      <li data-nav-id="/gas-education/introduction/page_4/" title="GASでコーディングしてみよう" class="dd-item ">
+      <li data-nav-id="/gas-education/introduction/page_4/" title="スクリプトエディタの使い方" class="dd-item ">
         <a href="/gas-education/introduction/page_4/">
-        <b>4. </b>GASでコーディングしてみよう
+        <b>4. </b>スクリプトエディタの使い方
         
         </a>
     </li>
@@ -207,9 +207,30 @@
  
   
     
-      <li data-nav-id="/gas-education/introduction/page_5/" title="最後に" class="dd-item ">
+      <li data-nav-id="/gas-education/introduction/page_5/" title="GASでコーディングしてみよう" class="dd-item ">
         <a href="/gas-education/introduction/page_5/">
-        <b>5. </b>最後に
+        <b>5. </b>GASでコーディングしてみよう
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/introduction/page_6/" title="最後に" class="dd-item ">
+        <a href="/gas-education/introduction/page_6/">
+        <b>6. </b>最後に
         
         </a>
     </li>
@@ -720,9 +741,30 @@
  
   
     
-      <li data-nav-id="/gas-education/javascript_bases/function/page_2_3_4/" title="最後に" class="dd-item ">
+      <li data-nav-id="/gas-education/javascript_bases/function/page_2_3_4/" title="無名関数" class="dd-item ">
         <a href="/gas-education/javascript_bases/function/page_2_3_4/">
-        <b>4. </b>最後に
+        <b>4. </b>無名関数
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/javascript_bases/function/page_2_3_5/" title="最後に" class="dd-item ">
+        <a href="/gas-education/javascript_bases/function/page_2_3_5/">
+        <b>5. </b>最後に
         
         </a>
     </li>
@@ -1219,6 +1261,9 @@
     <li>
       <ul>
         <li><a href="#関数の引数と戻り値">関数の引数と戻り値</a></li>
+        <li><a href="#関数と-return">関数と return</a></li>
+        <li><a href="#関数の引数">関数の引数</a></li>
+        <li><a href="#関数の引数の注意点">関数の引数の注意点</a></li>
       </ul>
     </li>
   </ul>
@@ -1246,25 +1291,26 @@
 
 
 <h3 id="関数の引数と戻り値">関数の引数と戻り値</h3>
-<p>関数を呼び出して処理を実行する際に値を受け渡すことができます。この呼び出した関数に渡す値を <em><strong>引数</strong></em> といいます。</p>
-<p>また、呼び出し関数から処理も戻す際にも値を受け渡すことができます。この呼び出した関数から受け取る値を <em><strong>戻り値</strong></em> といいます。</p>
-<p>引数と戻り値を含めた関数の宣言は次のように記述することができます。</p>
+<p>関数を呼び出して処理を実行する際に値を受け渡すことができます。この呼び出した関数に渡す値を <strong>引数</strong> といいます。<br>
+また、呼び出し関数から処理も戻す際にも値を受け渡すことができます。この呼び出した関数から受け取る値を <strong>戻り値</strong> といいます。<br>
+引数と戻り値を含めた関数の宣言は次のように記述することができます。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">関数名</span>(<span style="color:#a6e22e">仮引数１</span>, <span style="color:#a6e22e">仮引数２</span>, ...) {
   <span style="color:#75715e">// 処理
 </span><span style="color:#75715e"></span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">戻り値</span>;
 }
-</code></pre></div><p>関数が呼び出されたときに受け取る値を格納する変数を仮引数といいます。仮引数は関数名の後ろの丸括弧にないに指定します。仮引数の宣言には<code>var</code>は不要で、複数ある場合はカンマ区切りで記述します。</p>
-<p>また、return文 によって戻り値を指定します。戻り値が不要の場合はreturn文を省略します。
-return文が実行されると、それ以降の処理は実行されないため気をつけましょう。
+</code></pre></div><p>関数が呼び出されたときに受け取る値を格納する変数を <strong>仮引数</strong> といいます。仮引数は関数名の後ろの丸括弧内に指定します。<br>
+仮引数の宣言には<code>var</code>は不要で、複数ある場合はカンマ区切りで記述します。<br>
+また、return文 によって戻り値を指定します。戻り値が不要の場合はreturn文を省略します。<br>
+return文が実行されると、それ以降の処理は実行されないため気をつけましょう。<br>
 
 <div class="notices note" ><p>return文が実行されると、戻り値と共に処理も戻ります。</p>
 </div>
 </p>
 <p>一方で、引数を渡して関数を呼び出すには下記のように記述します。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">関数名</span>(<span style="color:#a6e22e">引数１</span>, <span style="color:#a6e22e">引数２</span>, ...)
-</code></pre></div><p>戻り値が返す関数を呼び出した場合は、左辺に変数を指定することで代入をしたり、さらに引数として利用をしたりすることができます。</p>
-<p>では、次のサンプルで確認をしてみましょう。</p>
-<p>面積を求める<code>calcArea</code>関数は引数として縦の長さ変数xと横の長さ変数yの値を受け取り、戻り値として<code>x * y</code>の算出結果を返します。</p>
+</code></pre></div><p>戻り値を返す関数を呼び出した場合は、左辺に変数を指定することで代入をしたり、さらに引数として利用をしたりすることができます。<br>
+では、次のサンプルで確認をしてみましょう。<br>
+面積を求める<code>calcArea</code>関数は引数として縦の長さx変数と横の長さy変数の値を受け取り、戻り値として<code>x * y</code>の算出結果を返します。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">myFunc_3</span>() {
   <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">calcArea</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">5</span>); <span style="color:#75715e">// 関数の結果を変数に格納することができます
 </span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">result</span>);
@@ -1275,6 +1321,48 @@ return文が実行されると、それ以降の処理は実行されないた�
 }
 </code></pre></div><pre><code>50
 30
+</code></pre><h3 id="関数と-return">関数と return</h3>
+<p>関数の値はキーワードの <strong>return</strong> を使って呼び出し側に戻します。<br>
+関数から return で戻らない場合や値が指定されていない return で戻る場合、<br>
+関数が返す値は <strong>undefined</strong> となります。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">myFunc_4</span>() {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">output_1</span>());
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">output_2</span>());
+}
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">output_1</span>() {
+  <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;Hello!&#39;</span>;
+}
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">output_2</span>() {
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">hello</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Hello!&#39;</span>;
+}
+</code></pre></div><pre><code>Hello!
+undefined
+</code></pre><h3 id="関数の引数">関数の引数</h3>
+<p>関数に情報を渡すには「引数（パラメーター）」と呼ばれるものを利用します。<br>
+引数は「関数が呼び出されるまでは存在しない変数」であり、<br>
+関数の呼び出しの際に（）のなかに値を設定することでその値を引数として利用することができます。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sum</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) {
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>;
+}
+</code></pre></div><p>上記のサンプルにおいて、aとbは「仮引数」と呼ばれており、<br>
+関数が呼び出されると仮引数に呼び出し側から渡された値が代入されたのち関数本体が実行されます。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sum</span>(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">10</span>);
+</code></pre></div><p>上記の例では仮引数のaには5、bには10が値として記憶されてから、関数本体が実行されます。<br>
+仮引数には普通の変数と同じような役割をしますが、この関数の本体でしか値の参照や代入はできません。<br>
+関数の外に同じ名前の変数があったとしても別の変数として扱われます。</p>
+<h3 id="関数の引数の注意点">関数の引数の注意点</h3>
+<p>多くの言語では引数の個数が違う場合は異なる関数として扱われます。<br>
+例えば、Javaではf(x)とf(x, y)とでは引数の数が異なるため別の関数として扱われます。<br>
+JavaScriptではこのような区別がなく、引数なしであっても、引数がいくつあっても同じ関数として呼び出されます。<br>
+そのため、どのような関数でも任意個数の引数を指定して呼び出すことができます。<br>
+呼び出し側に引数を指定しない場合は暗黙のうちに<code>undefined</code>が指定されて呼び出されます。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">myFunc_5</span>() {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">output_3</span>());
+}
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">output_3</span>(<span style="color:#a6e22e">x</span>) {
+  <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;output_3内のxの値：&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">x</span>;
+}
+</code></pre></div><pre><code>output_3内のxの値：undefined
 </code></pre>
 
 <footer class="footline">
@@ -1403,6 +1491,22 @@ return文が実行されると、それ以降の処理は実行されないた�
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1453,38 +1557,6 @@ return文が実行されると、それ以降の処理は実行されないた�
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1598,54 +1670,6 @@ return文が実行されると、それ以降の処理は実行されないた�
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
             
             
@@ -1686,6 +1710,86 @@ return文が実行されると、それ以降の処理は実行されないた�
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -1738,6 +1842,22 @@ return文が実行されると、それ以降の処理は実行されないた�
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2066,19 +2186,19 @@ return文が実行されると、それ以降の処理は実行されないた�
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/gas-education/js/clipboard.min.js?1603606337"></script>
-    <script src="/gas-education/js/perfect-scrollbar.min.js?1603606337"></script>
-    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1603606337"></script>
-    <script src="/gas-education/js/jquery.sticky.js?1603606337"></script>
-    <script src="/gas-education/js/featherlight.min.js?1603606337"></script>
-    <script src="/gas-education/js/highlight.pack.js?1603606337"></script>
+    <script src="/gas-education/js/clipboard.min.js?1612092594"></script>
+    <script src="/gas-education/js/perfect-scrollbar.min.js?1612092594"></script>
+    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1612092594"></script>
+    <script src="/gas-education/js/jquery.sticky.js?1612092594"></script>
+    <script src="/gas-education/js/featherlight.min.js?1612092594"></script>
+    <script src="/gas-education/js/highlight.pack.js?1612092594"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1603606337"></script>
-    <script src="/gas-education/js/learn.js?1603606337"></script>
-    <script src="/gas-education/js/hugo-learn.js?1603606337"></script>
+    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1612092594"></script>
+    <script src="/gas-education/js/learn.js?1612092594"></script>
+    <script src="/gas-education/js/hugo-learn.js?1612092594"></script>
 
-    <link href="/gas-education/mermaid/mermaid.css?1603606337" rel="stylesheet" />
-    <script src="/gas-education/mermaid/mermaid.js?1603606337"></script>
+    <link href="/gas-education/mermaid/mermaid.css?1612092594" rel="stylesheet" />
+    <script src="/gas-education/mermaid/mermaid.js?1612092594"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -12,21 +12,21 @@
     <title>関数 :: GAS Edu</title>
 
     
-    <link href="/gas-education/css/nucleus.css?1603606337" rel="stylesheet">
-    <link href="/gas-education/css/fontawesome-all.min.css?1603606337" rel="stylesheet">
-    <link href="/gas-education/css/hybrid.css?1603606337" rel="stylesheet">
-    <link href="/gas-education/css/featherlight.min.css?1603606337" rel="stylesheet">
-    <link href="/gas-education/css/perfect-scrollbar.min.css?1603606337" rel="stylesheet">
-    <link href="/gas-education/css/auto-complete.css?1603606337" rel="stylesheet">
-    <link href="/gas-education/css/atom-one-dark-reasonable.css?1603606337" rel="stylesheet">
-    <link href="/gas-education/css/theme.css?1603606337" rel="stylesheet">
-    <link href="/gas-education/css/hugo-theme.css?1603606337" rel="stylesheet">
+    <link href="/gas-education/css/nucleus.css?1612092594" rel="stylesheet">
+    <link href="/gas-education/css/fontawesome-all.min.css?1612092594" rel="stylesheet">
+    <link href="/gas-education/css/hybrid.css?1612092594" rel="stylesheet">
+    <link href="/gas-education/css/featherlight.min.css?1612092594" rel="stylesheet">
+    <link href="/gas-education/css/perfect-scrollbar.min.css?1612092594" rel="stylesheet">
+    <link href="/gas-education/css/auto-complete.css?1612092594" rel="stylesheet">
+    <link href="/gas-education/css/atom-one-dark-reasonable.css?1612092594" rel="stylesheet">
+    <link href="/gas-education/css/theme.css?1612092594" rel="stylesheet">
+    <link href="/gas-education/css/hugo-theme.css?1612092594" rel="stylesheet">
     
-    <link href="/gas-education/css/theme-blue.css?1603606337" rel="stylesheet">
+    <link href="/gas-education/css/theme-blue.css?1612092594" rel="stylesheet">
     
     
 
-    <script src="/gas-education/js/jquery-3.3.1.min.js?1603606337"></script>
+    <script src="/gas-education/js/jquery-3.3.1.min.js?1612092594"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -71,14 +71,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/gas-education/js/lunr.min.js?1603606337"></script>
-<script type="text/javascript" src="/gas-education/js/auto-complete.js?1603606337"></script>
+<script type="text/javascript" src="/gas-education/js/lunr.min.js?1612092594"></script>
+<script type="text/javascript" src="/gas-education/js/auto-complete.js?1612092594"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/a-nakamura1015\/gas-education";
     
 </script>
-<script type="text/javascript" src="/gas-education/js/search.js?1603606337"></script>
+<script type="text/javascript" src="/gas-education/js/search.js?1612092594"></script>
 
     
   </div>
@@ -186,9 +186,9 @@
  
   
     
-      <li data-nav-id="/gas-education/introduction/page_4/" title="GASでコーディングしてみよう" class="dd-item ">
+      <li data-nav-id="/gas-education/introduction/page_4/" title="スクリプトエディタの使い方" class="dd-item ">
         <a href="/gas-education/introduction/page_4/">
-        <b>4. </b>GASでコーディングしてみよう
+        <b>4. </b>スクリプトエディタの使い方
         
         </a>
     </li>
@@ -207,9 +207,30 @@
  
   
     
-      <li data-nav-id="/gas-education/introduction/page_5/" title="最後に" class="dd-item ">
+      <li data-nav-id="/gas-education/introduction/page_5/" title="GASでコーディングしてみよう" class="dd-item ">
         <a href="/gas-education/introduction/page_5/">
-        <b>5. </b>最後に
+        <b>5. </b>GASでコーディングしてみよう
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/introduction/page_6/" title="最後に" class="dd-item ">
+        <a href="/gas-education/introduction/page_6/">
+        <b>6. </b>最後に
         
         </a>
     </li>
@@ -720,9 +741,30 @@
  
   
     
-      <li data-nav-id="/gas-education/javascript_bases/function/page_2_3_4/" title="最後に" class="dd-item ">
+      <li data-nav-id="/gas-education/javascript_bases/function/page_2_3_4/" title="無名関数" class="dd-item ">
         <a href="/gas-education/javascript_bases/function/page_2_3_4/">
-        <b>4. </b>最後に
+        <b>4. </b>無名関数
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/javascript_bases/function/page_2_3_5/" title="最後に" class="dd-item ">
+        <a href="/gas-education/javascript_bases/function/page_2_3_5/">
+        <b>5. </b>最後に
         
         </a>
     </li>
@@ -1218,6 +1260,7 @@
   <ul>
     <li><a href="#関数とは">関数とは</a>
       <ul>
+        <li><a href="#関数の構文">関数の構文</a></li>
         <li><a href="#コーディングする際の注意点">コーディングする際の注意点</a></li>
       </ul>
     </li>
@@ -1246,20 +1289,22 @@
 
 
 <h2 id="関数とは">関数とは</h2>
-<p>入門編で少し解説いたしましたが、<em><strong>関数</strong></em> とは一連の処理をひとまとめにして名前をつけたものです。</p>
-<p>関数を実行する際は関数名を指定して呼び出すことにより、関数を実行することができます。</p>
-<p>関数を作り方にはルールがあり、以下のように <em><strong>function キーワード</strong></em> で定義します。</p>
+<p>入門編で少し解説しましたが、<strong>関数</strong> とは一連の処理をひとまとめにして名前をつけたものです。<br>
+「関数（function）」　は文が集まったもので、プログラムを構成する部品の役割をする「サブプログラム」です。<br>
+JavaScriptでは関数はとても重要な役割を果たしますが、本章ではその基本的な機能と使い方を紹介します。</p>
+<h3 id="関数の構文">関数の構文</h3>
+<p>関数を実行する際は関数名を指定して呼び出すことにより、関数を実行することができます。<br>
+関数を作り方にはルールがあり、以下のように <strong>function キーワード</strong> で定義します。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">関数名</span>() {
   <span style="color:#a6e22e">処理</span>
 }
-</code></pre></div><p>ここまではデフォルトの「myFunction」という名前の関数を実行してきましたが、
-関数名は任意の設定することができます。</p>
-<p>関数名はその関数がどのような処理を行うかがイメージしやすい名前をつけるようにしましょう。</p>
-<p>例えば、「ユーザー名を取得する関数」であれば、「getUserName」とするとわかりやすいですよね。</p>
-<p>また、波括弧（{}）で囲った箇所は、複数のステートメントをまとめたもので <em><strong>ブロック</strong></em> といいます。</p>
-<p>このブロックは今後の説明する構文で重要な役割を果たします。</p>
-<p>ブロックは改行しないで記述することはできますが、改行を入れたほうが読みやすいとコードになります。</p>
-<p>下記の例で見比べると一目瞭然ですね。</p>
+</code></pre></div><p>ここまではデフォルトの「myFunction」という名前の関数を実行してきましたが、関数名は任意でつけることができます。<br>
+関数名はその関数がどのような処理を行うかがイメージしやすい名前をつけるようにしましょう。<br>
+例えば、「ユーザー名を取得する関数」であれば、「getUserName」とするとわかりやすいですよね。<br>
+また、波括弧（<code>{}</code>）で囲った箇所は、複数のステートメントをまとめたもので <strong>ブロック</strong> といいます。<br>
+このブロックは今後の説明する構文で重要な役割を果たします。<br>
+ブロックは改行しないで記述することはできますが、改行を入れたほうが読みやすいコードになります。<br>
+下記の例で見比べると一目瞭然ですね。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">myFunction</span>() {<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Hello GAS&#39;</span>);}
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">myFunction</span>() {
   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Hello GAS&#39;</span>);
@@ -1268,21 +1313,21 @@
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sayHello</span>() {
   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Hello!&#39;</span>);
 }
-</code></pre></div><p>すると、スクリプトエディタのツールバーの「関数選択」のプルダウンに「sayHello」が選択可能となっていることが確認できます。</p>
-<p>その関数を選択してスクリプトを実行してそのログ表示を確認してみましょう。</p>
-<p>「sayHello」を実行すると、「Hello!」と表示されます。</p>
-<p>このように、gsファイルには複数の関数を定義することができます。そして、定義した関数を「関数選択」のプルダウンから選択して実行することができます。</p>
+</code></pre></div><p>すると、スクリプトエディタのツールバーの「関数選択」のプルダウンに「sayHello」が選択可能となっていることが確認できます。<br>
+その関数を選択してスクリプトを実行してそのログ表示を確認してみましょう。<br>
+「sayHello」を実行すると、「Hello!」と表示されます。<br>
+このように、gsファイルには複数の関数を定義することができます。そして、定義した関数を「関数選択」のプルダウンから選択して実行することができます。</p>
 <h3 id="コーディングする際の注意点">コーディングする際の注意点</h3>
-<p>JavaScriptでコーディングする際は基本的に半角英数字と半角記号のみを使用します。</p>
-<p>逆にいうと、全角文字は使用することができません。（後述の文字列やコメントでは使用できます。）</p>
-<p>また、JavaScriptは同じアルファベットでも大文字と小文字を区別します。
+<p>JavaScriptでコーディングする際は基本的に半角英数字と半角記号のみを使用します。<br>
+逆にいうと、全角文字は使用することができません。（後述の文字列やコメントでは使用できます。）<br>
+また、JavaScriptは同じアルファベットでも大文字と小文字を区別します。<br>
 そのため、下記のようなコードを記述するとスクリプトの実行時にエラーが発生します。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">myFunction</span>() {
   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">Log</span>(<span style="color:#e6db74">&#39;Hello GAS!&#39;</span>)
 }
-</code></pre></div><p>実行すると、「TypeError：オブジェクトconsoleで関数Logが見つかりません。」というエラーが発生します。</p>
-<p>このように、タイプミスで大文字と小文字を間違えたりするとエラーとなってしまいます。</p>
-<p>スクリプトエディタには自動補完機能があるので、この機能を駆使することでタイプミスを防ぐことができます。</p>
+</code></pre></div><p>実行すると、「<code>TypeError：オブジェクトconsoleで関数Logが見つかりません。</code>」というエラーが発生します。<br>
+このようにタイプミスで大文字と小文字を間違えたりするとエラーとなってしまいます。<br>
+ちなみに、スクリプトエディタには自動補完機能があるので、この機能を駆使することでタイプミスを防ぐことができます。</p>
 
 
 <footer class="footline">
@@ -1411,6 +1456,22 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1506,38 +1567,6 @@
                     
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1581,54 +1610,6 @@
                     
             
         
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
                     
                         
             
@@ -1709,6 +1690,102 @@
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -2074,19 +2151,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/gas-education/js/clipboard.min.js?1603606337"></script>
-    <script src="/gas-education/js/perfect-scrollbar.min.js?1603606337"></script>
-    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1603606337"></script>
-    <script src="/gas-education/js/jquery.sticky.js?1603606337"></script>
-    <script src="/gas-education/js/featherlight.min.js?1603606337"></script>
-    <script src="/gas-education/js/highlight.pack.js?1603606337"></script>
+    <script src="/gas-education/js/clipboard.min.js?1612092594"></script>
+    <script src="/gas-education/js/perfect-scrollbar.min.js?1612092594"></script>
+    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1612092594"></script>
+    <script src="/gas-education/js/jquery.sticky.js?1612092594"></script>
+    <script src="/gas-education/js/featherlight.min.js?1612092594"></script>
+    <script src="/gas-education/js/highlight.pack.js?1612092594"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1603606337"></script>
-    <script src="/gas-education/js/learn.js?1603606337"></script>
-    <script src="/gas-education/js/hugo-learn.js?1603606337"></script>
+    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1612092594"></script>
+    <script src="/gas-education/js/learn.js?1612092594"></script>
+    <script src="/gas-education/js/hugo-learn.js?1612092594"></script>
 
-    <link href="/gas-education/mermaid/mermaid.css?1603606337" rel="stylesheet" />
-    <script src="/gas-education/mermaid/mermaid.js?1603606337"></script>
+    <link href="/gas-education/mermaid/mermaid.css?1612092594" rel="stylesheet" />
+    <script src="/gas-education/mermaid/mermaid.js?1612092594"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
