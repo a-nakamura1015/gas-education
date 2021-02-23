@@ -1,4 +1,4 @@
-baseURL = "http://a-nakamura1015/gas-education"
+baseURL = "https://a-nakamura1015.github.io/gas-education"
 languageCode = "ja"
 title = "GAS Edu"
 contentDir = "content"
