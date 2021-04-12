@@ -5,36 +5,37 @@ pre: "<b>4. </b>"
 weight: 4
 ---
 ### Scriptletについて
-GASで生成した値を画面に出力したいときは　***Scriptlet*** を使用すると簡単に出力することができます。
-
+GASで生成した値を画面に出力したいときは　***Scriptlet*** を使用すると簡単に出力することができます。  
 Scriptletには「Standard scriptlets」と「Printing scriptlets」の２種類あります。
 
 #### Standard scriptlets
-スクリプトとして実行しますが、結果は画面に出力されません。
-
+スクリプトとして実行しますが、結果は画面に出力されません。  
 for文などの処理をしたい場合に記述します。
 ```
 <? ... ?>
 ```
 
 #### Printing scriptlets
-実行結果を画面に出力することができます。
+スクリプトの実行結果を画面に出力することができます。
 ```
 <?= ... ?>
 ```
 
 ### スプレッドシートの値を表示する
-Scriptletを使用するとスプレッドシートの値を画面に出力することができます。
+Scriptletを使用するとスプレッドシートの値を画面に出力することができます。  
+以下のサンプルで確認をしてみましょう。
 
+Code.gs
 ```js
 function doGet(e) {
   var template = HtmlService.createTemplateFromFile('index');
   var sheet = SpreadsheetApp.openById('XXXX').getSheetByName('XXXX');
   var values = sheet.getRange(2, 1, sheet.getLastRow() - 1, sheet.getLastColumn() - 1).getValues();
-  template.values = values;
+  template.values = values; // シートから取得した値を画面に渡します
   return template.evaluate();
 }
 ```
+index.html
 ```
 <!DOCTYPE html>
 <html>
@@ -69,4 +70,18 @@ function doGet(e) {
     </div>
   </div>
 </body>
+```
+
+注目する点は index.html の以下の処理です。  
+Scriptlet を活用してスプレッドシートから取得した値（`values`）を設定してします。  
+
+```
+<? for (var i = 0; i < values.length; i++) { ?>
+<tr>
+  <td><?= values[i][0]; ?></td>
+  <td><?= values[i][1]; ?></td>
+  <td><?= values[i][2]; ?></td>
+  <td><?= values[i][3]; ?></td>
+</tr>
+<? } ?>
 ```
