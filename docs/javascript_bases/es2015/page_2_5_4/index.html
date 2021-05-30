@@ -1,0 +1,3057 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.74.3" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/gas-education/images/favicon.png" type="image/png">
+
+    <title>class構文 :: GAS Edu</title>
+
+    
+    <link href="/gas-education/css/nucleus.css?1622365525" rel="stylesheet">
+    <link href="/gas-education/css/fontawesome-all.min.css?1622365525" rel="stylesheet">
+    <link href="/gas-education/css/hybrid.css?1622365525" rel="stylesheet">
+    <link href="/gas-education/css/featherlight.min.css?1622365525" rel="stylesheet">
+    <link href="/gas-education/css/perfect-scrollbar.min.css?1622365525" rel="stylesheet">
+    <link href="/gas-education/css/auto-complete.css?1622365525" rel="stylesheet">
+    <link href="/gas-education/css/atom-one-dark-reasonable.css?1622365525" rel="stylesheet">
+    <link href="/gas-education/css/theme.css?1622365525" rel="stylesheet">
+    <link href="/gas-education/css/hugo-theme.css?1622365525" rel="stylesheet">
+    
+    <link href="/gas-education/css/theme-blue.css?1622365525" rel="stylesheet">
+    
+    
+
+    <script src="/gas-education/js/jquery-3.3.1.min.js?1622365525"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/gas-education/javascript_bases/es2015/page_2_5_4/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://a-nakamura1015.github.io/gas-education">
+  <svg id="grav-logo" style="width:100%; height:100%;" viewBox="0 0 504 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <path d="M235.832,71.564l-7.98,-0.001c-1.213,0.001 -2.197,0.987 -2.197,2.204l0,15.327l-0.158,0.132c-4.696,3.962 -10.634,6.14 -16.719,6.14c-14.356,0 -26.034,-11.68 -26.034,-26.037c0,-14.358 11.678,-26.035 26.034,-26.035c5.582,0 10.919,1.767 15.437,5.113c0.877,0.649 2.093,0.56 2.866,-0.211l5.69,-5.69c0.444,-0.442 0.675,-1.055 0.639,-1.681c-0.034,-0.627 -0.336,-1.206 -0.828,-1.597c-6.76,-5.363 -15.214,-8.314 -23.805,-8.314c-21.18,0 -38.414,17.233 -38.414,38.415c0,21.183 17.234,38.415 38.414,38.415c10.937,0 21.397,-4.705 28.698,-12.914c0.358,-0.403 0.556,-0.921 0.556,-1.46l0,-19.603c0,-1.217 -0.985,-2.203 -2.2,-2.203"
+      style="fill:#000;fill-rule:nonzero;"></path>
+    <path d="M502.794,34.445c-0.408,-0.616 -1.1,-0.989 -1.838,-0.989l-8.684,0c-0.879,0 -1.673,0.522 -2.022,1.329l-24.483,56.839l-24.92,-56.852c-0.352,-0.799 -1.142,-1.316 -2.012,-1.316l-8.713,0c-0.744,0 -1.44,0.373 -1.843,0.995c-0.408,0.623 -0.476,1.408 -0.174,2.09l30.186,68.858c0.352,0.799 1.143,1.317 2.017,1.317l10.992,0c0.879,0 1.673,-0.527 2.021,-1.329l29.655,-68.861c0.289,-0.68 0.222,-1.461 -0.182,-2.081"
+      style="fill:#000;fill-rule:nonzero;"></path>
+    <path d="M388.683,34.772c-0.353,-0.798 -1.142,-1.316 -2.017,-1.316l-10.988,0c-0.879,0 -1.673,0.522 -2.021,1.329l-29.655,68.861c-0.294,0.675 -0.226,1.46 0.182,2.077c0.407,0.619 1.096,0.993 1.838,0.993l8.684,0c0.879,0 1.673,-0.526 2.022,-1.329l24.478,-56.842l24.92,56.854c0.353,0.798 1.143,1.317 2.013,1.317l8.717,0c0.744,0 1.44,-0.374 1.843,-0.993c0.408,-0.624 0.471,-1.41 0.174,-2.094l-30.19,-68.857Z"
+      style="fill:#000;fill-rule:nonzero;"></path>
+    <path d="M309.196,81.525l0.476,-0.229c8.675,-4.191 14.279,-13.087 14.279,-22.667c0,-13.881 -11.295,-25.174 -25.176,-25.174l-31.863,0c-1.214,0 -2.199,0.988 -2.199,2.202l0,68.855c0,1.219 0.985,2.204 2.199,2.204l7.979,0c1.214,0 2.2,-0.985 2.2,-2.204l0,-58.679l21.684,0c7.059,0 12.799,5.739 12.799,12.796c0,5.885 -3.996,10.989 -9.728,12.408c-1.032,0.261 -2.064,0.393 -3.071,0.393l-7.977,0c-0.829,0 -1.585,0.467 -1.959,1.205c-0.378,0.74 -0.305,1.625 0.187,2.296l22.62,30.884c0.412,0.566 1.07,0.901 1.771,0.901l9.915,0c0.827,0 1.587,-0.467 1.96,-1.207c0.378,-0.742 0.302,-1.629 -0.186,-2.296l-15.91,-21.688Z"
+      style="fill:#000;fill-rule:nonzero;"></path>
+    <path d="M107.191,80.969c-7.255,-4.794 -11.4,-8.845 -15.011,-16.109c-2.47,4.977 -8.236,12.376 -17.962,18.198c-4.856,15.106 -27.954,44.015 -35.43,39.916c-2.213,-1.212 -2.633,-2.808 -2.133,-4.456c0.536,-4.129 9.078,-13.62 9.078,-13.62c0,0 0.18,1.992 2.913,6.187c-3.609,-11.205 5.965,-25.031 8.5,-29.738c3.985,-1.269 4.274,-6.387 4.274,-6.387c0.255,-7.909 -3.278,-13.635 -6.701,-17.059c2.459,3.002 3.255,7.539 3.372,11.694l0,0.023c0.012,0.469 0.012,0.93 0.011,1.39c-0.117,3.439 -1.157,8.19 -3.383,8.19l0.006,0.03c-2.289,-0.098 -5.115,0.391 -7.639,1.18l-5.582,1.334c0,0 2.977,-0.136 4.584,1.252c-1.79,2.915 -5.769,6.533 -10.206,8.588c-6.457,2.995 -8.312,-2.964 -5.034,-6.838c0.805,-0.946 1.618,-1.745 2.387,-2.399c-0.495,-0.513 -0.807,-1.198 -0.889,-2.068c-0.001,-0.005 -0.004,-0.009 -0.005,-0.013c-0.45,-1.977 -0.202,-4.543 2.596,-8.623c0.551,-0.863 1.214,-1.748 2.007,-2.647c0.025,-0.031 0.046,-0.059 0.072,-0.089c0.034,-0.042 0.072,-0.08 0.108,-0.121c0.02,-0.023 0.039,-0.045 0.059,-0.068c0.2,-0.228 0.413,-0.45 0.639,-0.663c3.334,-3.414 8.599,-6.966 16.897,-10.152c9.675,-14.223 13.219,-16.89 13.219,-16.89c1.071,-1.096 2.943,-2.458 3.632,-2.805c-5.053,-8.781 -6.074,-21.158 -4.75,-24.493c-0.107,0.18 -0.206,0.365 -0.287,0.556c0.49,-1.143 0.819,-1.509 1.328,-2.111c1.381,-1.632 6.058,-2.488 7.737,0.971c0.895,1.844 1.063,4.232 1.034,6.023c-3.704,-0.193 -7.063,4.036 -7.063,4.036c0,0 3.067,-1.448 6.879,-1.473c0,0 1.015,0.883 2.283,2.542c-1.712,3.213 -4.524,10.021 -2.488,17.168c0.338,1.408 0.849,2.619 1.483,3.648c0.024,0.045 0.044,0.089 0.069,0.135c0.051,0.066 0.096,0.122 0.144,0.183c3.368,5.072 9.542,5.665 9.542,5.665c-2.906,-1.45 -5.274,-3.76 -6.816,-6.56c-0.8,-1.498 -1.291,-2.762 -1.592,-3.761c-1.636,-6.313 0.771,-9.999 2.149,-12.471c3.17,-4.917 8.944,-7.893 15.151,-7.185c8.712,0.995 14.968,8.862 13.973,17.571c-0.608,5.321 -3.781,9.723 -8.142,12.117c1.049,2.839 -0.073,6.28 -0.073,6.28c2.642,3.323 2.758,5.238 2.667,7.017c-3.357,-0.565 -6.618,1.701 -6.618,1.701c0,0 6.476,-1.546 10.238,1.81c2.446,2.631 4.078,5.009 5.051,6.766c1.393,2.505 7.859,2.683 7.123,7.188c-0.737,4.499 -5.669,4.542 -13.401,-0.56M69.571,0c-38.424,0 -69.571,31.148 -69.571,69.567c0,38.422 31.147,69.573 69.571,69.573c38.42,0 69.568,-31.151 69.568,-69.573c0,-38.42 -31.148,-69.567 -69.568,-69.567"
+      style="fill:#000;fill-rule:nonzero;"></path>
+    <path d="M73.796,51.693c0.813,-0.814 0.813,-2.134 0,-2.947c-0.815,-0.814 -2.133,-0.814 -2.947,0c-0.815,0.813 -0.815,2.133 0,2.947c0.814,0.813 2.132,0.813 2.947,0" style="fill:#000;fill-rule:nonzero;"></path>
+    <path d="M66.445,53.149c-0.814,0.813 -0.814,2.133 0,2.947c0.813,0.814 2.133,0.814 2.947,0c0.813,-0.814 0.813,-2.134 0,-2.947c-0.814,-0.813 -2.134,-0.813 -2.947,0" style="fill:#000;fill-rule:nonzero;"></path>
+    <path d="M79.231,54.233c-1.274,-1.274 -3.339,-1.272 -4.611,0l-2.713,2.712c-1.274,1.275 -1.274,3.339 0,4.612l2.978,2.978c1.274,1.275 3.338,1.274 4.611,0l2.712,-2.712c1.274,-1.274 1.274,-3.339 0,-4.612l-2.977,-2.978Z" style="fill:#000;fill-rule:nonzero;"></path>
+    <path d="M95.759,41.445c-2.151,-2.578 1.869,-7.257 4.391,-4.463c4.645,5.148 -2.237,7.041 -4.391,4.463M105.004,44.132c3.442,-6.553 -1.427,-10.381 -4.773,-13.523c-5.36,-5.039 -10.706,-7.217 -16.811,-0.241c-6.102,6.977 -2.226,15.068 3.356,19.061c5.584,3.994 14.782,1.255 18.228,-5.297"
+      style="fill:#000;fill-rule:nonzero;"></path>
+  </svg>
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/gas-education/js/lunr.min.js?1622365525"></script>
+<script type="text/javascript" src="/gas-education/js/auto-complete.js?1622365525"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/a-nakamura1015.github.io\/gas-education";
+    
+</script>
+<script type="text/javascript" src="/gas-education/js/search.js?1622365525"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/gas-education/introduction/" title="入門編" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/gas-education/introduction/">
+          <b>1. </b>入門編
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/introduction/page_1/" title="はじめに" class="dd-item ">
+        <a href="/gas-education/introduction/page_1/">
+        <b>1. </b>はじめに
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/introduction/page_2/" title="Google Apps Script とは" class="dd-item ">
+        <a href="/gas-education/introduction/page_2/">
+        <b>2. </b>Google Apps Script とは
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/introduction/page_3/" title="前準備をしよう" class="dd-item ">
+        <a href="/gas-education/introduction/page_3/">
+        <b>3. </b>前準備をしよう
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/introduction/page_4/" title="スクリプトエディタの使い方" class="dd-item ">
+        <a href="/gas-education/introduction/page_4/">
+        <b>4. </b>スクリプトエディタの使い方
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/introduction/page_5/" title="GASでコーディングしてみよう" class="dd-item ">
+        <a href="/gas-education/introduction/page_5/">
+        <b>5. </b>GASでコーディングしてみよう
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/introduction/page_6/" title="最後に" class="dd-item ">
+        <a href="/gas-education/introduction/page_6/">
+        <b>6. </b>最後に
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/gas-education/javascript_bases/" title="JavaScript基礎編" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/gas-education/javascript_bases/">
+          <b>2. </b>JavaScript基礎編
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/javascript_bases/page_1/" title="はじめに" class="dd-item ">
+        <a href="/gas-education/javascript_bases/page_1/">
+        <b>1. </b>はじめに
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/gas-education/javascript_bases/value/" title="基本構文を学ぼう" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/gas-education/javascript_bases/value/">
+          <b>2. </b>基本構文を学ぼう
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/javascript_bases/value/page_2_1_1/" title="ステートメント" class="dd-item ">
+        <a href="/gas-education/javascript_bases/value/page_2_1_1/">
+        <b>1. </b>ステートメント
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/javascript_bases/value/page_2_1_2/" title="関数" class="dd-item ">
+        <a href="/gas-education/javascript_bases/value/page_2_1_2/">
+        <b>2. </b>関数
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/javascript_bases/value/page_2_1_3/" title="コメント" class="dd-item ">
+        <a href="/gas-education/javascript_bases/value/page_2_1_3/">
+        <b>3. </b>コメント
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/javascript_bases/value/page_2_1_4/" title="変数" class="dd-item ">
+        <a href="/gas-education/javascript_bases/value/page_2_1_4/">
+        <b>4. </b>変数
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/javascript_bases/value/page_2_1_5/" title="スコープ" class="dd-item ">
+        <a href="/gas-education/javascript_bases/value/page_2_1_5/">
+        <b>5. </b>スコープ
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/javascript_bases/value/page_2_1_7/" title="データ型" class="dd-item ">
+        <a href="/gas-education/javascript_bases/value/page_2_1_7/">
+        <b>5. </b>データ型
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/javascript_bases/value/page_2_1_8/" title="配列" class="dd-item ">
+        <a href="/gas-education/javascript_bases/value/page_2_1_8/">
+        <b>6. </b>配列
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/javascript_bases/value/page_2_1_9/" title="オブジェクト" class="dd-item ">
+        <a href="/gas-education/javascript_bases/value/page_2_1_9/">
+        <b>7. </b>オブジェクト
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/javascript_bases/value/page_2_1_10/" title="演算子" class="dd-item ">
+        <a href="/gas-education/javascript_bases/value/page_2_1_10/">
+        <b>8. </b>演算子
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/javascript_bases/value/page2_1_11/" title="最後に" class="dd-item ">
+        <a href="/gas-education/javascript_bases/value/page2_1_11/">
+        <b>9. </b>最後に
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/gas-education/javascript_bases/control_syntax/" title="制御構文を学ぼう" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/gas-education/javascript_bases/control_syntax/">
+          <b>3. </b>制御構文を学ぼう
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/javascript_bases/control_syntax/page_2_2_1/" title="処理を分岐させる" class="dd-item ">
+        <a href="/gas-education/javascript_bases/control_syntax/page_2_2_1/">
+        <b>1. </b>処理を分岐させる
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/javascript_bases/control_syntax/page_2_2_2/" title="処理を繰り返し行う" class="dd-item ">
+        <a href="/gas-education/javascript_bases/control_syntax/page_2_2_2/">
+        <b>2. </b>処理を繰り返し行う
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/javascript_bases/control_syntax/page_2_2_3/" title="例外処理でエラーを検知する" class="dd-item ">
+        <a href="/gas-education/javascript_bases/control_syntax/page_2_2_3/">
+        <b>3. </b>例外処理でエラーを検知する
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/javascript_bases/control_syntax/page_2_2_4/" title="最後に" class="dd-item ">
+        <a href="/gas-education/javascript_bases/control_syntax/page_2_2_4/">
+        <b>4. </b>最後に
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/gas-education/javascript_bases/function/" title="関数を学ぼう" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/gas-education/javascript_bases/function/">
+          <b>4. </b>関数を学ぼう
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/javascript_bases/function/page_2_3_1/" title="宣言と呼び出し" class="dd-item ">
+        <a href="/gas-education/javascript_bases/function/page_2_3_1/">
+        <b>1. </b>宣言と呼び出し
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/javascript_bases/function/page_2_3_2/" title="引数と戻り値" class="dd-item ">
+        <a href="/gas-education/javascript_bases/function/page_2_3_2/">
+        <b>2. </b>引数と戻り値
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/javascript_bases/function/page_2_3_4/" title="無名関数" class="dd-item ">
+        <a href="/gas-education/javascript_bases/function/page_2_3_4/">
+        <b>4. </b>無名関数
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/javascript_bases/function/page_2_3_5/" title="最後に" class="dd-item ">
+        <a href="/gas-education/javascript_bases/function/page_2_3_5/">
+        <b>5. </b>最後に
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/gas-education/javascript_bases/object_mechanism/" title="オブジェクトの仕組みを学ぼう" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/gas-education/javascript_bases/object_mechanism/">
+          <b>5. </b>オブジェクトの仕組みを学ぼう
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/javascript_bases/object_mechanism/page_2_4_1/" title="オブジェクト" class="dd-item ">
+        <a href="/gas-education/javascript_bases/object_mechanism/page_2_4_1/">
+        <b>1. </b>オブジェクト
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/javascript_bases/object_mechanism/page_2_4_2/" title="インスタンス化" class="dd-item ">
+        <a href="/gas-education/javascript_bases/object_mechanism/page_2_4_2/">
+        <b>2. </b>インスタンス化
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/javascript_bases/object_mechanism/page_2_4_3/" title="最後に" class="dd-item ">
+        <a href="/gas-education/javascript_bases/object_mechanism/page_2_4_3/">
+        <b>3. </b>最後に
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/gas-education/javascript_bases/es2015/" title="ES2015を学ぼう" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/gas-education/javascript_bases/es2015/">
+          <b>6. </b>ES2015を学ぼう
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/javascript_bases/es2015/page_2_5_1/" title="let・const キーワード" class="dd-item ">
+        <a href="/gas-education/javascript_bases/es2015/page_2_5_1/">
+        <b>1. </b>let・const キーワード
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/javascript_bases/es2015/page_2_5_2/" title="テンプレート文字列" class="dd-item ">
+        <a href="/gas-education/javascript_bases/es2015/page_2_5_2/">
+        <b>2. </b>テンプレート文字列
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/javascript_bases/es2015/page_2_5_3/" title="アロー関数" class="dd-item ">
+        <a href="/gas-education/javascript_bases/es2015/page_2_5_3/">
+        <b>3. </b>アロー関数
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/javascript_bases/es2015/page_2_5_4/" title="class構文" class="dd-item active">
+        <a href="/gas-education/javascript_bases/es2015/page_2_5_4/">
+        <b>4. </b>class構文
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/javascript_bases/es2015/page_2_5_5/" title="スプレッド構文" class="dd-item ">
+        <a href="/gas-education/javascript_bases/es2015/page_2_5_5/">
+        <b>5. </b>スプレッド構文
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/javascript_bases/es2015/page_2_5_6/" title="for...of文" class="dd-item ">
+        <a href="/gas-education/javascript_bases/es2015/page_2_5_6/">
+        <b>6. </b>for...of文
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/javascript_bases/es2015/page_2_5_7/" title="最後に" class="dd-item ">
+        <a href="/gas-education/javascript_bases/es2015/page_2_5_7/">
+        <b>7. </b>最後に
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/javascript_bases/page_3/" title="最後に" class="dd-item ">
+        <a href="/gas-education/javascript_bases/page_3/">
+        <b>7. </b>最後に
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/gas-education/sheets/" title="スプレッドシート編" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/gas-education/sheets/">
+          <b>3. </b>スプレッドシート編
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/sheets/page_1/" title="はじめに" class="dd-item ">
+        <a href="/gas-education/sheets/page_1/">
+        <b>1. </b>はじめに
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/sheets/page_2/" title="Spreadsheetサービス" class="dd-item ">
+        <a href="/gas-education/sheets/page_2/">
+        <b>2. </b>Spreadsheetサービス
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/sheets/page_3/" title="スプレッドシートを操作する" class="dd-item ">
+        <a href="/gas-education/sheets/page_3/">
+        <b>3. </b>スプレッドシートを操作する
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/sheets/page_4/" title="シートを操作する" class="dd-item ">
+        <a href="/gas-education/sheets/page_4/">
+        <b>4. </b>シートを操作する
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/sheets/page_5/" title="セル範囲を操作する" class="dd-item ">
+        <a href="/gas-education/sheets/page_5/">
+        <b>5. </b>セル範囲を操作する
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/sheets/page_6/" title="トリガー" class="dd-item ">
+        <a href="/gas-education/sheets/page_6/">
+        <b>6. </b>トリガー
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/sheets/page_7/" title="最後に" class="dd-item ">
+        <a href="/gas-education/sheets/page_7/">
+        <b>7. </b>最後に
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/gas-education/web/" title="Webアプリ編" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/gas-education/web/">
+          <b>4. </b>Webアプリ編
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/web/page_1/" title="はじめに" class="dd-item ">
+        <a href="/gas-education/web/page_1/">
+        <b>1. </b>はじめに
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/web/page_2/" title="Web画面を表示してみよう" class="dd-item ">
+        <a href="/gas-education/web/page_2/">
+        <b>2. </b>Web画面を表示してみよう
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/web/page_4/" title="Web画面からGASの関数を実行してみましょう" class="dd-item ">
+        <a href="/gas-education/web/page_4/">
+        <b>3. </b>Web画面からGASの関数を実行してみましょう
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/web/page_5/" title="Web画面にスプレッドシートの値を表示してみましょう" class="dd-item ">
+        <a href="/gas-education/web/page_5/">
+        <b>4. </b>Web画面にスプレッドシートの値を表示してみましょう
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/gas-education/local/" title="ローカル開発編" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/gas-education/local/">
+          <b>5. </b>ローカル開発編
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/local/page_1/" title="はじめに" class="dd-item ">
+        <a href="/gas-education/local/page_1/">
+        <b>1. </b>はじめに
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/local/page_2/" title="ローカル開発とは" class="dd-item ">
+        <a href="/gas-education/local/page_2/">
+        <b>2. </b>ローカル開発とは
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/local/page_3/" title="clasp を使う前に" class="dd-item ">
+        <a href="/gas-education/local/page_3/">
+        <b>3. </b>clasp を使う前に
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/local/page_4/" title="clasp を使ってみよう" class="dd-item ">
+        <a href="/gas-education/local/page_4/">
+        <b>4. </b>clasp を使ってみよう
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/local/page_5/" title="最後に" class="dd-item ">
+        <a href="/gas-education/local/page_5/">
+        <b>5. </b>最後に
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/gas-education/'>GAS Edu</a> > <a href='/gas-education/javascript_bases/'>JavaScript基礎編</a> > <a href='/gas-education/javascript_bases/es2015/'>ES2015を学ぼう</a> > class構文
+          
+        
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#クラスとは">クラスとは</a></li>
+    <li><a href="#クラスの定義">クラスの定義</a></li>
+    <li><a href="#クラスを使うメリット">クラスを使うメリット</a></li>
+    <li><a href="#アクセッサプロパティ">アクセッサプロパティ</a></li>
+    <li><a href="#プロトタイプ">プロトタイプ</a></li>
+    <li><a href="#静的メソッドクラスメソッド">静的メソッド（クラスメソッド）</a></li>
+    <li><a href="#継承">継承</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              class構文
+            </h1>
+          
+
+        
+
+
+<h2 id="クラスとは">クラスとは</h2>
+<p>クラスを一言で表すと「オブジェクトの雛形（テンプレート）」です。<br>
+クラスはオブジェクトの**属性（プロパティ）<strong>と</strong>機能（メソッド）**を定義することができます。<br>
+例えば、人間をクラスで定義した場合、<br>
+名前や年齢などの情報を持ちますがこれは人間の属性（プロパティ）にあたります。<br>
+属性（プロパティ）は人間によって同じ場合もあれば異なる場合もあります。<br>
+また、人間は挨拶をしたり、食事をしたりしますがこれは機能（メソッド）にあたります。<br>
+皆同じ機能を持ちますが、人間によっては結果が異なる場合がありますね。<br>
+このようにクラスはデータの抽象的な概念を表現する際に活躍します。</p>
+<p>クラスはあくまで「オブジェクトの雛形（テンプレート）」であるため、<br>
+実際に動かす際はクラスをもとに**インスタンス（実体）**を生成し、このインスタンスに属性（プロパティ）を設定し機能（メソッド）を実行します。<br>
+これは、間の設計書（クラス）をもとに人間（インスタンス）を作っているというイメージです。</p>
+<h2 id="クラスの定義">クラスの定義</h2>
+<p>ES2015でクラスを表現するための<strong>class構文</strong>が導入されました。<br>
+class構文では <strong>class</strong> キーワードを用いてクラス名を付けて宣言します。<br>
+また、クラスは <strong>コンストラクター（constructor）</strong> と呼ばれる特殊なメソッドを持ちます。<br>
+コンストラクターはインスタンスが生成されるときに自動的に呼び出されるメソッドであり、<br>
+インスタンスの初期化処理（プロパティの値の設定など）を行うことができます。<br>
+コンストラクターは省略することができますが、この場合は空っぽのコンストラクターが定義されることになります。<br>
+なお、クラスに定義できるコンストラクターは1つまでです。</p>
+<p>クラスを宣言する方法は<strong>クラス宣言</strong>と<strong>クラス式</strong>の２種類があります。<br>
+以下はクラス宣言の構文です。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">クラス名</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">仮引数名1</span>{, <span style="color:#a6e22e">仮引数名2</span>...}) {
+    <span style="color:#75715e">// 同クラスのインスタンスが生成されるとき、インスタンスごとに自動的に呼び出される
+</span><span style="color:#75715e"></span>  }
+}
+</code></pre></div><p>もう一つの宣言方法のクラス式の構文は以下の通りです。<br>
+クラス式は変数に代入する形式となり、無名関数として扱うことができるためクラス名を省略することができます。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// クラスを値として定義し、変数に代入
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">変数名</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">クラス名</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">仮引数名1</span>{, <span style="color:#a6e22e">仮引数名2</span>...}) {}
+}
+<span style="color:#75715e">// 無名関数としてクラス名を省略して定義
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">変数名</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">class</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">仮引数名1</span>{, <span style="color:#a6e22e">仮引数名2</span>...}) {}
+}
+</code></pre></div>
+<div class="notices note" ><p>JavaScriptではクラス名の先頭の文字を大文字で書くことが慣習になっています。<br>
+この慣習を守ることで、小文字で書くインスタンス名と大文字で書くクラス名が一目で区別をつけることができます。</p>
+</div>
+
+<h2 id="クラスを使うメリット">クラスを使うメリット</h2>
+<p>これまではオブジェクトが必要になった際は、以下のようにその都度プロパティやメソッドを定義していました。<br>
+しかし、このコーディング方法はほとんど同じ内容のコードを書かないといけない上、<br>
+メソッドを増やすことになった場合は非常に手間がかかります。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">object_pattern</span>() {
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">human1</span> <span style="color:#f92672">=</span> {
+    <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Taro&#39;</span>,
+    <span style="color:#a6e22e">greet</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
+      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Hello. My name is </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+    }
+  }
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">human2</span> <span style="color:#f92672">=</span> {
+    <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Hanako&#39;</span>,
+    <span style="color:#a6e22e">greet</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>() {
+      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Hello. My name is </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+    }
+  }
+  <span style="color:#a6e22e">human1</span>.<span style="color:#a6e22e">greet</span>(); <span style="color:#75715e">// Hello. My name is Taro
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">human2</span>.<span style="color:#a6e22e">greet</span>(); <span style="color:#75715e">// Hello. My name is Hanako
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>一方、クラスはこの問題を解消してくれます。<br>
+以下は先ほどのサンプルをclass構文を使って書き直したサンプルです。<br>
+仮にメソッドを増やすことになったとしても、Humanクラスにメソッド追加することで、<br>
+各インスタンスは共通のメソッドを呼び出すことができます。<br>
+また、クラス内でthisはクラスを元に生成されたインスタンスのことを指します。<br>
+以下のサンプルには<strong>名前がTaroの人間クラスのインスタンス</strong>と<strong>名前がHanakoの人間クラスのインスタンス</strong>が生成されています。<br>
+インスタンスを生成するには**new クラス名()**と記述します。<br>
+※) クラスは変数や関数と同様にグローバル領域に定義することができます。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Human</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+  }
+  <span style="color:#a6e22e">greet</span>() {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Hello. My name is </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+  }
+}
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">classes_pattern_1</span>() {
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">human1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Human</span>(<span style="color:#e6db74">&#39;Taro&#39;</span>);
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">human2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Human</span>(<span style="color:#e6db74">&#39;Hanako&#39;</span>);
+  <span style="color:#a6e22e">human1</span>.<span style="color:#a6e22e">greet</span>(); <span style="color:#75715e">// Hello. My name is Taro
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">human2</span>.<span style="color:#a6e22e">greet</span>(); <span style="color:#75715e">// Hello. My name is Hanako
+</span><span style="color:#75715e"></span>}
+</code></pre></div><h2 id="アクセッサプロパティ">アクセッサプロパティ</h2>
+<p>通常、クラスに定義したメソッドは<strong>インスタンス.メソッド名()<strong>で実行することができますが、<br>
+インスタンスのプロパティの参照（getter）と代入（setter）する特殊なメソッドは</strong>インスタンス.プロパティ名</strong>で実行することができます。<br>
+このようにプロパティを制御するメソッドを<strong>アクセッサプロパティ</strong>といいます。<br>
+アクセッサプロパティは対象のメソッド名の前に<code>get</code>または<code>set</code>をつけることで定義できます。<br>
+<code>get</code>をつけたメソッドはプロパティの参照ができるようになり、仮引数は不要ですが必ず値を返す必要があります。<br>
+一方、<code>set</code>を付けたメソッドはプロパティに代入ができるようになり、値を返す必要はありませんが仮引数は必要になります。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">クラス</span> {
+  <span style="color:#a6e22e">get</span> <span style="color:#a6e22e">プロパティ名</span>() {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">値</span>;
+  }
+  <span style="color:#a6e22e">set</span> <span style="color:#a6e22e">プロパティ名</span>(<span style="color:#a6e22e">仮引数</span>) {
+    <span style="color:#75715e">// プロパティの代入などのsetterの処理
+</span><span style="color:#75715e"></span>  }
+}
+</code></pre></div><p>先ほどのサンプルコードのHumanクラスをアクセッサプロパティでコーディングすると以下の通りになります。<br>
+クラス内のプロパティを指している<code>this.name</code>を<code>this._name</code>としているのには理由があります。<br>
+<code>this.name</code>が呼ばれるとgetterが動くのですが、このgetterもまた<code>this.name</code>を呼んでいるのです。<br>
+そのため、同じ関数がひたすら呼ばれることにより<code>RangeError: Maximum call stack size exceeded</code>が発生してしまいます。<br>
+このエラーを回避するため、プロパティを<code>this._name</code>とコーディングする必要があるのです。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Human</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+  }
+  <span style="color:#a6e22e">greet</span>() {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Hello. My name is </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+  }
+  <span style="color:#a6e22e">get</span> <span style="color:#a6e22e">name</span>() {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_name</span>;
+  }
+  <span style="color:#a6e22e">set</span> <span style="color:#a6e22e">name</span>(<span style="color:#a6e22e">name</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+  }
+}
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">classes_pattern_2</span>() {
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">human</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Human</span>(<span style="color:#e6db74">&#39;Yamada Taro&#39;</span>);
+  <span style="color:#a6e22e">human</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Suzuki Taro&#39;</span>; <span style="color:#75715e">// getterでYamada TaroからSuzuki Taroに改名
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">human</span>.<span style="color:#a6e22e">name</span>); <span style="color:#75715e">// setterで改名後の名前を取得
+</span><span style="color:#75715e"></span>}
+</code></pre></div><pre><code>Suzuki Taro
+</code></pre><h2 id="プロトタイプ">プロトタイプ</h2>
+<p>全ての関数はprototypeと呼ばれる特別なプロパティを持っています。<br>
+このprototypeの仕組みにより、クラスに対して定義したメソッドは各インスタンスで利用できるメソッドになります。<br>
+このように各インスタンスで共有で利用できるメソッドを**プロトタイプメソッド（インスタンスメソッド）**と呼ばれています。<br>
+先ほどのサンプルコードではgreetメソッドを定義していましたが、<br>
+このメソッドを各インスタンスが利用できるのはプロトタイプメソッドとして定義しているためです。<br>
+プロトタイプメソッドは以下のように定義して呼び出すことができます。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">クラス名</span> {
+  <span style="color:#a6e22e">メソッド名</span>() {
+  }
+}
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">インスタンス名</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">クラス名</span>();
+<span style="color:#a6e22e">インスタンス名</span>.<span style="color:#a6e22e">メソッド名</span>();
+</code></pre></div><p>また、生成したインスタンスに対してメソッドやプロパティを定義することができます。<br>
+同じ名前のメソッドやプロパティを宣言すると、プロトタイプメソッドよりもインスタンス生成後にインスタンスに対して追加したメソッドやプロパティが優先されます。<br>
+追加したメソッドやプロパティは対象のインスタンスのみで利用可能で、同クラスの別インスタンスでは利用することはできません。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Human</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+  }
+  <span style="color:#a6e22e">greet</span>() {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Hello. My name is </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+  }
+  <span style="color:#a6e22e">get</span> <span style="color:#a6e22e">name</span>() {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_name</span>;
+  }
+  <span style="color:#a6e22e">set</span> <span style="color:#a6e22e">name</span>(<span style="color:#a6e22e">name</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+  }
+}
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">classes_pattern_3</span>() {
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">human1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Human</span>(<span style="color:#e6db74">&#39;Taro&#39;</span>);
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">human2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Human</span>(<span style="color:#e6db74">&#39;Hanako&#39;</span>);
+  <span style="color:#75715e">// human1にメソッドを再定義・追加する
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">human1</span>.<span style="color:#a6e22e">greet</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() { <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`I am </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">human1</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>); }
+  <span style="color:#a6e22e">human1</span>.<span style="color:#a6e22e">shout</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() { <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Hello!!!&#39;</span>); }
+  <span style="color:#75715e">// 各インスタンスのメソッドを実行する
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">human1</span>.<span style="color:#a6e22e">greet</span>();
+  <span style="color:#a6e22e">human1</span>.<span style="color:#a6e22e">shout</span>(); <span style="color:#75715e">// Hello!!!
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">human2</span>.<span style="color:#a6e22e">greet</span>(); <span style="color:#75715e">// Hello. My name is Hanako
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">human2</span>.<span style="color:#a6e22e">shout</span>(); <span style="color:#75715e">// TypeError: human2.shout is not a function
+</span><span style="color:#75715e"></span>}
+</code></pre></div><h2 id="静的メソッドクラスメソッド">静的メソッド（クラスメソッド）</h2>
+<p>ここまで紹介したメソッドはインスタンスごとに実行することができる<strong>インスタンスメソッド</strong>でしたが、<br>
+ここではクラスをインスタンス化せずに使用する<strong>静的メソッド（クラスメソッド）<strong>を紹介します。<br>
+静的メソッドは特定のインスタンスに関わることなく、クラスに関係する処理を実行することができるメソッドです。<br>
+静的メソッドの定義方法はメソッド名の前に</strong>static</strong>をつけるだけで、<br>
+静的メソッドはインスタンス名.メソッド名ではなく<strong>クラス名.メソッド名</strong>で呼び出すことができます。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">クラス名</span> {
+  <span style="color:#66d9ef">static</span> <span style="color:#a6e22e">メソッド名</span>() {
+    <span style="color:#75715e">// 静的メソッドの処理
+</span><span style="color:#75715e"></span>  }
+}
+<span style="color:#75715e">// 静的メソッドの呼び出し
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">クラス名</span>.<span style="color:#a6e22e">メソッド名</span>();
+</code></pre></div><p>それでは、静的メソッドがどのような場面で活躍するかを紹介します。<br>
+例えば、Humanクラスから生成されたインスタンスの数を管理したい場合、<br>
+各インスタンスではなくクラスでインスタンスの数を管理する必要があります。<br>
+以下のサンプルコードではHumanクラスのインスタンスが生成されるたびに静的メソッドを実行してインスタンスの数をカウントしています。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Human</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+    <span style="color:#75715e">// インスタンスが生成されるたびに静的メソッドを実行
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">Human</span>.<span style="color:#a6e22e">getCounter</span>();
+  }
+  <span style="color:#75715e">// Human.countプロパティを加算する静的メソッド
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">static</span> <span style="color:#a6e22e">getCounter</span>() {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">Human</span>.<span style="color:#a6e22e">count</span><span style="color:#f92672">++</span>;
+  }
+  <span style="color:#a6e22e">greet</span>() {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Hello. My name is </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+  }
+  <span style="color:#a6e22e">get</span> <span style="color:#a6e22e">name</span>() {
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_name</span>;
+  }
+  <span style="color:#a6e22e">set</span> <span style="color:#a6e22e">name</span>(<span style="color:#a6e22e">name</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+  }
+}
+<span style="color:#75715e">// クラス共通のプロパティを設定
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">Human</span>.<span style="color:#a6e22e">count</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">classes_pattern_4</span>() {
+  <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Human</span>(<span style="color:#e6db74">&#39;Taro&#39;</span>);
+  <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Human</span>(<span style="color:#e6db74">&#39;Hanako&#39;</span>);
+  <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Human</span>(<span style="color:#e6db74">&#39;Ichiro&#39;</span>);
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">Human</span>.<span style="color:#a6e22e">count</span>);
+}
+</code></pre></div><pre><code>3
+</code></pre><h2 id="継承">継承</h2>
+<p>クラスのインスタンスを生成すると、クラスのプロトタイプがもつ機能を「継承」します。<br>
+継承とは、クラスの構造や機能を引き継いだ新しいクラスを定義することです。</p>
+<p>仮にオブジェクトのプロトタイプに呼び出そうとしたメソッドが見つからない場合は、<br>
+同クラスが継承している<strong>スーパークラス（親クラス）<strong>で同じ名前のメソッドがないかを探します。<br>
+同じ名前のメソッドが見つかるまでスーパークラス（親クラス）を遡っていき、一番上まで遡っても見つからない場合はエラーとなります。<br>
+このようにオブジェクト自身のプロトタイプを追っていくことを</strong>プロトタイプチェーン</strong>と呼ばれています。<br>
+このプロトタイプチェーンにより、クラスの間に階層関係を構築することができます。</p>
+<p><strong>extends</strong>キーワードを使い、以下の構文で書くことで既存のクラスを継承することができます。<br>
+class構文の右辺にextendsキーワードで継承元となるスーパークラス（親クラス）を指定することで、 スーパークラスを継承した<strong>サブクラス（子クラス）<strong>を定義できます。<br>
+サブクラスのインスタンスは、通常のインスタンスの作成方法と同じく</strong>new演算子</strong>をクラス名の前に記述することで作成することができます。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">子クラス名</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">親クラス名</span> {
+}
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">child</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">子クラス名</span>();
+</code></pre></div><p>以下のサンプルコードはスーパークラスである Animal クラスと、<br>
+Animalクラスを継承するサブクラス（子クラス）のDogクラスとCatクラスをコーディングしています。<br>
+サブクラスのコンストラクタに**super()**が実行されていますが、<br>
+このsuper()でextendsを使って定義したサブクラスからスーパークラスを参照することができます。<br>
+サンプルコードではスーパークラスのコンストラクタを参照して実行しています。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">categoryName</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">category</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">categoryName</span>;
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span>;
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">category</span><span style="color:#e6db74">}</span><span style="color:#e6db74">が産まれた`</span>);
+  }
+  <span style="color:#a6e22e">walk</span>() {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">が歩いた`</span>);
+  }
+  <span style="color:#75715e">// 吠える・鳴くメソッド
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">bark</span>() {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">が吠えた`</span>);
+  }
+}
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 犬は動物のサブクラス
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Dog</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Animal</span> {
+  <span style="color:#a6e22e">constructor</span>() {
+    <span style="color:#75715e">// スーパークラス（Animalクラス）のコンストラクタを呼び出す
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">super</span>(<span style="color:#e6db74">&#39;犬&#39;</span>);
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span>;
+  }
+　<span style="color:#a6e22e">setName</span>(<span style="color:#a6e22e">name</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+  }
+  <span style="color:#75715e">// スーパークラス（Animalクラス）のメソッドを上書き
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">bark</span>() {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;ワン！&#39;</span>);
+  }
+  <span style="color:#75715e">// サブクラス固有のメソッドを追加
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">bite</span>() {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">は噛み付いた`</span>);
+  }
+}
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 猫は動物のサブクラス
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Cat</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Animal</span> {
+  <span style="color:#a6e22e">constructor</span>() {
+    <span style="color:#75715e">// スーパークラス（Animalクラス）のコンストラクタを呼び出す
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">super</span>(<span style="color:#e6db74">&#39;猫&#39;</span>);
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span>;
+  }
+　<span style="color:#a6e22e">setName</span>(<span style="color:#a6e22e">name</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+  }
+  <span style="color:#75715e">// スーパークラス（Animalクラス）のメソッドを上書き
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">bark</span>() {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;ニャ〜&#39;</span>);
+  }
+  <span style="color:#75715e">// サブクラス固有のメソッドを追加
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">scratch</span>() {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">は引っ掻いた`</span>);
+  }
+}
+</code></pre></div><p>先ほどのDogクラスとCatクラスからインスタンスを生成し、メソッドを実行しているのが以下のサンプルコードです。<br>
+Dogクラスから生成したインスタンスにはPochiという名前を、Catクラスから生成したインスタンスにはTamaという名前をつけ、<br>
+それぞれのメソッドを実行しています。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">classes_pattern_5</span>() {
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">dog</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Dog</span>();
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">cat</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Cat</span>();
+  <span style="color:#75715e">// スーパークラスの共通のメソッドを呼び出す
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">dog</span>.<span style="color:#a6e22e">setName</span>(<span style="color:#e6db74">&#39;Pochi&#39;</span>);
+  <span style="color:#a6e22e">dog</span>.<span style="color:#a6e22e">walk</span>();
+  <span style="color:#a6e22e">cat</span>.<span style="color:#a6e22e">setName</span>(<span style="color:#e6db74">&#39;Tama&#39;</span>);
+  <span style="color:#a6e22e">cat</span>.<span style="color:#a6e22e">walk</span>();
+  <span style="color:#75715e">// 上書きされたスーパークラスの共通メソッドを呼び出す
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">dog</span>.<span style="color:#a6e22e">bark</span>();
+  <span style="color:#a6e22e">cat</span>.<span style="color:#a6e22e">bark</span>();
+  <span style="color:#75715e">// 各クラスの固有のメソッドを呼び出す
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">dog</span>.<span style="color:#a6e22e">bite</span>();
+  <span style="color:#a6e22e">cat</span>.<span style="color:#a6e22e">scratch</span>();
+}
+</code></pre></div><pre><code>犬が産まれた
+猫が産まれた
+Pochiが歩いた
+Tamaが歩いた
+ワン！
+ニャ〜
+Pochiは噛み付いた
+Tamaは引っ掻いた
+</code></pre><p>このように、継承によりオブジェクトなどのデータ型に関する操作が統一的であることを<strong>ポリモーフィズム</strong>と呼びます。<br>
+また、JavaScriptには<strong>instaceof演算子</strong>で左辺の値が右辺のクラスのインスタンスであるかを真偽値で返ししてくれます。<br>
+instaceof演算子は右辺にスーパークラスが指定された場合はtrueを返します。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">classes_pattern_6</span>() {
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">dog</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Dog</span>(); <span style="color:#75715e">// 犬が産まれた
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">cat</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Cat</span>(); <span style="color:#75715e">// 猫が産まれた
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">dog</span> <span style="color:#66d9ef">instanceof</span> <span style="color:#a6e22e">Dog</span>); <span style="color:#75715e">// true
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">cat</span> <span style="color:#66d9ef">instanceof</span> <span style="color:#a6e22e">Cat</span>); <span style="color:#75715e">// true
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">dog</span> <span style="color:#66d9ef">instanceof</span> <span style="color:#a6e22e">Cat</span>); <span style="color:#75715e">// false
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">cat</span> <span style="color:#66d9ef">instanceof</span> <span style="color:#a6e22e">Dog</span>); <span style="color:#75715e">// false
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">dog</span> <span style="color:#66d9ef">instanceof</span> <span style="color:#a6e22e">Animal</span>); <span style="color:#75715e">// true
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">cat</span> <span style="color:#66d9ef">instanceof</span> <span style="color:#a6e22e">Animal</span>); <span style="color:#75715e">// true
+</span><span style="color:#75715e"></span>}
+</code></pre></div><pre><code>犬が産まれた
+猫が産まれた
+true
+true
+false
+false
+true
+true
+</code></pre>
+<div class="notices note" ><p>JavaScriptのすべてのオブジェクトはルートクラスであるObjectのインスタンスになります。<br>
+そのため、任意のオブジェクト o に対し、<code>o instanceof Object</code>の結果はtrueになります。</p>
+</div>
+
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/gas-education/javascript_bases/es2015/page_2_5_3/" title="アロー関数"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/gas-education/javascript_bases/es2015/page_2_5_5/" title="スプレッド構文" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/gas-education/js/clipboard.min.js?1622365525"></script>
+    <script src="/gas-education/js/perfect-scrollbar.min.js?1622365525"></script>
+    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1622365525"></script>
+    <script src="/gas-education/js/jquery.sticky.js?1622365525"></script>
+    <script src="/gas-education/js/featherlight.min.js?1622365525"></script>
+    <script src="/gas-education/js/highlight.pack.js?1622365525"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1622365525"></script>
+    <script src="/gas-education/js/learn.js?1622365525"></script>
+    <script src="/gas-education/js/hugo-learn.js?1622365525"></script>
+
+    <link href="/gas-education/mermaid/mermaid.css?1622365525" rel="stylesheet" />
+    <script src="/gas-education/mermaid/mermaid.js?1622365525"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+
