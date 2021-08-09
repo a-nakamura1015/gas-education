@@ -5,7 +5,7 @@ pre: "<b>7. </b>"
 weight: 7
 ---
 ### Scriptletについて
-GASで生成した値を画面に出力したいときは　***Scriptlet*** を使用すると簡単に出力することができます。  
+GASで生成した値を画面に出力したいときは　**Scriptlet** を使用すると簡単に出力することができます。  
 Scriptletには「Standard scriptlets」と「Printing scriptlets」の２種類あります。
 
 #### Standard scriptlets

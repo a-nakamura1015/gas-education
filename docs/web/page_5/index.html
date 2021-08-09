@@ -12,22 +12,22 @@
     <title>クライアントサイドのJavaScriptを学ぼう :: GAS Edu</title>
 
     
-    <link href="/gas-education/css/nucleus.css?1623017699" rel="stylesheet">
-    <link href="/gas-education/css/fontawesome-all.min.css?1623017699" rel="stylesheet">
-    <link href="/gas-education/css/hybrid.css?1623017699" rel="stylesheet">
-    <link href="/gas-education/css/featherlight.min.css?1623017699" rel="stylesheet">
-    <link href="/gas-education/css/perfect-scrollbar.min.css?1623017699" rel="stylesheet">
-    <link href="/gas-education/css/auto-complete.css?1623017699" rel="stylesheet">
-    <link href="/gas-education/css/atom-one-dark-reasonable.css?1623017699" rel="stylesheet">
-    <link href="/gas-education/css/theme.css?1623017699" rel="stylesheet">
-    <link href="/gas-education/css/tabs.css?1623017699" rel="stylesheet">
-    <link href="/gas-education/css/hugo-theme.css?1623017699" rel="stylesheet">
+    <link href="/gas-education/css/nucleus.css?1628505123" rel="stylesheet">
+    <link href="/gas-education/css/fontawesome-all.min.css?1628505123" rel="stylesheet">
+    <link href="/gas-education/css/hybrid.css?1628505123" rel="stylesheet">
+    <link href="/gas-education/css/featherlight.min.css?1628505123" rel="stylesheet">
+    <link href="/gas-education/css/perfect-scrollbar.min.css?1628505123" rel="stylesheet">
+    <link href="/gas-education/css/auto-complete.css?1628505123" rel="stylesheet">
+    <link href="/gas-education/css/atom-one-dark-reasonable.css?1628505123" rel="stylesheet">
+    <link href="/gas-education/css/theme.css?1628505123" rel="stylesheet">
+    <link href="/gas-education/css/tabs.css?1628505123" rel="stylesheet">
+    <link href="/gas-education/css/hugo-theme.css?1628505123" rel="stylesheet">
     
-    <link href="/gas-education/css/theme-blue.css?1623017699" rel="stylesheet">
+    <link href="/gas-education/css/theme-blue.css?1628505123" rel="stylesheet">
     
     
 
-    <script src="/gas-education/js/jquery-3.3.1.min.js?1623017699"></script>
+    <script src="/gas-education/js/jquery-3.3.1.min.js?1628505123"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -72,14 +72,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/gas-education/js/lunr.min.js?1623017699"></script>
-<script type="text/javascript" src="/gas-education/js/auto-complete.js?1623017699"></script>
+<script type="text/javascript" src="/gas-education/js/lunr.min.js?1628505123"></script>
+<script type="text/javascript" src="/gas-education/js/auto-complete.js?1628505123"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/a-nakamura1015.github.io\/gas-education";
     
 </script>
-<script type="text/javascript" src="/gas-education/js/search.js?1623017699"></script>
+<script type="text/javascript" src="/gas-education/js/search.js?1628505123"></script>
 
     
   </div>
@@ -1670,10 +1670,11 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#クライアントサイトのjavascript">クライアントサイトのJavaScript</a></li>
+        <li><a href="#クライアントサイドのjavascript">クライアントサイドのJavaScript</a></li>
         <li><a href="#サーバーサイドのjavascriptとの違い">サーバーサイドのJavaScriptとの違い</a></li>
         <li><a href="#htmlの要素を操作する">HTMLの要素を操作する</a></li>
         <li><a href="#cssを操作する">CSSを操作する</a></li>
+        <li><a href="#画面にダイアログを表示する">画面にダイアログを表示する</a></li>
       </ul>
     </li>
   </ul>
@@ -1700,10 +1701,355 @@
         
 
 
-<h3 id="クライアントサイトのjavascript">クライアントサイトのJavaScript</h3>
+<h3 id="クライアントサイドのjavascript">クライアントサイドのJavaScript</h3>
+<p>ここまではGSファイルにJavaScriptを書いてきましたが、実はHTMLファイルにもJavaScritを書くことができます。<br>
+HTMLファイルでJavaScriptを書ける場所は決まっており、<strong>scriptタグ</strong> の中に書くことができます。<br>
+また、このscriptタグも書くことができる場所が決まっています。</p>
+<h4 id="javascriptを書くことができる場所">JavaScriptを書くことができる場所</h4>
+<p>scriptタグを書くことができるのは主に以下の2つの場所になります。<br>
+1つ目はheadタグの中でstyleタグと同様の場所に書くことができます。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+  &lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">base</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_top&#34;</span>&gt;
+    &lt;<span style="color:#f92672">style</span>&gt;
+      <span style="color:#f92672">//</span> <span style="color:#f92672">CSSを記述する</span>
+    &lt;/<span style="color:#f92672">style</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+      <span style="color:#75715e">// JavaScriptを記述する
+</span><span style="color:#75715e"></span>    &lt;/<span style="color:#f92672">script</span>&gt;
+  &lt;/<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">body</span>&gt;
+  &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><p>2つ目はbodyタグの中です。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+  &lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">base</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_top&#34;</span>&gt;
+    &lt;<span style="color:#f92672">style</span>&gt;
+      <span style="color:#f92672">//</span> <span style="color:#f92672">CSSを記述する</span>
+    &lt;/<span style="color:#f92672">style</span>&gt;
+  &lt;/<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">body</span>&gt;
+    &lt;<span style="color:#f92672">div</span>&gt;Sample&lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+      // JavaScriptを記述する
+    &lt;<span style="color:#f92672">script</span>&gt;
+  &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><p>それでは、早速クライアントサイドの JavaScript をコーディングしてみましょう。<br>
+今回は Google Chrome のコンソールログに「Hello!」と表示をしてみます。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Hello!&#39;</span>);
+</code></pre></div>
+
+<div class="tab-panel">
+    <div class="tab-nav">
+    
+        <button
+          data-tab-item="index.html"
+          data-tab-group="web_5_1"
+          class="tab-nav-button btn active"
+          onclick="switchTab('web_5_1','index.html')"
+         >index.html</button>
+    
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="index.html" data-tab-group="web_5_1" class="tab-item active">
+            <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+  &lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">base</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_top&#34;</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Hello!&#39;</span>);
+    &lt;/<span style="color:#f92672">script</span>&gt;
+  &lt;/<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">body</span>&gt;
+  &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div>
+        </div>
+        
+    </div>
+</div>
+
+<p>Google Chrome のコンソールログは以下の手順で確認できます。</p>
+<ol>
+<li>ブラウザ右上「︙」をクリックします。</li>
+<li>表示されたメニューから[その他のツール]→[デベロッパーツール]をクリックします。</li>
+<li>デベロッパーツール内の「Console」タブを選択します。</li>
+</ol>
+<p><img src="../img/page_5_1.png" alt="page_5_1.png"></p>
+<p>続いて、ボタンをクリックした際にコンソールログに「Hello!」と表示をしてみましょう。<br>
+任意のタイミングで処理をさせたい場合は関数として定義する必要があります。<br>
+次のサンプルではボタンをクリックした際に<code>viewMessage()</code>が実行されるように、<br>
+inputタグの <code>onclick</code> に<code>viewMessage()</code>を設定しています。</p>
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+    
+        <button
+          data-tab-item="index.html"
+          data-tab-group="web_5_2"
+          class="tab-nav-button btn active"
+          onclick="switchTab('web_5_2','index.html')"
+         >index.html</button>
+    
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="index.html" data-tab-group="web_5_2" class="tab-item active">
+            <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+  &lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">base</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_top&#34;</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+      <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">viewMessage</span>() {
+        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;ボタンをクリックしました！&#39;</span>);
+      }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+  &lt;/<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">body</span>&gt;
+    &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;メッセージを表示する&#34;</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewMessage()&#34;</span>&gt;
+  &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div>
+        </div>
+        
+    </div>
+</div>
+
+<p><img src="../img/page_5_2_1.png" alt="page_5_2_1.png"><br>
+<img src="../img/page_5_2_2.png" alt="page_5_2_2.png"></p>
 <h3 id="サーバーサイドのjavascriptとの違い">サーバーサイドのJavaScriptとの違い</h3>
+<p>クライアントサイドもサーバーサイドも同じ JavaScript をコーディングしていますが、<br>
+コーディングできる処理はそれぞれ異なります。</p>
+<p>サーバーサイドはGoogle の各種サービスを操作する Google Apps Script を実行することはできますが、<br>
+画面の値や色を変えたりなどの画面側の処理を行うことができません。<br>
+画面側の処理を行いたい場合は .gs ではなくHTMLのスクリプトタグ内にコーディングをしていきます。</p>
 <h3 id="htmlの要素を操作する">HTMLの要素を操作する</h3>
+<p>クライアントサイドのJavaScriptで画面を操作するには対象の画面の部品を特定する必要があります。<br>
+画面の各部品には<code>id</code>を設定することができるため、この<code>id</code>で部品を特定することができます。<br>
+以下のサンプルでは<code>viewMessage()</code>でテキストボックスの入力した値を取得してコンソールログに出力していますが、<br>
+<code>document.getElementById()</code>で対象のテキストボックスを取得しています。</p>
+<p>
+
+<div class="tab-panel">
+    <div class="tab-nav">
+    
+        <button
+          data-tab-item="index.html"
+          data-tab-group="web_5_3"
+          class="tab-nav-button btn active"
+          onclick="switchTab('web_5_3','index.html')"
+         >index.html</button>
+    
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="index.html" data-tab-group="web_5_3" class="tab-item active">
+            <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+  &lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">base</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_top&#34;</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+      <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">viewMessage</span>() {
+        <span style="color:#75715e">// idが’textBox’の要素を取得します。
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">textBox</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;textBox&#39;</span>);
+        <span style="color:#75715e">// 取得した要素から値を取得します。
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">textBox</span>.<span style="color:#a6e22e">value</span>;
+        <span style="color:#75715e">// コンソールログで取得した値を表示します。
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>);
+      }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+  &lt;/<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">body</span>&gt;
+    &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;textBox&#34;</span>&gt;
+    &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;メッセージを表示する&#34;</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewMessage()&#34;</span>&gt;
+  &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div>
+        </div>
+        
+    </div>
+</div>
+<br>
+<img src="../img/page_5_3_1.png" alt="page_5_3_1.png"><br>
+<img src="../img/page_5_3_2.png" alt="page_5_3_2.png"></p>
+<p>クライアントサイドの JavaScript は画面から情報取得することだけでなく、<br>
+画面を変化させることもできます。<br>
+以下のサンプルではテキストボックスに入力した内容を画面に出力しています。</p>
+<p>
+
+<div class="tab-panel">
+    <div class="tab-nav">
+    
+        <button
+          data-tab-item="index.html"
+          data-tab-group="web_5_4"
+          class="tab-nav-button btn active"
+          onclick="switchTab('web_5_4','index.html')"
+         >index.html</button>
+    
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="index.html" data-tab-group="web_5_4" class="tab-item active">
+            <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+  &lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">base</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_top&#34;</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+      <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">viewMessage</span>() {
+        <span style="color:#75715e">// idが’textBox’の要素を取得します。
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">textBox</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;textBox&#39;</span>);
+        <span style="color:#75715e">// 取得した要素から値を取得します。
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">textBox</span>.<span style="color:#a6e22e">value</span>;
+        <span style="color:#75715e">// 取得した値を太字にします。
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">output</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`&lt;b&gt;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">value</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&lt;/b&gt;`</span>;
+        <span style="color:#75715e">// 出力先の要素を取得します。
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">outputArea</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;outputArea&#39;</span>);
+        <span style="color:#75715e">// 出力先の要素に値を追加します。
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">outputArea</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">output</span>;
+      }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+  &lt;/<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">body</span>&gt;
+    &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;textBox&#34;</span>&gt;
+    &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;メッセージを表示する&#34;</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewMessage()&#34;</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;outputArea&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div>
+        </div>
+        
+    </div>
+</div>
+<br>
+<img src="../img/page_5_4.png" alt="page_5_4.png"></p>
 <h3 id="cssを操作する">CSSを操作する</h3>
+<p>クライアントサイドの JavaScript は画面の見た目も変えることができます。<br>
+以下のサンプルでは CSS の設定を JavaScript で変えています。</p>
+<p>
+
+<div class="tab-panel">
+    <div class="tab-nav">
+    
+        <button
+          data-tab-item="index.html"
+          data-tab-group="web_5_5"
+          class="tab-nav-button btn active"
+          onclick="switchTab('web_5_5','index.html')"
+         >index.html</button>
+    
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="index.html" data-tab-group="web_5_5" class="tab-item active">
+            <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+  &lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">base</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_top&#34;</span>&gt;
+    &lt;<span style="color:#f92672">style</span>&gt;
+      #colorBtn {
+        <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">blue</span>;
+        <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">white</span>;
+        <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">15</span><span style="color:#66d9ef">px</span>;
+      }
+    &lt;/<span style="color:#f92672">style</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+      <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">changeColor</span>() {
+        <span style="color:#75715e">// idが&#39;colorBtn&#39;の要素を取得する。
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">colorBtn</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;colorBtn&#39;</span>);
+        <span style="color:#75715e">// 取得した要素の背景色を赤色に変更する。
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">colorBtn</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">backgroundColor</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;red&#39;</span>;
+      }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+  &lt;/<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">body</span>&gt;
+    &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;colorBtn&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;色を変える&#34;</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;changeColor()&#34;</span>&gt;
+  &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div>
+        </div>
+        
+    </div>
+</div>
+<br>
+＜ボタンのクリック前＞<br>
+<img src="../img/page_5_5_1.png" alt="page_5_5_1.png"><br>
+＜ボタンのクリック後＞<br>
+<img src="../img/page_5_5_2.png" alt="page_5_5_2.png"></p>
+<h3 id="画面にダイアログを表示する">画面にダイアログを表示する</h3>
+<p>画面上にポップアップでメッセージを表示したい場合は<code>dialogタグ</code>を使いましょう。<br>
+以下のサンプルでは画面表示時に閉じるボタン付きのダイアログを表示しています。</p>
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+    
+        <button
+          data-tab-item="index.html"
+          data-tab-group="web_5_6"
+          class="tab-nav-button btn active"
+          onclick="switchTab('web_5_6','index.html')"
+         >index.html</button>
+    
+        <button
+          data-tab-item="コード.gs"
+          data-tab-group="web_5_6"
+          class="tab-nav-button btn "
+          onclick="switchTab('web_5_6','コード.gs')"
+         >コード.gs</button>
+    
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="index.html" data-tab-group="web_5_6" class="tab-item active">
+            <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+  &lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">base</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_top&#34;</span>&gt;
+  &lt;/<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">body</span>&gt;
+    &lt;<span style="color:#f92672">dialog</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alert&#34;</span>&gt;
+      &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alert-message&#34;</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
+      &lt;<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alert-closeBtn&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;閉じる&#34;</span>&gt;
+      &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">dialog</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+      <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">showAlert</span>() {
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">dialog</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;alert&#39;</span>);
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">dialogMsg</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;alert-message&#39;</span>);
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">dialogCloseBtn</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;alert-closeBtn&#39;</span>);
+        <span style="color:#a6e22e">dialogMsg</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;こんにちは！&#39;</span>;
+        <span style="color:#75715e">// 閉じるボタンをクリックした時の処理
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">closedFnc</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
+          <span style="color:#a6e22e">dialog</span>.<span style="color:#a6e22e">close</span>();
+        }
+        <span style="color:#a6e22e">dialogCloseBtn</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;click&#39;</span>, <span style="color:#a6e22e">closedFnc</span>);
+      }
+    &lt;/<span style="color:#f92672">script</span>&gt;
+  &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+
+</code></pre></div>
+        </div>
+        
+        <div data-tab-item="コード.gs" data-tab-group="web_5_6" class="tab-item ">
+            <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">doGet</span>() {
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">HtmlService</span>.<span style="color:#a6e22e">createTemplateFromFile</span>(<span style="color:#e6db74">&#39;index&#39;</span>).<span style="color:#a6e22e">evaluate</span>();
+}
+</code></pre></div>
+        </div>
+        
+    </div>
+</div>
+
+<p><img src="../img/page_5_6.png" alt="page_5_6.png"></p>
 
 
 <footer class="footline">
@@ -2811,19 +3157,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/gas-education/js/clipboard.min.js?1623017699"></script>
-    <script src="/gas-education/js/perfect-scrollbar.min.js?1623017699"></script>
-    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1623017699"></script>
-    <script src="/gas-education/js/jquery.sticky.js?1623017699"></script>
-    <script src="/gas-education/js/featherlight.min.js?1623017699"></script>
-    <script src="/gas-education/js/highlight.pack.js?1623017699"></script>
+    <script src="/gas-education/js/clipboard.min.js?1628505123"></script>
+    <script src="/gas-education/js/perfect-scrollbar.min.js?1628505123"></script>
+    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1628505123"></script>
+    <script src="/gas-education/js/jquery.sticky.js?1628505123"></script>
+    <script src="/gas-education/js/featherlight.min.js?1628505123"></script>
+    <script src="/gas-education/js/highlight.pack.js?1628505123"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1623017699"></script>
-    <script src="/gas-education/js/learn.js?1623017699"></script>
-    <script src="/gas-education/js/hugo-learn.js?1623017699"></script>
+    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1628505123"></script>
+    <script src="/gas-education/js/learn.js?1628505123"></script>
+    <script src="/gas-education/js/hugo-learn.js?1628505123"></script>
     
         
-            <script src="/gas-education/mermaid/mermaid.js?1623017699"></script>
+            <script src="/gas-education/mermaid/mermaid.js?1628505123"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
