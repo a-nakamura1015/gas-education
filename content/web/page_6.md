@@ -60,7 +60,7 @@ function setSheetData() {
 
 {{< tabs groupId="web_6_2" >}}
 {{% tab name="index.html" %}}
-```index
+```html
 <script>
   google.script.run.setSheetData();
 </script>
@@ -85,14 +85,14 @@ function setSheetData() {
 
 {{< tabs groupId="web_6_3" >}}
 {{% tab name="index.html" %}}
-```
+```html
 <script>
   google.script.run.setSheetData('こんにちは！');
 </script>
 ```
 {{% /tab %}}
 {{% tab name="コード.gs" %}}
-```
+```js
 function setSheetData(value) {
   // 1. スプレッドシートを特定して取得します。
   var spreadsheet = SpreadsheetApp.openById(SHEET_ID);
@@ -115,7 +115,7 @@ function setSheetData(value) {
 
 {{< tabs groupId="web_6_4" >}}
 {{% tab name="index.html" %}}
-```
+```html
 <input type='txt' id='msg' onclick='output()' />
 <script>
   function output() {
@@ -139,7 +139,7 @@ function setSheetData(value) {
 
 {{< tabs groupId="web_6_5" >}}
 {{% tab name="index.html" %}}
-```
+```html
 <script>
  // 1. スプレッドシートから値を取得する
  var result = google.script.run.getSheetData();
@@ -168,6 +168,7 @@ function setSheetData(value) {
 
 {{< tabs groupId="web_6_6" >}}
 {{% tab name="index.html" %}}
+```html
 <script>
   alert(1); // ①
   alert(2); // ②
@@ -183,7 +184,7 @@ function setSheetData(value) {
 
 {{< tabs groupId="web_6_7" >}}
 {{% tab name="index.html" %}}
-```
+```html
 <script>
  // 1. スプレッドシートから値を取得する
  var result = google.script.run.getSheetData();
@@ -215,7 +216,7 @@ JavaScriptでコールバックは「後々呼び出すために定義した関�
 
 {{< tabs groupId="web_6_8" >}}
 {{% tab name="index.html" %}}
-```
+```html
 <script>
   // 数値の2を返す関数（後々呼び出すためにコーディングされた関数）
   function getNumber() {
@@ -252,7 +253,7 @@ google.script.run.withSuccessHandler(コールバック関数).GAS関数()
 
 {{< tabs groupId="web_6_9" >}}
 {{% tab name="index.html" %}}
-```
+```html
 <script>
 　function outputResult(result) {
     console.log(result);
@@ -267,7 +268,7 @@ google.script.run.withSuccessHandler(コールバック関数).GAS関数()
 
 {{< tabs groupId="web_6_10" >}}
 {{% tab name="index.html" %}}
-```
+```html
 <script>
   google.script.run.withSuccessHandler(function(result){
     console.log(result);

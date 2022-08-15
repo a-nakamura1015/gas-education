@@ -15,6 +15,8 @@ for (変数名 of 配列) {
 ```
 以下のサンプルコードでfor...of文を試してみましょう。  
 配列の要素が`value`変数に代入されることが確認できます。
+{{< tabs groupId="es2022_31" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function for_of_1() {
   const values = ['A', 'B', 'C'];
@@ -22,7 +24,9 @@ function for_of_1() {
     console.log(value);
   }
 }
-```Â
+```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 A
 B
@@ -30,6 +34,8 @@ C
 ```
 for...of文は原則最後の要素まで繰り返し処理を行いますが、  
 `break文`で繰り返し処理を抜けることができます。
+{{< tabs groupId="es2022_32" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function for_of_2() {
   const values = ['A', 'B', 'C'];
@@ -39,6 +45,8 @@ function for_of_2() {
   }
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 A
 ```
@@ -52,6 +60,8 @@ for (変数名 in 配列) {
 }
 ```
 以下のサンプルコードで宣言した変数にインデックス番号が代入されていることを確認してみましょう。
+{{< tabs groupId="es2022_33" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function for_in_1() {
   const values = ['A', 'B', 'C'];
@@ -62,6 +72,8 @@ function for_in_1() {
   }
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 0
 A
@@ -74,6 +86,8 @@ C
 ---
 ```
 また、配列ではなく連想配列を指定すると、宣言した変数にはキー（オブジェクトのプロパティ名）が代入されます。
+{{< tabs groupId="es2022_34" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function for_in_2() {
   const account = {
@@ -88,6 +102,8 @@ function for_in_2() {
   }
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 id
 1

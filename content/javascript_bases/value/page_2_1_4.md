@@ -25,18 +25,26 @@ var 変数名1, 変数名2, 変数名3; // カンマ区切りにすることで�
 ```
 変数を宣言する際に初期値を必ずしも指定する必要はなく、  
 指定しない場合は「未定義」であることを意味する **undefined** が自動的に設定されます。  
+{{< tabs groupId="value_2_6" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function myFunction() {
   var num;
   console.log(num); // undefined
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
+
 変数に値を代入したのち、その変数名を記述することで格納した値を呼び出すことができます。  
 また、変数に代入したのち、変数に格納した値を上書きすることもできます。  
 上書きは変数に値を代入する方法と同じ方法で記述することができます。（宣言ではないので **varキーワード** は不要です。）  
 下記のサンプルではログに2回出力しています。  
 1回目のログ出力は代入する前であるため「未定義」を意味する **undefined** が出力され、  
-2回目のログ出力は「10」を変数numに代入しているため 10 がログに出力されます。  
+2回目のログ出力は「10」を変数numに代入しているため 10 がログに出力されます。 
+
+{{< tabs groupId="value_2_6" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function myFunction() {
   var num;
@@ -45,9 +53,14 @@ function myFunction() {
   console.log(num); // 10
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
+
 変数の宣言時に値の代入をすることもできます。  
 このことを **初期化** といいます。（2行のコードが1行になるのでスッキリしますね。）  
 この場合もカンマ区切りでまとめて初期化を行うことができます。
+{{< tabs groupId="value_2_7" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function myFunction() {
   var num_1 = 10;
@@ -57,6 +70,8 @@ function myFunction() {
   console.log(num_3); // 1000
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 
 ### 定数とは
 変数は上書きができると説明しましたが、ときには変数を上書きしたくないケースもあります。
@@ -72,6 +87,8 @@ JavaScriptで定数を宣言する際は行頭に **const** をつけて初期�
 const 定数名 = 値;
 ```
 下記のサンプルで定数が更新されないことを確認してみましょう。
+{{< tabs groupId="value_2_8" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function myFunction() {
   const num = 10;
@@ -79,6 +96,8 @@ function myFunction() {
   console.log(num);
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 定数numに対して、100を再代入して上書きしようとしましたが、  
 「`TypeError: Assignment to constant variable.`」とエラーが表示されます。
 {{% notice tip %}}
@@ -154,6 +173,8 @@ var namae = `Taro`; // NG!
 キャメルというのはラクダ（Camel）が由来なのですが、頭文字を大文字にするとちょうどそこがコブのように見えることから **キャメル記法** と言われています。  
 もうひとつの記法として **スネーク記法** と呼ばれるものがあります。こちらは英単語をアンダースコア（\_）でつないでいく記法です。　　
 
+{{< tabs groupId="value_2_9" >}}
+{{% tab name="コード.gs" %}}
 ```js
 // 関数名はキャメル記法
 function getUserName() {
@@ -164,4 +185,6 @@ function getUserName() {
   console.log(GREETING_WORD + userName); // Hello Taro
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 これらのポイントを意識しながらコーディングをすると、自然と読みやすいスクリプトになっていきます。

@@ -19,6 +19,8 @@ if文では丸括弧の中に条件式を記述します。
 条件式の結果がtrueであれば中括弧の中の処理が実行され、falseであれば中括弧の中の処理は実行されません。
 （この中括弧の中を **ブロック** といいます。）
 下記のサンプルを記述して実行してみましょう。
+{{< tabs groupId="value_2_2_1_1" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function outputBranch_1() {
   var x = 10;
@@ -27,6 +29,9 @@ function outputBranch_1() {
   }
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
+
 ```
 xは1よりも大きいです。
 ```
@@ -42,6 +47,8 @@ if (条件式) {
 ```
 条件式がtrueの場合はifブロック内の処理が実行され、falseの場合はelseブロック内の処理が実行されます。
 下記はif else 文のサンプルになります。変数xに代入する値を変更しながら複数回実行して、意図したブロックの処理が実行されるか確認してみましょう。
+{{< tabs groupId="value_2_2_1_2" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function outputBranch_2() {
   var x = 10;
@@ -52,6 +59,9 @@ function outputBranch_2() {
   }
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
+
 ```
 xは10以下です。
 ```
@@ -70,6 +80,8 @@ if (条件式１) {
 条件式１、条件式２と順番に条件式を判定していき、最初に条件式がtrueだった際に該当のブロック内の処理をします。
 また、最後のelseは省略することができます。
 下記のサンプルを実行して、if else 文の動作を確認してみましょう。
+{{< tabs groupId="value_2_2_1_3" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function outputBranch_4() {
   var x = 10;
@@ -82,6 +94,9 @@ function outputBranch_4() {
   }
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
+
 ```
 xは10以上で20よりも小さいです。
 ```
@@ -109,6 +124,8 @@ JavaScriptで使用できる比較演算子は下記の通りです。
 
 この比較演算子には注意すべき点があります。
 下記のサンプルを実行するとログにはtrueとfalseのどちらが出力されるでしょうか？
+{{< tabs groupId="value_2_2_1_4" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function outputComparison_1() {
   var fruits_1 = ['apple', 'grape'];
@@ -120,11 +137,16 @@ function outputComparison_1() {
   console.log(person_1 == person_2); // false
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
+
 出力されたログの結果は共にfalseになります。
 実は、配列やオブジェクトを変数に代入した場合に、実際に変数に格納されるのはメモリ上のアドレス（参照値）です。
 したがって、要素や構造が全く同じであったとしても、物理的に別のアドレスに割り当てられている配列またはオブジェクト同士の比較はfalseとなります。
 一方で、下記のサンプルを実行するといずれのログもtrueとなります。
 それぞれの変数に格納されているアドレスは等しいため比較結果はtrueとなります。
+{{< tabs groupId="value_2_2_1_5" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function outputComparison_2() {
   var fruits_1 = ['apple', 'grape'];
@@ -136,6 +158,9 @@ function outputComparison_2() {
   console.log(person_1 == person_2); // true
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
+
 {{% notice note %}}
 配列とオブジェクトの比較はその参照値の比較となります。
 {{% /notice %}}
@@ -157,6 +182,8 @@ function outputComparison_2() {
 - 「同じ値に変換される」とき
 
 下記のサンプルでそれぞれの演算子の違いを確認していきましょう。
+{{< tabs groupId="value_2_2_1_6" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function outputComparison_3() {
   // 「==」と「===」の違い
@@ -167,11 +194,16 @@ function outputComparison_3() {
   console.log(10 !== '10'); // true
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
+
 「==」と「!=」は寛容な比較（データがを考慮しない）を行いますが、データ型を考慮しなかったために想定外の結果を引き起こす可能性があります。
 そのため、「===」と「!==」を使用する方がより安全に開発することができます。
 
 ### 論理演算子とは
 if文の複数の条件式を同時に判定させたいケースがありますが、現時点では下記のように記述することができます。
+{{< tabs groupId="value_2_2_1_7" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function outputLogical_1() {
   var x = 10;
@@ -182,6 +214,8 @@ function outputLogical_1() {
   }
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 xは10よりも大きく、20以下です。
 ```
@@ -198,6 +232,8 @@ JavaScriptで使用できる論理演算子は下記の通りです。
 
 この論理演算子を使用すると、先ほどのサンプルを下記のように記述することができます。
 他の論理演算子の結果と合わせて確認しましょう。
+{{< tabs groupId="value_2_2_1_8" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function outputLogical_2() {
   var x = 10;
@@ -212,6 +248,9 @@ function outputLogical_2() {
   }
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
+
 ```
 xは10よりも大きく、20以下です。
 xは10よりも大きい、または20以下です。
@@ -241,7 +280,8 @@ switch文では、式の結果と一致する値を、値１、値２・・・�
 
 例として、下記のサンプルを実行してみましょう。
 `fruit`変数に代入されている値によって出力されるログの内容が変わりますので、`fruit`変数に代入する値を変えてみて複数回実行して確認してみましょう。
-
+{{< tabs groupId="value_2_2_1_9" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function outputBranch_5() {
   var fruit = 'apple';
@@ -260,14 +300,17 @@ function outputBranch_5() {
   }
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 りんご
 ```
 
 #### break文
-
 各case節の処理の末尾にあるbreak文は省略することができますが、原則各case節ごとにbreak文を記述することになります。
 どうしてbreak文が必要なの？と思われるでしょうが、それは下記のサンプルを実行するとわかります。
+{{< tabs groupId="value_2_2_1_10" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function outputBranch_5() {
   var fruit = 'apple';
@@ -283,6 +326,8 @@ function outputBranch_5() {
   }
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 りんご
 グレープ

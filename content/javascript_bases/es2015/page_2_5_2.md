@@ -19,17 +19,23 @@ ES2015からは`テンプレート文字列`で文字列の中にプレースホ
 ```
 では、サンプルコードで確認をしてみましょう。  
 波括弧の中に変数名を指定することで、変数に格納されている値を文字列に挿入することができます。
+{{< tabs groupId="es2022_10" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function template_literals_1() {
   const name = 'Taro';
   console.log(`My name is ${name}.`);
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 My name is Taro.
 ```
 波括弧の中には値や変数だけでなく四則演算子も指定できます。  
 そのため、以下のように計算式を指定することもできます。
+{{< tabs groupId="es2022_11" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function template_literals_2() {
   const num1 = 1;
@@ -37,16 +43,22 @@ function template_literals_2() {
   console.log(`Result:${num1 + num2}`);
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 Result:3
 ```
 また、テンプレート文字列内で改行をすると、文字列を複数行にすることもできます。
+{{< tabs groupId="es2022_12" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function template_literals_3() {
   console.log(`1行目
 2行目`);
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 1行目
 2行目

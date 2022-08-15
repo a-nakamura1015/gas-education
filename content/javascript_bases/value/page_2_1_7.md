@@ -26,6 +26,8 @@ JavaScriptではデータの種類を「プリミティブ(primitive)」と「�
 
 この「不変」というのは「変数の値を変更できない」という意味ではありません。
 下記のサンプルは文字列の中から一部の文字列を切り取っていますが、実行すると切り取り元のデータは変わっていないことが確認できます。
+{{< tabs groupId="value_2_14" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function myfunction() {
   var str = '12345';
@@ -37,6 +39,8 @@ function myfunction() {
   console.log(str);
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 123
 12345
@@ -53,6 +57,8 @@ JavaScriptはデータ型については寛容です。
 ### 数値型（Number）
 数値型は整数や小数以外にも16進数を扱うことができます。
 全角数値の場合やカンマが含まれている場合（例：1,000）は数値として扱われないため注意しましょう。
+{{< tabs groupId="value_2_15" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function outputNumber() {
   console.log(10);        // 10
@@ -62,16 +68,22 @@ function outputNumber() {
   console.log(0.0000001); // 1.0E-6
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 上記のサンプルを実行すると、「1.0E7」や「1.0E-6」という結果が表示されます。
 これらは **指数表現** といい、整数部の桁数が7桁以上、小数点の桁数が6桁以上の数値は指数表記となります。
 
 また、数値と数値の間に四則演算子がある場合は計算が行われます。
+{{< tabs groupId="value_2_15" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function calNumber() {
   console.log(1 + 1); // 2
   console.log(2 - 3); // -1
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 
 ### 文字列型（String）
 JavaScriptでは文字列型の値を記述する場合はシングルクォーテーション（'）、またはダブルクォーテーション（"）で囲います。
@@ -79,13 +91,16 @@ JavaScriptでは文字列型の値を記述する場合はシングルクォー�
 
 また、シングルクォーテーションまたはダブルクォーテーションを文字列として使用したい場合は、
 使用されていないクォーテーションで囲うことになります。
-
+{{< tabs groupId="value_2_16" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function outputString_1() {
   console.log('Hello "Taro"!'); // Hello "Taro"!
   console.log("I'm Taro");      // I'm Taro
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 改行やタブなどの特別な文字はバックスラッシュ（\）に指定文字を組み合わせることで表現することができます。
 これを **エスケープシーケンス** といいます。
 
@@ -101,6 +116,8 @@ GASで使用できるエスケープシーケンスは下記の通りです。
 | \\" | ダブルクォーテーション |
 
 試しに下記のサンプルでエスケープシーケンスを確認してみましょう。
+{{< tabs groupId="value_2_17" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function outputString_2() {
   /*
@@ -110,10 +127,13 @@ function outputString_2() {
   console.log('Hello\n\'GAS\'!');
 }
 ```
-
+{{% /tab %}}
+{{< /tabs >}}
 文字列は四則演算子の`+`で結合することができます。
 下記のサンプルでは`+`の左辺と右辺を結合してひとつの文字列しています。
 なお、左辺と右辺が数値の場合は加算の処理がなされる点には気をつけてください。
+{{< tabs groupId="value_2_18" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function outputString_3() {
   console.log('Hello ' + 'GAS'); // Hello GAS
@@ -121,7 +141,11 @@ function outputString_3() {
   console.log(1 + 2); // 3
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 文字列の中に変数などの値を設定したい場合は、下記の通り「＋」記号で文字列連結を行うことで実現できます。
+{{< tabs groupId="value_2_18" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function outputString_4() {
   var age = 50;
@@ -129,8 +153,12 @@ function outputString_4() {
   console.log(message); // 私の年齢は50歳です。
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 上記のように文字列連結で実現できますが、
 **テンプレートリテラル** を使用するとよりスマートに書くことができます。
+{{< tabs groupId="value_2_19" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function outputString_5() {
   var age = 50;
@@ -138,11 +166,15 @@ function outputString_5() {
   console.log(message); // 私の年齢は50歳です。
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 このようにテンプレートリテラルを使うと、変数などの値を文字列に埋め込むのがシンプルに書けます。
 テンプレートリテラルは文頭と文末を「`」(バッククォート）で囲むことで使用できます。
 テンプレートリテラルでは「$」を特別な値として扱っており、
 変数や定数を「${}」で囲むことでその変数や定数の値を文字列に埋め込むことができます。
 「${}」の中には計算式や関数を設定することで、その結果を埋め込むこともできます。
+{{< tabs groupId="value_2_20" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function outputString_6() {
   var age = 50;
@@ -150,6 +182,8 @@ function outputString_6() {
   console.log(message); // 私の年齢は60歳です。
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 
 ### 真偽型（Boolean）
 **真偽型** は、`true`と`false`のいずれかの値で表現する値です。
@@ -187,13 +221,16 @@ var num = null;
 
 例えば、下記のサンプルでは変数の宣言後に代入を行っていませんが、この変数のを参照するとundefinedとなっています。
 どの変数も宣言して代入するまではundefinedの状態になります。
-
+{{< tabs groupId="value_2_21" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function outputUndefined() {
   var num;
   console.log(num); // undefined
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 
 ## オブジェクト
 オブジェクトはプリミティブとは異なり、さまざまな形式や値をを取ることができる柔軟性があるデータです。

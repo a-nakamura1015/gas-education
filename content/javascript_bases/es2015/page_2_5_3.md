@@ -17,6 +17,8 @@ ES2015では「アロー関数」という表記法が追加されて以下の�
 - 関数が1行の場合は`{}`と`return`を省略できる。
 
 以下は関数内に通常の記法で宣言した関数（f1）とアロー関数として宣言した関数（f2）を実行するサンプルです。
+{{< tabs groupId="es2022_13" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function arrow_functions_1() {
   const f1 = function() {
@@ -27,12 +29,16 @@ function arrow_functions_1() {
   console.log(f2());
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 normal function
 arrow function
 ```
 先程のサンプルは関数内の処理が1行のみでしたが、アロー関数で複数行の処理をコーディングしたい場合は`{}`が必要になります。  
 また、値を返したい場合は`return`も必要になります。
+{{< tabs groupId="es2022_14" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function arrow_functions_2() {
   const f3 = () => {
@@ -42,6 +48,8 @@ function arrow_functions_2() {
   console.log(f3());
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 arrow function
 ```
@@ -60,6 +68,8 @@ function(仮引数名1{, 仮引数名2, ...}){};
 (仮引数名1{, 仮引数名2, ...}) => {};
 ```
 以下のサンプルを実行し、通常の関数もアロー関数もともに値を受け取れることを確認してみましょう。
+{{< tabs groupId="es2022_15" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function arrow_functions_3() {
   const name = 'Taro';
@@ -71,12 +81,16 @@ function arrow_functions_3() {
   f2(name);
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 My name is Taro.
 His name is Taro.
 ```
 通常の関数と同じく、アロー関数も仮引数を複数指定することができます。  
 しかし、仮引数が1つのときと違って`()`が必要になります。
+{{< tabs groupId="es2022_17" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function arrow_functions_4() {
   const num1 = 1;
@@ -89,6 +103,8 @@ function arrow_functions_4() {
   f2(num1, num2);
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 normal function: 3
 arrow function: 3
@@ -103,7 +119,8 @@ arrow function: 3
 ### this の振る舞いが異なる
 通常の関数の場合 thisはオブジェクトを指しますが、  
 アロー関数のthis はグローバル領域に宣言したthisを指します。(もし、グローバル領域にthisがない場合、this は undefined になります。)
-
+{{< tabs groupId="es2022_18" >}}
+{{% tab name="コード.gs" %}}
 ```js
 // ゴローバル両機にthis.nameを宣言
 this.name = 'Ichiro';
@@ -122,12 +139,16 @@ function arrow_functions_5() {
   person2.greet();
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 Hello. My name is Taro.
 Hello. My name is Ichiro.
 ```
 先程の例はメソッドをアロー関数にすると this はグローバル領域を指してしまうという例でしたが、  
 メソッドを通常の関数として宣言するとその関数内の this はオブジェクトを指してくれます。
+{{< tabs groupId="es2022_19" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function arrow_functions_6() {
   const person3 = {
@@ -141,6 +162,8 @@ function arrow_functions_6() {
   person3.greet();
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 Hello. My name is Hanako.
 ```

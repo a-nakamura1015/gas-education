@@ -5,7 +5,7 @@ pre: "<b>1. </b>"
 weight: 1
 ---
 
-## 関数の呼び出し
+### 関数の呼び出し
 おさらいまでに、**関数** とは一連の処理をひとつにまとめたものをいいます。
 関数については先ほどご紹介しているので下記を参考にしてください。
 
@@ -17,6 +17,8 @@ weight: 1
 関数名()
 ```
 次のサンプルは他の関数を呼び出す例です。`myFunc_1`を実行すると、ログには「おはようございます！」と「こんにちは！」、「こんばんは！」が出力されます。
+{{< tabs groupId="function_1" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function myFunc_1() {
   console.log('おはようございます！');
@@ -27,6 +29,8 @@ function myFunc_2() {
   console.log('こんにちは！');
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 おはようございます！
 こんにちは！
@@ -45,7 +49,8 @@ JavaScriptにおいて関数はオブジェクトとして扱われます。
 このように関数を呼び出さずに参照することができるのですが、
 この関数の「参照」を利用することでオブジェクトとして扱うことができます。
 （オブジェクトについては[次章](../../object_mechanism/page_2_4_1)で解説します。）
-
+{{< tabs groupId="function_2" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function getMessage() {
   return 'Hello!';
@@ -54,10 +59,13 @@ function getMessage() {
 console.log(getMessage()); // Hello!
 console.log(getMessage);   // [Function: getMessage]
 ```
-
+{{% /tab %}}
+{{< /tabs >}}
 続いて、「変数（定数）への代入」を試してみましょう。
 関数を変数に代入することで、関数を別の名前で呼び出すことができます。
 
+{{< tabs groupId="function_3" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function getMessage() {
   return 'Hello!';
@@ -66,9 +74,11 @@ function getMessage() {
 var message = getMessage; // 関数をmessage変数に代入
 console.log(message());   // Hello!
 ```
+```
+{{% /tab %}}
+{{< /tabs >}}
 
 {{% notice tip %}}
 同じプロジェクト内であれば、別のgsファイルに記述した関数も呼び出すことができます。
 {{% /notice %}}
 この例でわかるように、関数を呼び出した場合はその呼び出した関数の処理が完了した時点で元の関数に戻ります。
-

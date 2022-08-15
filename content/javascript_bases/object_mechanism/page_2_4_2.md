@@ -8,6 +8,8 @@ weight: 2
 ## インスタンス化
 早速、次のサンプルをご確認ください。
 personオブジェクトが定義されており、nameとageというプロパティと、greetというメソッドが用意されています。
+{{< tabs groupId="object_5" >}}
+{{% tab name="コード.gs" %}}
 ```js
 var person = {
   name: 'Taro',
@@ -21,6 +23,8 @@ function outputObj_3() {
   console.log(person.greet()); // My name is Taro. I am 22 years old.
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 このオブジェクト同じ構造で、5人分のオブジェクトを用意する必要が出てきた場合はどのようにコーディングすればいいでしょうか？
 
 全てのオブジェクトのプロパティとメソッドを漏れなく記述しようとすると、上記のサンプルのpersonクラスを5つ用意する必要があります。
@@ -86,6 +90,8 @@ this.メソッド名 = function(仮引数１, 仮引数２, ...) {
 ここで、コンストラクタとインスタンス化の例として次のサンプルを確認してみましょう。
 new演算子によって、Personコンストラクタにnameおよびageを引数として渡して、オブジェクトを生成するものです。
 実行後ログを確認すると、渡した引数がthisキーワードによって、それぞれのプロパティにセットされているのが確認できるでしょう。
+{{< tabs groupId="object_7" >}}
+{{% tab name="コード.gs" %}}
 ```js
 var Person = function(name, age) {
   this.name = name;
@@ -100,6 +106,8 @@ function outputObj_4() {
   console.log(person.greet());
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 My name is Hanako. I am 25 years old.
 ```
@@ -112,6 +120,8 @@ My name is Hanako. I am 25 years old.
 ### インスタンスのメンバーの変更
 クラスから生成したインスタンスはオブジェクトのため、個別にメンバーの値の変更やメンバーの追加も可能です。
 次のサンプルを実行してみましょう。ageプロパティの値に5を加算して、jobs　プロパティを新たに追加しています。
+{{< tabs groupId="object_8" >}}
+{{% tab name="コード.gs" %}}
 ```js
 var Person = function(name, age) {
   this.name = name;
@@ -125,6 +135,8 @@ function outputObj_5() {
   console.log(person);
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
  { jobs='Engineer', name='Nobuo', age=25 }
 ```

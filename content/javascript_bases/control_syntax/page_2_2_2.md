@@ -27,6 +27,8 @@ while (条件式) {
 ```
 while文を使いますと、条件式の結果がtrueの間はブロック内の処理を繰り返し実行し、条件式がfalseになったときにループ処理から抜けます。
 下記のサンプルを実行して、while文の処理の流れを確認しましょう。
+{{< tabs groupId="value_2_2_1_11" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function outputLoop() {
   var x = 1;
@@ -38,12 +40,16 @@ function outputLoop() {
   console.log(sum);
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 55
 ```
 #### 無限ループ
 繰り返し処理を行う際には **無限ループ** に気をつける必要があります。
 下記のサンプルを実行すると無限ループが発生します。
+{{< tabs groupId="value_2_2_1_12" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function outputLoop_2() {
   var x = 1;
@@ -54,6 +60,8 @@ function outputLoop_2() {
   console.log(sum);
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 このサンプルを実行するとスクリプトエディタの上部に「関数outLoop_2を実行中...」というメッセージが表示されたまま処理が完了しません。
 このサンプルは変数xを初期化して1を代入していますが、while文の条件式が`x <= 10`となっているのにもかかわらず変数xが更新されずにずっと1のままのため、
 while文の中をグルグル回り続けてしまっています。
@@ -91,6 +99,8 @@ for文の処理の流れは以下の通りです。
 　計算後は②条件式に戻ります。
 
 次のサンプルを実行してfor文の処理の流れを確認しましょう。
+{{< tabs groupId="value_2_2_1_13" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function outputLoop_3() {
   var sum = 0;
@@ -100,6 +110,8 @@ function outputLoop_3() {
   console.log(sum);
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 55
 ```
@@ -108,6 +120,8 @@ function outputLoop_3() {
 いまのループを中断して次のループに進みたい（要約するとスキップしたい）場合は`continue文`を活用します。
 continue文が実行されると、そのループは中断され増減式が実行されます。
 次のサンプルではカウンタ変数のindex変数が２の倍数の場合は、continue文以降の処理をスキップしています。
+{{< tabs groupId="value_2_2_1_13" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function outputLoop_4() {
   for (var index = 0; index <= 10; index++) {
@@ -119,6 +133,8 @@ function outputLoop_4() {
   }
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```js
 1.0
 3.0
@@ -129,6 +145,8 @@ function outputLoop_4() {
 
 ### 繰り返し処理と配列
 これまでは配列の要素を取得しようとすると下記のようにコーディングする必要がありました。
+{{< tabs groupId="value_2_2_1_14" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function outputLoop_5() {
   var fruits = ['apple', 'banana', 'orange'];
@@ -137,6 +155,8 @@ function outputLoop_5() {
   console.log(fruits[2]);
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```js
 apple
 banana
@@ -145,6 +165,8 @@ orange
 上記の例では取り出す要素が3つだけのため問題ありませんが、
 この要素の数が10、100と増えていくとそれに比例してコーディング量が増えてしまいます。
 そのような時に繰り返し処理を活用するとコーディング量を減らすことができます。
+{{< tabs groupId="value_2_2_1_15" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function outputLoop_6() {
   var fruits = ['apple', 'banana', 'orange'];
@@ -153,6 +175,8 @@ function outputLoop_6() {
   }
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```js
 apple
 banana
@@ -160,6 +184,8 @@ orange
 ```
 先ほどの例は配列の要素を取得しましたが、多次元配列から要素を取得するときも活躍します。
 以下のサンプルでは繰り返し処理を活用して２次元配列の要素を取得しています。
+{{< tabs groupId="value_2_2_1_16" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function outputLoop_7() {
   var foods = [['apple', 'banana', 'orange'], ['beef', 'pork', 'chicken']];
@@ -168,6 +194,8 @@ function outputLoop_7() {
   }
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 ['apple', 'banana', 'orange']
 ['beef', 'pork', 'chicken']
@@ -176,6 +204,8 @@ function outputLoop_7() {
 その場合は繰り返し処理の中でさらに繰り返し処理を行う２重ループを行うことで実現できます。
 1回目のループ（カウント変数がi変数のループ）では配列（要素）を取得して、
 2回目のループ（カウント変数がj変数のループ）で要素を取得しています。
+{{< tabs groupId="value_2_2_1_17" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function outputLoop_8() {
   var foods = [['apple', 'banana', 'orange'], ['beef', 'pork', 'chicken']];
@@ -186,6 +216,8 @@ function outputLoop_8() {
   }
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```js
 apple
 banana

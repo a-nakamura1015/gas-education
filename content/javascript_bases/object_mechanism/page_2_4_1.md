@@ -37,6 +37,8 @@ GASの各サービスはこのオブジェクトの仕組みに忠実に構成�
 実際にJSONを作ってみましょう。次の例は学業の成績データをオブジェクトにしてみました。  
 成績データ（result）は各科目の点数を格納しており、  
 国語（japanese）・数学（math）・英語（english）の点数を持っています。
+{{< tabs groupId="object_1" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function object_1() {
   var result = {
@@ -49,6 +51,8 @@ function object_1() {
   console.log(result.english);
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 100
 80
@@ -57,6 +61,8 @@ function object_1() {
 
 プロパティは変数と同様に再代入することができます。  
 次の例は成績データ（result）の国語（japanese）に0を再代入しています。
+{{< tabs groupId="object_2" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function object_2() {
   var result = {
@@ -69,6 +75,8 @@ function object_2() {
   console.log(result.japanese);
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 100
 0
@@ -102,7 +110,8 @@ function object_2() {
 ```
 
 では、下記のサンプルで確認していきましょう。myGreetオブジェクトのsayHelloというメソッドを用意して呼び出しています。
-
+{{< tabs groupId="object_3" >}}
+{{% tab name="コード.gs" %}}
 ```js
 var myGreet = {
   sayHello: function() {
@@ -113,6 +122,8 @@ function outputObj_1() {
   console.log(myGreet.sayHello());
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 Hello!
 ```
@@ -134,6 +145,8 @@ Hello!
 ```
 myGreetオブジェクトにsayGoodByeメソッドを追加する処理を加えたものが次のサンプルです。  
 実行すると、ログには「Good bye!」も出力され、追加したsayGoodByeメソッドが動作していることが確認できます。
+{{< tabs groupId="object_4" >}}
+{{% tab name="コード.gs" %}}
 ```js
 var myGreet = {
   sayHello: function() {
@@ -148,6 +161,8 @@ function outputObj_2() {
   console.log(myGreet.sayGoodBye());
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 Hello!
 Good bye!

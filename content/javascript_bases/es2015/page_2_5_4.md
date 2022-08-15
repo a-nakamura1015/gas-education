@@ -57,6 +57,8 @@ JavaScriptではクラス名の先頭の文字を大文字で書くことが慣�
 これまではオブジェクトが必要になった際は、以下のようにその都度プロパティやメソッドを定義していました。  
 しかし、このコーディング方法はほとんど同じ内容のコードを書かないといけない上、  
 メソッドを増やすことになった場合は非常に手間がかかります。
+{{< tabs groupId="es2022_20" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function object_pattern() {
   const human1 = {
@@ -75,6 +77,8 @@ function object_pattern() {
   human2.greet(); // Hello. My name is Hanako
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 一方、クラスはこの問題を解消してくれます。  
 以下は先ほどのサンプルをclass構文を使って書き直したサンプルです。  
 仮にメソッドを増やすことになったとしても、Humanクラスにメソッド追加することで、  
@@ -83,6 +87,8 @@ function object_pattern() {
 以下のサンプルには**名前がTaroの人間クラスのインスタンス**と**名前がHanakoの人間クラスのインスタンス**が生成されています。  
 インスタンスを生成するには**new クラス名()**と記述します。  
 ※) クラスは変数や関数と同様にグローバル領域に定義することができます。
+{{< tabs groupId="es2022_21" >}}
+{{% tab name="コード.gs" %}}
 ```js
 class Human {
   constructor(name) {
@@ -99,6 +105,8 @@ function classes_pattern_1() {
   human2.greet(); // Hello. My name is Hanako
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ## アクセッサプロパティ
 通常、クラスに定義したメソッドは**インスタンス.メソッド名()**で実行することができますが、  
 インスタンスのプロパティの参照（getter）と代入（setter）する特殊なメソッドは**インスタンス.プロパティ名**で実行することができます。  
@@ -121,6 +129,8 @@ class クラス {
 `this.name`が呼ばれるとgetterが動くのですが、このgetterもまた`this.name`を呼んでいるのです。  
 そのため、同じ関数がひたすら呼ばれることにより`RangeError: Maximum call stack size exceeded`が発生してしまいます。  
 このエラーを回避するため、プロパティを`this._name`とコーディングする必要があるのです。
+{{< tabs groupId="es2022_22" >}}
+{{% tab name="コード.gs" %}}
 ```js
 class Human {
   constructor(name) {
@@ -142,6 +152,8 @@ function classes_pattern_2() {
   console.log(human.name); // setterで改名後の名前を取得
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 Suzuki Taro
 ```
@@ -163,6 +175,8 @@ const インスタンス名 = new クラス名();
 また、生成したインスタンスに対してメソッドやプロパティを定義することができます。  
 同じ名前のメソッドやプロパティを宣言すると、プロトタイプメソッドよりもインスタンス生成後にインスタンスに対して追加したメソッドやプロパティが優先されます。  
 追加したメソッドやプロパティは対象のインスタンスのみで利用可能で、同クラスの別インスタンスでは利用することはできません。
+{{< tabs groupId="es2022_23" >}}
+{{% tab name="コード.gs" %}}
 ```js
 class Human {
   constructor(name) {
@@ -191,6 +205,8 @@ function classes_pattern_3() {
   human2.shout(); // TypeError: human2.shout is not a function
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 
 ## 静的メソッド（クラスメソッド）
 ここまで紹介したメソッドはインスタンスごとに実行することができる**インスタンスメソッド**でしたが、  
@@ -211,6 +227,8 @@ class クラス名 {
 例えば、Humanクラスから生成されたインスタンスの数を管理したい場合、  
 各インスタンスではなくクラスでインスタンスの数を管理する必要があります。  
 以下のサンプルコードではHumanクラスのインスタンスが生成されるたびに静的メソッドを実行してインスタンスの数をカウントしています。
+{{< tabs groupId="es2022_24" >}}
+{{% tab name="コード.gs" %}}
 ```js
 class Human {
   constructor(name) {
@@ -241,6 +259,8 @@ function classes_pattern_4() {
   console.log(Human.count);
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 3
 ```
@@ -268,6 +288,8 @@ Animalクラスを継承するサブクラス（子クラス）のDogクラス�
 サブクラスのコンストラクタに**super()**が実行されていますが、  
 このsuper()でextendsを使って定義したサブクラスからスーパークラスを参照することができます。  
 サンプルコードではスーパークラスのコンストラクタを参照して実行しています。
+{{< tabs groupId="es2022_25" >}}
+{{% tab name="コード.gs" %}}
 ```js
 class Animal {
   constructor(categoryName) {
@@ -283,8 +305,7 @@ class Animal {
     console.log(`${this.name}が吠えた`);
   }
 }
-```
-```js
+
 /**
  * 犬は動物のサブクラス
  */
@@ -306,8 +327,7 @@ class Dog extends Animal {
     console.log(`${this.name}は噛み付いた`);
   }
 }
-```
-```js
+
 /**
  * 猫は動物のサブクラス
  */
@@ -330,9 +350,14 @@ class Cat extends Animal {
   }
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
+
 先ほどのDogクラスとCatクラスからインスタンスを生成し、メソッドを実行しているのが以下のサンプルコードです。  
 Dogクラスから生成したインスタンスにはPochiという名前を、Catクラスから生成したインスタンスにはTamaという名前をつけ、  
 それぞれのメソッドを実行しています。
+{{< tabs groupId="es2022_26" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function classes_pattern_5() {
   const dog = new Dog();
@@ -350,6 +375,8 @@ function classes_pattern_5() {
   cat.scratch();
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 犬が産まれた
 猫が産まれた
@@ -364,6 +391,8 @@ Tamaは引っ掻いた
 このように、継承によりオブジェクトなどのデータ型に関する操作が統一的であることを**ポリモーフィズム**と呼びます。  
 また、JavaScriptには**instaceof演算子**で左辺の値が右辺のクラスのインスタンスであるかを真偽値で返ししてくれます。  
 instaceof演算子は右辺にスーパークラスが指定された場合はtrueを返します。
+{{< tabs groupId="es2022_27" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function classes_pattern_6() {
   const dog = new Dog(); // 犬が産まれた
@@ -376,6 +405,8 @@ function classes_pattern_6() {
   console.log(cat instanceof Animal); // true
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 犬が産まれた
 猫が産まれた

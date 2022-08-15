@@ -26,6 +26,8 @@ weight: 1
 ### var キーワード
 #### var キーワードでの変数の再宣言・再代入
 varキーワードで宣言した変数は再宣言・再代入をすることができます。
+{{< tabs groupId="es2022_1" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function var_pattern_1() {
   // var での再宣言
@@ -38,9 +40,14 @@ function var_pattern_2() {
   value = 2;
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
+
 #### var キーワードでの変数のスコープ
 varキーワードで宣言したローカル変数は `関数スコープ` となります。  
 関数スコープの場合は関数内であれば宣言したブロックが異なっていても参照することができます。
+{{< tabs groupId="es2022_2" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function var_pattern_3() {
   let isLoop = true;
@@ -53,12 +60,17 @@ function var_pattern_3() {
   console.log(value); // 1
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
+
 #### var キーワードでの変数の巻き上げ
 先述の通り、 var キーワードで宣言されたローカル変数は同関数内であれば参照することができます。
 実は宣言の前からでも参照することができるのです。  
 この事象は「巻き上げ（hosting）」と呼ばれています。  
 以下のサンプルコードをでは、1回目の`console.log()`でパラメーターに value 変数を渡していますが、実行時点では value 変数は宣言されていません。  
 実行してもエラーは発生しませんが、1回目の`console.log()`でログに表示されるのは`undefined`となります。  
+{{< tabs groupId="es2022_3" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function var_pattern_4() {
   console.log(value); // undefined
@@ -66,6 +78,8 @@ function var_pattern_4() {
   console.log(value); // 1
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 変数の巻き上げで注意すべきは巻き上げが発生してもエラーとして扱われない点です。  
 変数の巻き上げに気づかず、そのまま処理を実行することにより期待しない処理が行われる可能性があります。  
 一方、後述する let・const キーワードでローカル変数を宣言した場合は変数の巻き上げは発生せずエラーが発生します。  
@@ -78,6 +92,8 @@ JavaScriptでは関数内で宣言されたローカル変数は、すべてそ�
 #### let キーワードの再宣言・再代入
 letキーワードで宣言したローカル変数は再宣言することはできませんが、再代入することはできます。  
 letキーワードで宣言したローカル変数を再宣言するようにコーディングすると、保存する際に JavaScript の文法が間違っているという意味の`構文エラー（SyntaxError）`が発生します。
+{{< tabs groupId="es2022_4" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function let_pattern_1() {
   // let での再宣言
@@ -91,9 +107,13 @@ function let_pattern_2() {
   value = 2;
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 #### let キーワードのスコープ
-letキーワードで宣言したローカル変数は `ブロックスコープ` となります。  
+letキーワードで宣言したローカル変数は **ブロックスコープ** となります。  
 ブロックスコープの場合はブロック内であれば宣言したローカル変数を参照することができますが、同じ関数であってもブロック外からは参照することができません。
+{{< tabs groupId="es2022_5" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function let_pattern_3() {
   let isLoop = true;
@@ -107,9 +127,14 @@ function let_pattern_3() {
   console.log(value);
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
+
 #### let キーワードの変数の巻き戻し
 let キーワードでローカル変数を宣言した場合は変数の巻き戻しは発生しません。  
 代わりに実行する際に参照する変数が見つからないという意味の `参照エラー（ReferenceError）`が発生します。
+{{< tabs groupId="es2022_6" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function let_pattern_4() {
   console.log(value);
@@ -118,9 +143,14 @@ function let_pattern_4() {
   console.log(value);
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
+
 ### const キーワード
 #### const キーワードの再宣言・再代入
 constキーワードで宣言したローカル変数は再宣言・再代入ができません。
+{{< tabs groupId="es2022_7" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function const_pattern_3() {
   let isLoop = true;
@@ -134,9 +164,14 @@ function const_pattern_3() {
   console.log(value);
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
+
 #### const キーワードのスコープ
 constキーワードで宣言したローカル変数は、letキーワードと同じく `ブロックスコープ` となります。  
 そのため、ブロック内であれば宣言したローカル変数を参照することができますが、同じ関数であってもブロック外からは参照することができません。
+{{< tabs groupId="es2022_8" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function const_pattern_4() {
   console.log(value);
@@ -145,9 +180,14 @@ function const_pattern_4() {
   console.log(value);
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
+
 #### const キーワードの変数の巻き戻し
 let キーワードと同様に、const キーワードでローカル変数を宣言した場合は変数の巻き戻しは発生しません。  
 代わりに実行する際に参照する変数が見つからないという意味の `参照エラー（ReferenceError）`が発生します。
+{{< tabs groupId="es2022_9" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function const_pattern_4() {
   console.log(value);
@@ -156,3 +196,5 @@ function const_pattern_4() {
   console.log(value);
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}

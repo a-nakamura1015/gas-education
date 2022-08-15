@@ -30,6 +30,9 @@ return文が実行されると、戻り値と共に処理も戻ります。
 戻り値を返す関数を呼び出した場合は、左辺に変数を指定することで代入をしたり、さらに引数として利用をしたりすることができます。
 では、次のサンプルで確認をしてみましょう。
 面積を求める`calcArea`関数は引数として縦の長さx変数と横の長さy変数の値を受け取り、戻り値として`x * y`の算出結果を返します。
+
+{{< tabs groupId="function_4" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function myFunc_3() {
   var result = calcArea(10, 5); // 関数の結果を変数に格納することができます
@@ -40,6 +43,8 @@ function calcArea(x, y) {
   return x * y;
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 50
 30
@@ -49,6 +54,8 @@ function calcArea(x, y) {
 関数の値はキーワードの **return** を使って呼び出し側に戻します。
 関数から return で戻らない場合や値が指定されていない return で戻る場合、
 関数が返す値は **undefined** となります。
+{{< tabs groupId="function_5" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function myFunc_4() {
   console.log(output_1());
@@ -61,6 +68,8 @@ function output_2() {
   var hello = 'Hello!';
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 Hello!
 undefined
@@ -70,11 +79,15 @@ undefined
 関数に情報を渡すには「引数（パラメーター）」と呼ばれるものを利用します。
 引数は「関数が呼び出されるまでは存在しない変数」であり、
 関数の呼び出しの際に（）のなかに値を設定することでその値を引数として利用することができます。
+{{< tabs groupId="function_6" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function sum(a, b) {
   return a + b;
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 上記のサンプルにおいて、aとbは「仮引数」と呼ばれており、
 関数が呼び出されると仮引数に呼び出し側から渡された値が代入されたのち関数本体が実行されます。
 ```js
@@ -91,6 +104,8 @@ console.log(sum(5, 10);
 JavaScriptではこのような区別がなく、引数なしであっても、引数がいくつあっても同じ関数として呼び出されます。
 そのため、どのような関数でも任意個数の引数を指定して呼び出すことができます。
 呼び出し側に引数を指定しない場合は暗黙のうちに`undefined`が指定されて呼び出されます。
+{{< tabs groupId="function_7" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function myFunc_5() {
   console.log(output_3());
@@ -99,6 +114,8 @@ function output_3(x) {
   return 'output_3内のxの値：' + x;
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 output_3内のxの値：undefined
 ```

@@ -8,16 +8,19 @@ weight: 5
 宣言した変数はどこからでも参照できるわけではありません。  
 変数には参照できる範囲が定められており、その範囲をスコープといいます。  
 
-
 ### グローバル領域
 早速ですが、下記のサンプルを実行してみましょう。
 実行する関数内にはステートメントは１行もありませんが、実行するとどうなるでしょうか？
+{{< tabs groupId="value_2_9" >}}
+{{% tab name="コード.gs" %}}
 ```js
 var msgHello = 'Hello!'
 console.log(msgHello);
 function outputScope_1() {
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 Hello!
 ```
@@ -28,6 +31,8 @@ GASにはどの関数に属さない領域にステートメントを記述す�
 
 次のサンプルを実行すると、まずグローバル領域に記述されたステートメントが上から順番に実行されていきます。  
 その後、呼び出された関数内のステートメントが実行されることが確認できるでしょう。
+{{< tabs groupId="value_2_10" >}}
+{{% tab name="コード.gs" %}}
 ```js
 console.log('Good Morning!');
 function outputScope_2() {
@@ -35,6 +40,8 @@ function outputScope_2() {
 }
 console.log('Good Night!');
 ```
+{{% /tab %}}
+{{< /tabs >}}
 ```
 Good Morning!
 Hello!
@@ -60,6 +67,8 @@ Good Night!
 次のサンプルはローカル変数のスコープを確認するサンプルです。  
 `localFunction_2`関数を実行すると「localFunction_2が定義されていません」というエラーが発生します。  
 このようにローカル変数は外からはアクセスすることができないのです。
+{{< tabs groupId="value_2_11" >}}
+{{% tab name="コード.gs" %}}
 ```js
 function localFunction_1() {
   var localMsg = 'ローカル';
@@ -68,20 +77,28 @@ function localFunction_2() {
   console.log(localMsg);
 }
 ```
+{{% /tab %}}
+{{< /tabs >}}
 続いて、グローバル変数のスコープを確認するために、次のサンプルを実行してみましょう。
+{{< tabs groupId="value_2_12" >}}
+{{% tab name="コード.gs" %}}
 ```js
 var globalMsg = 'グローバル';
 function globalFunction_1() {
   console.log(globalMsg);
 }
 ```
-```js
+{{% /tab %}}
+{{< /tabs >}}
+```
 グローバル
 ```
 このようにグローバル変数は全ての関数からアクセスすることができます。
 それでは、次のサンプルの場合はどうなるでしょうか？
 msg変数がグローバル領域でも、関数の中でも宣言されています。
 このような場合に`globalFunction_2`を実行するとローカル変数のmsgが表示されます。
+{{< tabs groupId="value_2_13" >}}
+{{% tab name="コード.gs" %}}
 ```js
 var msg = 'グローバル';
 function globalFunction_2() {
@@ -89,6 +106,8 @@ function globalFunction_2() {
   console.log(msg);
 }
 ```
-```js
+{{% /tab %}}
+{{< /tabs >}}
+```
 ローカル
 ```
