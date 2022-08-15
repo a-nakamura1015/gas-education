@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/gas-education/images/favicon.png" type="image/png">
 
-    <title>スプレッドシートを操作する :: GAS Edu</title>
+    <title>カレンダーを操作しよう :: GAS Edu</title>
 
     
     <link href="/gas-education/css/nucleus.css?1660543980" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/gas-education/sheets/page_3/">
+  <body class="" data-url="/gas-education/calendar/page_3/">
     <nav id="sidebar" class="">
 
 
@@ -1113,7 +1113,7 @@
   
     
     <li data-nav-id="/gas-education/sheets/" title="スプレッドシート編" class="dd-item
-        parent
+        
         
         
         ">
@@ -1181,7 +1181,7 @@
  
   
     
-      <li data-nav-id="/gas-education/sheets/page_3/" title="スプレッドシートを操作する" class="dd-item active">
+      <li data-nav-id="/gas-education/sheets/page_3/" title="スプレッドシートを操作する" class="dd-item ">
         <a href="/gas-education/sheets/page_3/">
         <b>3. </b>スプレッドシートを操作する
         
@@ -1294,7 +1294,7 @@
   
     
     <li data-nav-id="/gas-education/calendar/" title="Google カレンダー編" class="dd-item
-        
+        parent
         
         
         ">
@@ -1362,7 +1362,7 @@
  
   
     
-      <li data-nav-id="/gas-education/calendar/page_3/" title="カレンダーを操作しよう" class="dd-item ">
+      <li data-nav-id="/gas-education/calendar/page_3/" title="カレンダーを操作しよう" class="dd-item active">
         <a href="/gas-education/calendar/page_3/">
         <b>3. </b>カレンダーを操作しよう
         
@@ -1792,7 +1792,7 @@
             
           
           
-            <a href='/gas-education/'>GAS Edu</a> > <a href='/gas-education/sheets/'>スプレッドシート編</a> > スプレッドシートを操作する
+            <a href='/gas-education/'>GAS Edu</a> > <a href='/gas-education/calendar/'>Google カレンダー編</a> > カレンダーを操作しよう
           
         
           
@@ -1807,9 +1807,12 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#spreadsheetクラスとは">Spreadsheetクラスとは</a>
+    <li>
       <ul>
-        <li><a href="#シートを取得する">シートを取得する</a></li>
+        <li><a href="#カレンダーを作成しよう">カレンダーを作成しよう</a></li>
+        <li><a href="#カレンダーの情報を取得しよう">カレンダーの情報を取得しよう</a></li>
+        <li><a href="#カレンダーの情報を更新しよう">カレンダーの情報を更新しよう</a></li>
+        <li><a href="#カレンダーを削除しよう">カレンダーを削除しよう</a></li>
       </ul>
     </li>
   </ul>
@@ -1829,54 +1832,340 @@
           
             <h1>
               
-              スプレッドシートを操作する
+              カレンダーを操作しよう
             </h1>
           
 
         
 
 
-<h2 id="spreadsheetクラスとは">Spreadsheetクラスとは</h2>
-<p><strong>Spreadsheetクラス</strong> は、文字通りスプレッドシートを操作する機能を提供するクラスです。<br>
-シートを取得したり作成したりするメソッドやスプレッドシートの情報など（メンバー）が提供されています。<br>
-では早速、Spreadsheetクラスのメンバーを使って、スプレッドシートの様々な情報を取得してみましょう。<br>
-次のサンプルはスプレッドシートのID、スプレッドシート名、URLがログに出力されます。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">spreadsheet_3</span>() {
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">spreadsheet</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">SpreadsheetApp</span>.<span style="color:#a6e22e">getActiveSpreadsheet</span>();
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">spreadsheet</span>.<span style="color:#a6e22e">getId</span>()); <span style="color:#75715e">// スプレッドシートのID
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">spreadsheet</span>.<span style="color:#a6e22e">getName</span>()); <span style="color:#75715e">// スプレッドシートの名前
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">spreadsheet</span>.<span style="color:#a6e22e">getURL</span>()); <span style="color:#75715e">// スプレッドシートのURL
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
-</span></span></code></pre></div><h3 id="シートを取得する">シートを取得する</h3>
-<p>Spreadsheetクラスはその配下であるシートを取得することができます。<br>
-シートの取得方法は次のような方法があります。</p>
-<ul>
-<li>アクティブなシートを取得する</li>
-<li>シート名で特定して取得する</li>
-<li>インデックスで配列からシートを特定して取得する</li>
-</ul>
-<p>アクティブなシートは先ほど説明した通りコンテナバインドスクリプトに限り、SpreadsheetAppクラスから直接取得することができます。<br>
-別な方法として、<strong>getSheetByNameメソッド</strong> を使用してシート名で特定して取得する方法があります。<br>
-シート名で取得するのは簡単ではありますが、シート名が変わると取得できなくなる点に注意です。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">Spreadsheetオブジェクト</span>.<span style="color:#a6e22e">getSheetByName</span>(<span style="color:#a6e22e">シート名</span>)
-</span></span></code></pre></div><p>他にも、<strong>getSheetsメソッド</strong> でシートを配列として取得した上で、インデックスでシートを特定する方法もあります。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">Spreadsheetオブジェクト</span>.<span style="color:#a6e22e">getSheets</span>()
-</span></span></code></pre></div><p>getSheetsメソッドは、スプレッドシートに含まれるシートのうち最も左に位置するシートのインデックスを0として、<br>
-そこから右方向に順番にシートを配列に格納して取得します。<br>
-戻り値が配列になりますので、全てのシートに処理を行いたい場合などに便利です。<br>
-しかし、インデックスは並び順に依存しているため、<br>
-特定のシートのみ処理をしたい（例えば左から2つめのシートのみ処理したい）場合はシートの並び順が変更された場合は意図したシートが処理されないことになります。</p>
-<p>それでは、次のサンプルを実行して確認してみましょう。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">spreadsheet_4</span>() {
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">spreadsheet</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">SpreadsheetApp</span>.<span style="color:#a6e22e">getActiveSpreadsheet</span>();
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sheet</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">spreadsheet</span>.<span style="color:#a6e22e">getSheetByName</span>(<span style="color:#e6db74">&#39;シート1&#39;</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">conosole</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getName</span>());
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sheets</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">spreadsheetApp</span>.<span style="color:#a6e22e">getSheets</span>();
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sheet</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">getName</span>());
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sheet</span>[<span style="color:#ae81ff">1</span>].<span style="color:#a6e22e">getName</span>());
+<h3 id="カレンダーを作成しよう">カレンダーを作成しよう</h3>
+<p>Google カレンダーでは複数のカレンダーを作ることができます。(この機能により、用途によってカレンダーを使い分けることができます。)<br>
+GAS でカレンダーを作るには、GoogleAppsクラスの <a href="https://developers.google.com/apps-script/reference/calendar/calendar-app#createcalendarname" target="_blank">createCalendar メソッド</a>
+を活用します。<br>
+このメソッドはパラメータとして <strong>カレンダー名</strong> を指定する必要があります。</p>
+<table>
+<thead>
+<tr>
+<th>メソッド名</th>
+<th>パラメータ</th>
+<th>戻り値</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>createCalendar</td>
+<td>[String] カレンダーの名前</td>
+<td>[Calendar] 作成したカレンダー</td>
+<td>ユーザーが所有する新しいカレンダーを作成します。</td>
+</tr>
+</tbody>
+</table>
+<p>今回は以下のサンプルコードを実行して、旅行用のカレンダーを作成してみましょう。<br>
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+    
+        <button
+          data-tab-item="コード.gs"
+          data-tab-group="calendar_3_1"
+          class="tab-nav-button btn active"
+          onclick="switchTab('calendar_3_1','コード.gs')"
+         >コード.gs</button>
+    
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="コード.gs" data-tab-group="calendar_3_1" class="tab-item active">
+            <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">createCalendar</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">myCalendar</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">CalendarApp</span>.<span style="color:#a6e22e">createCalendar</span>(<span style="color:#e6db74">&#39;旅行用&#39;</span>);
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p><strong>getNameメソッド</strong> はシート名を取得するメソッドです。getSheetsメソッドはシートを配列として取得するため、角括弧内にインデックスを用いて各シートを取り出すことができます。</p>
+</span></span></code></pre></div>
+        </div>
+        
+    </div>
+</div>
+</p>
+<p>サンプルコードが無事実行ができたら、Google カレンダーを再読み込みしてみましょう。<br>
+すると、マイカレンダーの中に旅行用カレンダーが作成されていることが確認できます。</p>
+<hr>
+<h3 id="カレンダーの情報を取得しよう">カレンダーの情報を取得しよう</h3>
+<p>カレンダーに予定を作るには、まずカレンダーを取得する必要があります。<br>
+CalendarAppクラスの <a href="https://developers.google.com/apps-script/reference/calendar/calendar-app#getallcalendars" target="_blank">getAllCalendars メソッド</a>
+を実行することで、Google カレンダー内にある全てのカレンダーを取得することができます。<br>
+このメソッドは Calendarクラスのオブジェクトを配列で返します。</p>
+<table>
+<thead>
+<tr>
+<th>メソッド名</th>
+<th>パラメータ</th>
+<th>戻り値</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>getAllCalendars</td>
+<td>なし</td>
+<td>[Calendar[]] 取得したカレンダーの配列</td>
+<td>ユーザーが所有または購読しているすべてのカレンダーを取得します。</td>
+</tr>
+</tbody>
+</table>
+<p>以下のサンプルコードは CalendarApp.getAllCalendar() の戻り値をループ処理で一つずつ取得して処理をしています。</p>
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+    
+        <button
+          data-tab-item="コード.gs"
+          data-tab-group="calendar_3_2"
+          class="tab-nav-button btn active"
+          onclick="switchTab('calendar_3_2','コード.gs')"
+         >コード.gs</button>
+    
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="コード.gs" data-tab-group="calendar_3_2" class="tab-item active">
+            <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getAllCalendar</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 全てのカレンダーを取得する
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">allCalendar</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">CalendarApp</span>.<span style="color:#a6e22e">getAllCalendars</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">allCalendar</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// カレンダーを一つずつ取得して、カレンダーの情報をログで出力する
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">calendar</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">allCalendar</span>[<span style="color:#a6e22e">i</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">id</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">calendar</span>.<span style="color:#a6e22e">getId</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">calendar</span>.<span style="color:#a6e22e">getName</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">descripion</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">calendar</span>.<span style="color:#a6e22e">getDescription</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">id</span>, <span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">descripion</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+        </div>
+        
+    </div>
+</div>
+
+<p>サンプルコードの変数<strong>calendar</strong>には Calendarクラスのオブジェクトが格納されています。<br>
+Calendarクラスはカレンダーの情報を取得するためのメソッドを提供しています。<br>
+サンプルコードを実行すると、カレンダーのID、名前、説明をログで表示されますので確認してみましょう。</p>
+<table>
+<thead>
+<tr>
+<th>メソッド名</th>
+<th>パラメータ</th>
+<th>戻り値</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>getId</td>
+<td>なし</td>
+<td>[String] 取得したカレンダーの ID</td>
+<td>カレンダーの ID を取得します。</td>
+</tr>
+<tr>
+<td>getName</td>
+<td>なし</td>
+<td>[String] 取得したカレンダーの名前</td>
+<td>カレンダーの名前を取得します。</td>
+</tr>
+<tr>
+<td>getDescription</td>
+<td>なし</td>
+<td>[String] 取得したカレンダーの説明</td>
+<td>カレンダーの説明を取得します。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="notices note" ><p><strong>カレンダーの説明の確認方法</strong><br>
+カレンダーの説明はカレンダーの設定画面で確認することができます。<br>
+対象のカレンダーにマウスカーソルを合わせると3点リーダーが表示され、クリックするとメニューが表示されます。<br>
+このメニュー内の「設定と共有」を選択すると、カレンダーの設定画面を表示することができます。<br>
+<img src="../img/page_3_1.png" alt="page_3_1.png"></p>
+</div>
+
+<p>また、ある特定のカレンダーのみを取得することもできます。<br>
+CalendarAppクラスの <a href="https://developers.google.com/apps-script/reference/calendar/calendar-app#getcalendarbyidid" target="_blank">getCalendarById メソッド</a>
+ で特定のカレンダーを取得できます。<br>
+このメソッドはパラメータに<strong>カレンダーのID</strong>を指定するため、特定のカレンダーを取得するには事前にカレンダーのIDを確認する必要があります。</p>
+<p>以下のサンプルコードはカレンダーを特定し、そのカレンダーの情報を取得してログに出力しています。<br>
+<strong>&lsquo;カレンダーのID&rsquo;</strong> には先ほど作成した旅行用のカレンダーのIDを指定しましょう。<br>
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+    
+        <button
+          data-tab-item="コード.gs"
+          data-tab-group="calendar_3_3"
+          class="tab-nav-button btn active"
+          onclick="switchTab('calendar_3_3','コード.gs')"
+         >コード.gs</button>
+    
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="コード.gs" data-tab-group="calendar_3_3" class="tab-item active">
+            <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getCalendarById</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// IDが一致するカレンダーを取得する
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">calendar</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">CalendarApp</span>.<span style="color:#a6e22e">getCalendarById</span>(<span style="color:#e6db74">&#39;カレンダーのID&#39;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 取得したカレンダーの情報を取得する
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">id</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">calendar</span>.<span style="color:#a6e22e">getId</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">calendar</span>.<span style="color:#a6e22e">getName</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">descripion</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">calendar</span>.<span style="color:#a6e22e">getDescription</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">id</span>, <span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">descripion</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+        </div>
+        
+    </div>
+</div>
+</p>
+<table>
+<thead>
+<tr>
+<th>メソッド名</th>
+<th>パラメータ</th>
+<th>戻り値</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>getCalendarById</td>
+<td>[String] カレンダーのID</td>
+<td>[Calendar] 取得したカレンダー</td>
+<td>指定された ID のカレンダーを取得します。</td>
+</tr>
+</tbody>
+</table>
+
+<div class="notices note" ><p><strong>カレンダーのIDの確認方法</strong><br>
+カレンダーのIDはカレンダーの設定画面で確認することができます。<br>
+対象のカレンダーにマウスカーソルを合わせると3点リーダーが表示され、クリックするとメニューが表示されます。<br>
+このメニュー内の「設定と共有」を選択すると、カレンダーの設定画面を表示することができます。<br>
+<img src="../img/page_3_2.png" alt="page_3_2.png"></p>
+</div>
+
+<hr>
+<h3 id="カレンダーの情報を更新しよう">カレンダーの情報を更新しよう</h3>
+<p>カレンダーを特定することができれば、カレンダーの情報を更新することができるようになります。<br>
+Calendarクラスの <a href="https://developers.google.com/apps-script/reference/calendar/calendar#setnamename" target="_blank">setName メソッド</a>
+はカレンダーの名前を、<br>
+Calendarクラスの <a href="https://developers.google.com/apps-script/reference/calendar/calendar#setdescriptiondescription" target="_blank">setDescription メソッド</a>
+はカレンダーの説明を更新することができます。</p>
+<p>以下のサンプルコードはカレンダーを取得した後にカレンダーの名前と説明を更新しています。<br>
+サンプルコードを実行したのち、期待通りに Google カレンダーが更新されているかを確認してみましょう。<br>
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+    
+        <button
+          data-tab-item="コード.gs"
+          data-tab-group="calendar_3_4"
+          class="tab-nav-button btn active"
+          onclick="switchTab('calendar_3_4','コード.gs')"
+         >コード.gs</button>
+    
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="コード.gs" data-tab-group="calendar_3_4" class="tab-item active">
+            <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">updateCalendar</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// IDが一致するカレンダーを取得する
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">calendar</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">CalendarApp</span>.<span style="color:#a6e22e">getCalendarById</span>(<span style="color:#e6db74">&#39;カレンダーのID&#39;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">calendar</span>.<span style="color:#a6e22e">setName</span>(<span style="color:#e6db74">&#39;Updated Calendar&#39;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">calendar</span>.<span style="color:#a6e22e">setDescription</span>(<span style="color:#e6db74">&#39;This is updated by gas.&#39;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+        </div>
+        
+    </div>
+</div>
+</p>
+<table>
+<thead>
+<tr>
+<th>メソッド名</th>
+<th>パラメータ</th>
+<th>戻り値</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>setName</td>
+<td>[String] カレンダーの名前</td>
+<td>なし</td>
+<td>カレンダーの名前を設定します。</td>
+</tr>
+<tr>
+<td>setDescription</td>
+<td>[String] カレンダーの説明</td>
+<td>なし</td>
+<td>カレンダーの説明を設定します。</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="カレンダーを削除しよう">カレンダーを削除しよう</h3>
+<p>カレンダーを特定することができれば、カレンダーを削除することもできます。<br>
+Calendarクラスの <a href="https://developers.google.com/apps-script/reference/calendar/calendar#deletecalendar" target="_blank">deleteCalendar メソッド</a>
+  はカレンダーを削除することができます。</p>
+<p>以下のサンプルコードを実行すると特定したカレンダーを削除されます。<br>
+<strong>&lsquo;カレンダーのID&rsquo;</strong> には先ほど更新した <strong>Updated Calendar</strong> カレンダーのIDを指定しましょう。<br>
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+    
+        <button
+          data-tab-item="コード.gs"
+          data-tab-group="calendar_3_5"
+          class="tab-nav-button btn active"
+          onclick="switchTab('calendar_3_5','コード.gs')"
+         >コード.gs</button>
+    
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="コード.gs" data-tab-group="calendar_3_5" class="tab-item active">
+            <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">deleteCalendar</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// IDが一致するカレンダーを取得する
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">calendar</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">CalendarApp</span>.<span style="color:#a6e22e">getCalendarById</span>(<span style="color:#e6db74">&#39;カレンダーのID&#39;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">calendar</span>.<span style="color:#a6e22e">deleteCalendar</span>();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+        </div>
+        
+    </div>
+</div>
+</p>
+<table>
+<thead>
+<tr>
+<th>メソッド名</th>
+<th>パラメータ</th>
+<th>戻り値</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>deleteCalendar</td>
+<td>なし</td>
+<td>なし</td>
+<td>カレンダーを完全に削除します。自分が所有するカレンダーのみを削除できます。</td>
+</tr>
+</tbody>
+</table>
 
 
 <footer class="footline">
@@ -2607,7 +2896,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -2621,8 +2909,21 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -2655,26 +2956,6 @@
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -2743,6 +3024,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2755,6 +3037,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2788,6 +3073,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2803,6 +3089,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3067,10 +3356,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/gas-education/sheets/page_2/" title="Spreadsheetサービス"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/gas-education/calendar/page_2/" title="Calendarサービス"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/gas-education/sheets/page_4/" title="シートを操作する" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/gas-education/calendar/page_4/" title="予定を操作しよう" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

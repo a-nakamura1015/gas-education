@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/gas-education/images/favicon.png" type="image/png">
 
-    <title>スプレッドシートを操作する :: GAS Edu</title>
+    <title>予定を操作しよう :: GAS Edu</title>
 
     
     <link href="/gas-education/css/nucleus.css?1660543980" rel="stylesheet">
@@ -37,7 +37,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/gas-education/sheets/page_3/">
+  <body class="" data-url="/gas-education/calendar/page_4/">
     <nav id="sidebar" class="">
 
 
@@ -1113,7 +1113,7 @@
   
     
     <li data-nav-id="/gas-education/sheets/" title="スプレッドシート編" class="dd-item
-        parent
+        
         
         
         ">
@@ -1181,7 +1181,7 @@
  
   
     
-      <li data-nav-id="/gas-education/sheets/page_3/" title="スプレッドシートを操作する" class="dd-item active">
+      <li data-nav-id="/gas-education/sheets/page_3/" title="スプレッドシートを操作する" class="dd-item ">
         <a href="/gas-education/sheets/page_3/">
         <b>3. </b>スプレッドシートを操作する
         
@@ -1294,7 +1294,7 @@
   
     
     <li data-nav-id="/gas-education/calendar/" title="Google カレンダー編" class="dd-item
-        
+        parent
         
         
         ">
@@ -1383,7 +1383,7 @@
  
   
     
-      <li data-nav-id="/gas-education/calendar/page_4/" title="予定を操作しよう" class="dd-item ">
+      <li data-nav-id="/gas-education/calendar/page_4/" title="予定を操作しよう" class="dd-item active">
         <a href="/gas-education/calendar/page_4/">
         <b>4. </b>予定を操作しよう
         
@@ -1792,7 +1792,7 @@
             
           
           
-            <a href='/gas-education/'>GAS Edu</a> > <a href='/gas-education/sheets/'>スプレッドシート編</a> > スプレッドシートを操作する
+            <a href='/gas-education/'>GAS Edu</a> > <a href='/gas-education/calendar/'>Google カレンダー編</a> > 予定を操作しよう
           
         
           
@@ -1807,9 +1807,12 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#spreadsheetクラスとは">Spreadsheetクラスとは</a>
+    <li>
       <ul>
-        <li><a href="#シートを取得する">シートを取得する</a></li>
+        <li><a href="#予定を作成しよう">予定を作成しよう</a></li>
+        <li><a href="#予定の情報を取得しよう">予定の情報を取得しよう</a></li>
+        <li><a href="#予定の情報を更新しよう">予定の情報を更新しよう</a></li>
+        <li><a href="#予定を削除しよう">予定を削除しよう</a></li>
       </ul>
     </li>
   </ul>
@@ -1829,54 +1832,324 @@
           
             <h1>
               
-              スプレッドシートを操作する
+              予定を操作しよう
             </h1>
           
 
         
 
 
-<h2 id="spreadsheetクラスとは">Spreadsheetクラスとは</h2>
-<p><strong>Spreadsheetクラス</strong> は、文字通りスプレッドシートを操作する機能を提供するクラスです。<br>
-シートを取得したり作成したりするメソッドやスプレッドシートの情報など（メンバー）が提供されています。<br>
-では早速、Spreadsheetクラスのメンバーを使って、スプレッドシートの様々な情報を取得してみましょう。<br>
-次のサンプルはスプレッドシートのID、スプレッドシート名、URLがログに出力されます。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">spreadsheet_3</span>() {
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">spreadsheet</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">SpreadsheetApp</span>.<span style="color:#a6e22e">getActiveSpreadsheet</span>();
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">spreadsheet</span>.<span style="color:#a6e22e">getId</span>()); <span style="color:#75715e">// スプレッドシートのID
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">spreadsheet</span>.<span style="color:#a6e22e">getName</span>()); <span style="color:#75715e">// スプレッドシートの名前
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">spreadsheet</span>.<span style="color:#a6e22e">getURL</span>()); <span style="color:#75715e">// スプレッドシートのURL
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
-</span></span></code></pre></div><h3 id="シートを取得する">シートを取得する</h3>
-<p>Spreadsheetクラスはその配下であるシートを取得することができます。<br>
-シートの取得方法は次のような方法があります。</p>
+<h3 id="予定を作成しよう">予定を作成しよう</h3>
+<p>いよいよカレンダーの予定を作ってみましょう。<br>
+カレンダーの予定を作るには、まず予定を作成するカレンダーを取得する必要があります。<br>
+カレンダーを取得できたら、Calendarクラスの [createEvent メソッド]で予定を作りましょう。<br>
+Calendar.createEventメソッド実行するには以下の３つの引数を指定する必要があります。</p>
 <ul>
-<li>アクティブなシートを取得する</li>
-<li>シート名で特定して取得する</li>
-<li>インデックスで配列からシートを特定して取得する</li>
+<li>予定のタイトル</li>
+<li>予定の開始日時</li>
+<li>予定の終了日時</li>
 </ul>
-<p>アクティブなシートは先ほど説明した通りコンテナバインドスクリプトに限り、SpreadsheetAppクラスから直接取得することができます。<br>
-別な方法として、<strong>getSheetByNameメソッド</strong> を使用してシート名で特定して取得する方法があります。<br>
-シート名で取得するのは簡単ではありますが、シート名が変わると取得できなくなる点に注意です。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">Spreadsheetオブジェクト</span>.<span style="color:#a6e22e">getSheetByName</span>(<span style="color:#a6e22e">シート名</span>)
-</span></span></code></pre></div><p>他にも、<strong>getSheetsメソッド</strong> でシートを配列として取得した上で、インデックスでシートを特定する方法もあります。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">Spreadsheetオブジェクト</span>.<span style="color:#a6e22e">getSheets</span>()
-</span></span></code></pre></div><p>getSheetsメソッドは、スプレッドシートに含まれるシートのうち最も左に位置するシートのインデックスを0として、<br>
-そこから右方向に順番にシートを配列に格納して取得します。<br>
-戻り値が配列になりますので、全てのシートに処理を行いたい場合などに便利です。<br>
-しかし、インデックスは並び順に依存しているため、<br>
-特定のシートのみ処理をしたい（例えば左から2つめのシートのみ処理したい）場合はシートの並び順が変更された場合は意図したシートが処理されないことになります。</p>
-<p>それでは、次のサンプルを実行して確認してみましょう。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">spreadsheet_4</span>() {
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">spreadsheet</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">SpreadsheetApp</span>.<span style="color:#a6e22e">getActiveSpreadsheet</span>();
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sheet</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">spreadsheet</span>.<span style="color:#a6e22e">getSheetByName</span>(<span style="color:#e6db74">&#39;シート1&#39;</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">conosole</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getName</span>());
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sheets</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">spreadsheetApp</span>.<span style="color:#a6e22e">getSheets</span>();
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sheet</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">getName</span>());
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sheet</span>[<span style="color:#ae81ff">1</span>].<span style="color:#a6e22e">getName</span>());
+<p>以下のサンプルコードは「タイトルが New Event」で、「予定の時間が2022年9月1日の9時〜10時」の予定を作成しています。<br>
+サンプルコードの <strong>&lsquo;カレンダーのID&rsquo;</strong> には任意のカレンダーのIDを指定しましょう。<br>
+サンプルコードを実行したら、Google カレンダー上に予定が作成されているかを確認してみましょう。<br>
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+    
+        <button
+          data-tab-item="コード.gs"
+          data-tab-group="calendar_4_1"
+          class="tab-nav-button btn active"
+          onclick="switchTab('calendar_4_1','コード.gs')"
+         >コード.gs</button>
+    
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="コード.gs" data-tab-group="calendar_4_1" class="tab-item active">
+            <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">createEvent</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// IDが一致するカレンダーを取得する
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">calendar</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">CalendarApp</span>.<span style="color:#a6e22e">getCalendarById</span>(<span style="color:#e6db74">&#39;カレンダーのID&#39;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;New Event&#39;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">startTime</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date(<span style="color:#e6db74">&#39;2022-09-01 09:00:00&#39;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">endTime</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date(<span style="color:#e6db74">&#39;2022-09-01 10:00:00&#39;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">calendar</span>.<span style="color:#a6e22e">createEvent</span>(<span style="color:#a6e22e">title</span>, <span style="color:#a6e22e">startTime</span>, <span style="color:#a6e22e">endTime</span>);
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p><strong>getNameメソッド</strong> はシート名を取得するメソッドです。getSheetsメソッドはシートを配列として取得するため、角括弧内にインデックスを用いて各シートを取り出すことができます。</p>
+</span></span></code></pre></div>
+        </div>
+        
+    </div>
+</div>
+</p>
+<h4 id="calendar-クラスのメソッド">Calendar クラスのメソッド</h4>
+<table>
+<thead>
+<tr>
+<th>メソッド名</th>
+<th>パラメータ</th>
+<th>戻り値</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>createEvent</td>
+<td>[String] 予定のタイトル、[Date] 予定の開始日時、[Date] 予定の終了日時</td>
+<td>[CalendarEvent] 作成されたイベント</td>
+<td>新しいイベントを作成します。</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="予定の情報を取得しよう">予定の情報を取得しよう</h3>
+<p>続いて、先ほど作成した予定を GAS で取得してみましょう。<br>
+Calendarクラスの <a href="https://developers.google.com/apps-script/reference/calendar/calendar#geteventsstarttime,-endtime" target="_blank">getEvents メソッド</a>
+で、対象のカレンダーの予定を取得することができます。<br>
+Calendar.getEvents メソッドは <strong>パラメータで取得する予定の範囲を指定する</strong>ことができ、開始日時と終了日時を指定します。</p>
+<p>以下のサンプルコードを実行すると、2022年9月1日の予定を取得することができます。<br>
+サンプルコードの <strong>&lsquo;カレンダーのID&rsquo;</strong> には任意のカレンダーのIDを指定しましょう。<br>
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+    
+        <button
+          data-tab-item="コード.gs"
+          data-tab-group="calendar_4_2"
+          class="tab-nav-button btn active"
+          onclick="switchTab('calendar_4_2','コード.gs')"
+         >コード.gs</button>
+    
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="コード.gs" data-tab-group="calendar_4_2" class="tab-item active">
+            <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getEvents</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// IDが一致するカレンダーを取得する
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">calendar</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">CalendarApp</span>.<span style="color:#a6e22e">getCalendarById</span>(<span style="color:#e6db74">&#39;カレンダーのID&#39;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 2022年9月1日のカレンダーの予定を取得する
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">events</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">calendar</span>.<span style="color:#a6e22e">getEvents</span>(<span style="color:#66d9ef">new</span> Date(<span style="color:#e6db74">&#39;2022-09-01 00:00:00&#39;</span>), <span style="color:#66d9ef">new</span> Date(<span style="color:#e6db74">&#39;2022-09-01 23:59:59&#39;</span>));
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">events</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">event</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">events</span>[<span style="color:#a6e22e">i</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">getTitle</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">startTime</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">getStartTime</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">endTime</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">getEndTime</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">location</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">getLocation</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">description</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">getDescription</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">event</span>, <span style="color:#a6e22e">title</span>, <span style="color:#a6e22e">startTime</span>, <span style="color:#a6e22e">endTime</span>, <span style="color:#a6e22e">location</span>, <span style="color:#a6e22e">description</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+        </div>
+        
+    </div>
+</div>
+</p>
+<h4 id="calendar-クラスのメソッド-1">Calendar クラスのメソッド</h4>
+<table>
+<thead>
+<tr>
+<th>メソッド名</th>
+<th>パラメータ</th>
+<th>戻り値</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>getEvents</td>
+<td>[Date] 取得する予定の範囲の開始日時、[Date] 取得する予定の範囲の予定の終了日時</td>
+<td>[CalendarEvent[]] 指定した時間範囲内で作成されたイベント</td>
+<td>特定の時間範囲内に発生するすべてのイベントを取得します。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="calendarevent-クラスのメソッド">CalendarEvent クラスのメソッド</h4>
+<table>
+<thead>
+<tr>
+<th>メソッド名</th>
+<th>パラメータ</th>
+<th>戻り値</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>getTitle</td>
+<td>なし</td>
+<td>[String] 取得したイベントのタイトル</td>
+<td>イベントのタイトルを取得します。</td>
+</tr>
+<tr>
+<td>getStartTime</td>
+<td>なし</td>
+<td>[Date] 取得したイベントの開始時刻</td>
+<td>イベントの開始時刻を取得します。</td>
+</tr>
+<tr>
+<td>getEndTime</td>
+<td>なし</td>
+<td>[Date] 取得したイベントの終了時刻</td>
+<td>イベントの終了時刻を取得します。</td>
+</tr>
+<tr>
+<td>getLocation</td>
+<td>なし</td>
+<td>[String] 取得したイベントの場所</td>
+<td>イベントの場所を取得します。</td>
+</tr>
+<tr>
+<td>getDescription</td>
+<td>なし</td>
+<td>[String] 取得したイベントの説明</td>
+<td>イベントの説明を取得します。</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="予定の情報を更新しよう">予定の情報を更新しよう</h3>
+<p>取得した予定はその内容を更新することができます。<br>
+更新対象の予定を特定できたのであれば、各メソッドで予定の内容を変更することができます。<br>
+以下のサンプルコードを実行すると、2022年9月1日の予定のうち、タイトルが New Event の予定の内容が更新されます。<br>
+サンプルコードの <strong>&lsquo;カレンダーのID&rsquo;</strong> には任意のカレンダーのIDを指定しましょう。<br>
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+    
+        <button
+          data-tab-item="コード.gs"
+          data-tab-group="calendar_4_3"
+          class="tab-nav-button btn active"
+          onclick="switchTab('calendar_4_3','コード.gs')"
+         >コード.gs</button>
+    
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="コード.gs" data-tab-group="calendar_4_3" class="tab-item active">
+            <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">updateEvent</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// IDが一致するカレンダーを取得する
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">calendar</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">CalendarApp</span>.<span style="color:#a6e22e">getCalendarById</span>(<span style="color:#e6db74">&#39;カレンダーのID&#39;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 2022年9月1日のカレンダーの予定を取得する
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">events</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">calendar</span>.<span style="color:#a6e22e">getEvents</span>(<span style="color:#66d9ef">new</span> Date(<span style="color:#e6db74">&#39;2022-09-01 00:00:00&#39;</span>), <span style="color:#66d9ef">new</span> Date(<span style="color:#e6db74">&#39;2022-09-01 23:59:59&#39;</span>));
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">events</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// カレンダーの予定を取得する
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">event</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">events</span>[<span style="color:#a6e22e">i</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">getTitle</span>() <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;New Event&#39;</span>) {
+</span></span><span style="display:flex;"><span>	    <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">setTitle</span>(<span style="color:#e6db74">&#39;Updated Event&#39;</span>);
+</span></span><span style="display:flex;"><span>	    <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">setTime</span>(<span style="color:#66d9ef">new</span> Date(<span style="color:#e6db74">&#39;2022-09-01 15:00:00&#39;</span>), <span style="color:#66d9ef">new</span> Date(<span style="color:#e6db74">&#39;2022-09-01 16:00:00&#39;</span>));
+</span></span><span style="display:flex;"><span>	    <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">setLocation</span>(<span style="color:#e6db74">&#39;Tokyo&#39;</span>);
+</span></span><span style="display:flex;"><span>	    <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">setDescription</span>(<span style="color:#e6db74">&#39;This is updated by gas.&#39;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+        </div>
+        
+    </div>
+</div>
+</p>
+<h4 id="calendarevent-クラスのメソッド-1">CalendarEvent クラスのメソッド</h4>
+<table>
+<thead>
+<tr>
+<th>メソッド名</th>
+<th>パラメータ</th>
+<th>戻り値</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>setTitle</td>
+<td>[String] イベントの新しいタイトル</td>
+<td>なし</td>
+<td>イベントのタイトルを設定します。</td>
+</tr>
+<tr>
+<td>setTime</td>
+<td>[Date] イベントの新しい開始時刻、[Date] イベントの新しい終了時刻</td>
+<td>なし</td>
+<td>イベントの開始時刻を設定します。</td>
+</tr>
+<tr>
+<td>setLocation</td>
+<td>[String] イベントの新しい場所</td>
+<td>なし</td>
+<td>イベントの場所を設定します。</td>
+</tr>
+<tr>
+<td>setDescription</td>
+<td>[String] イベントの新しい説明</td>
+<td>なし</td>
+<td>イベントの説明を設定します。</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="予定を削除しよう">予定を削除しよう</h3>
+<p>最後に GAS で予定を削除してみましょう。<br>
+Calendarクラスの <a href="https://developers.google.com/apps-script/reference/calendar/calendar-event#deleteevent" target="_blank">deleteEvent メソッド</a>
+を実行すると、対象の予定を削除することができます。<br>
+以下のサンプルコードは2022年9月1日の予定のうち、タイトルが New Event の予定が削除されます。<br>
+サンプルコードの <strong>&lsquo;カレンダーのID&rsquo;</strong> には任意のカレンダーのIDを指定しましょう。<br>
+
+
+<div class="tab-panel">
+    <div class="tab-nav">
+    
+        <button
+          data-tab-item="コード.gs"
+          data-tab-group="calendar_4_3"
+          class="tab-nav-button btn active"
+          onclick="switchTab('calendar_4_3','コード.gs')"
+         >コード.gs</button>
+    
+    </div>
+    <div class="tab-content">
+        
+        <div data-tab-item="コード.gs" data-tab-group="calendar_4_3" class="tab-item active">
+            <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">deleteEvent</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// IDが一致するカレンダーを取得する
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">calendar</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">CalendarApp</span>.<span style="color:#a6e22e">getCalendarById</span>(<span style="color:#e6db74">&#39;カレンダーのID&#39;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 2022年9月1日のカレンダーの予定を取得する
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">events</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">calendar</span>.<span style="color:#a6e22e">getEvents</span>(<span style="color:#66d9ef">new</span> Date(<span style="color:#e6db74">&#39;2022-09-01 00:00:00&#39;</span>), <span style="color:#66d9ef">new</span> Date(<span style="color:#e6db74">&#39;2022-09-01 23:59:59&#39;</span>));
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">events</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// カレンダーの予定を取得する
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">event</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">events</span>[<span style="color:#a6e22e">i</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">getTitle</span>() <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;New Event&#39;</span>) {
+</span></span><span style="display:flex;"><span>	    <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">deleteEvent</span>();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+        </div>
+        
+    </div>
+</div>
+</p>
+<h4 id="calendarevent-クラスのメソッド-2">CalendarEvent クラスのメソッド</h4>
+<table>
+<thead>
+<tr>
+<th>メソッド名</th>
+<th>パラメータ</th>
+<th>戻り値</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>deleteEvent</td>
+<td>なし</td>
+<td>なし</td>
+<td>イベントを削除します。</td>
+</tr>
+</tbody>
+</table>
 
 
 <footer class="footline">
@@ -2607,142 +2880,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                 
                 
 
@@ -2819,6 +2956,142 @@
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -3067,10 +3340,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/gas-education/sheets/page_2/" title="Spreadsheetサービス"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/gas-education/calendar/page_3/" title="カレンダーを操作しよう"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/gas-education/sheets/page_4/" title="シートを操作する" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/gas-education/calendar/page_5/" title="最後に" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
