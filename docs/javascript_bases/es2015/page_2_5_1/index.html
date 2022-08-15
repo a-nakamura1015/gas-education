@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.83.1" />
+    <meta name="generator" content="Hugo 0.94.2" />
     <meta name="description" content="">
 
 
@@ -12,22 +12,22 @@
     <title>let・const キーワード :: GAS Edu</title>
 
     
-    <link href="/gas-education/css/nucleus.css?1628505123" rel="stylesheet">
-    <link href="/gas-education/css/fontawesome-all.min.css?1628505123" rel="stylesheet">
-    <link href="/gas-education/css/hybrid.css?1628505123" rel="stylesheet">
-    <link href="/gas-education/css/featherlight.min.css?1628505123" rel="stylesheet">
-    <link href="/gas-education/css/perfect-scrollbar.min.css?1628505123" rel="stylesheet">
-    <link href="/gas-education/css/auto-complete.css?1628505123" rel="stylesheet">
-    <link href="/gas-education/css/atom-one-dark-reasonable.css?1628505123" rel="stylesheet">
-    <link href="/gas-education/css/theme.css?1628505123" rel="stylesheet">
-    <link href="/gas-education/css/tabs.css?1628505123" rel="stylesheet">
-    <link href="/gas-education/css/hugo-theme.css?1628505123" rel="stylesheet">
+    <link href="/gas-education/css/nucleus.css?1660526089" rel="stylesheet">
+    <link href="/gas-education/css/fontawesome-all.min.css?1660526089" rel="stylesheet">
+    <link href="/gas-education/css/hybrid.css?1660526089" rel="stylesheet">
+    <link href="/gas-education/css/featherlight.min.css?1660526089" rel="stylesheet">
+    <link href="/gas-education/css/perfect-scrollbar.min.css?1660526089" rel="stylesheet">
+    <link href="/gas-education/css/auto-complete.css?1660526089" rel="stylesheet">
+    <link href="/gas-education/css/atom-one-dark-reasonable.css?1660526089" rel="stylesheet">
+    <link href="/gas-education/css/theme.css?1660526089" rel="stylesheet">
+    <link href="/gas-education/css/tabs.css?1660526089" rel="stylesheet">
+    <link href="/gas-education/css/hugo-theme.css?1660526089" rel="stylesheet">
     
-    <link href="/gas-education/css/theme-blue.css?1628505123" rel="stylesheet">
+    <link href="/gas-education/css/theme-blue.css?1660526089" rel="stylesheet">
     
     
 
-    <script src="/gas-education/js/jquery-3.3.1.min.js?1628505123"></script>
+    <script src="/gas-education/js/jquery-3.3.1.min.js?1660526089"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -72,14 +72,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/gas-education/js/lunr.min.js?1628505123"></script>
-<script type="text/javascript" src="/gas-education/js/auto-complete.js?1628505123"></script>
+<script type="text/javascript" src="/gas-education/js/lunr.min.js?1660526089"></script>
+<script type="text/javascript" src="/gas-education/js/auto-complete.js?1660526089"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/a-nakamura1015.github.io\/gas-education";
     
 </script>
-<script type="text/javascript" src="/gas-education/js/search.js?1628505123"></script>
+<script type="text/javascript" src="/gas-education/js/search.js?1660526089"></script>
 
     
   </div>
@@ -1293,13 +1293,89 @@
  
   
     
+    <li data-nav-id="/gas-education/calendar/" title="Google カレンダー編" class="dd-item
+        
+        
+        
+        ">
+      <a href="/gas-education/calendar/">
+          <b>4. </b>Google カレンダー編
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/calendar/page_2/" title="Calendarサービス" class="dd-item ">
+        <a href="/gas-education/calendar/page_2/">
+        <b>2. </b>Calendarサービス
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/calendar/page_1/" title="はじめに" class="dd-item ">
+        <a href="/gas-education/calendar/page_1/">
+        <b>1. </b>はじめに
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
     <li data-nav-id="/gas-education/web/" title="Webアプリ編" class="dd-item
         
         
         
         ">
       <a href="/gas-education/web/">
-          <b>4. </b>Webアプリ編
+          <b>5. </b>Webアプリ編
           
       </a>
       
@@ -1480,7 +1556,7 @@
         
         ">
       <a href="/gas-education/local/">
-          <b>5. </b>ローカル開発編
+          <b>6. </b>ローカル開発編
           
       </a>
       
@@ -1756,41 +1832,41 @@
 <h3 id="var-キーワード">var キーワード</h3>
 <h4 id="var-キーワードでの変数の再宣言再代入">var キーワードでの変数の再宣言・再代入</h4>
 <p>varキーワードで宣言した変数は再宣言・再代入をすることができます。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">var_pattern_1</span>() {
-  <span style="color:#75715e">// var での再宣言
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
-}
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">var_pattern_2</span>() {
-  <span style="color:#75715e">// var での再代入
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-  <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
-}
-</code></pre></div><h4 id="var-キーワードでの変数のスコープ">var キーワードでの変数のスコープ</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">var_pattern_1</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// var での再宣言
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">var_pattern_2</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// var での再代入
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="var-キーワードでの変数のスコープ">var キーワードでの変数のスコープ</h4>
 <p>varキーワードで宣言したローカル変数は <code>関数スコープ</code> となります。<br>
 関数スコープの場合は関数内であれば宣言したブロックが異なっていても参照することができます。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">var_pattern_3</span>() {
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">isLoop</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
-  <span style="color:#66d9ef">while</span>(<span style="color:#a6e22e">isLoop</span>){
-    <span style="color:#75715e">// value 変数を宣言したのちループ処理を抜ける
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-    <span style="color:#a6e22e">isLoop</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
-  }
-  <span style="color:#75715e">// ブロックスコープが適用されないため value 変数を参照できる
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>); <span style="color:#75715e">// 1
-</span><span style="color:#75715e"></span>}
-</code></pre></div><h4 id="var-キーワードでの変数の巻き上げ">var キーワードでの変数の巻き上げ</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">var_pattern_3</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">isLoop</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">while</span>(<span style="color:#a6e22e">isLoop</span>){
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// value 変数を宣言したのちループ処理を抜ける
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">isLoop</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// ブロックスコープが適用されないため value 変数を参照できる
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>); <span style="color:#75715e">// 1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><h4 id="var-キーワードでの変数の巻き上げ">var キーワードでの変数の巻き上げ</h4>
 <p>先述の通り、 var キーワードで宣言されたローカル変数は同関数内であれば参照することができます。<br>
 実は宣言の前からでも参照することができるのです。<br>
 この事象は「巻き上げ（hosting）」と呼ばれています。<br>
 以下のサンプルコードをでは、1回目の<code>console.log()</code>でパラメーターに value 変数を渡していますが、実行時点では value 変数は宣言されていません。<br>
 実行してもエラーは発生しませんが、1回目の<code>console.log()</code>でログに表示されるのは<code>undefined</code>となります。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">var_pattern_4</span>() {
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>); <span style="color:#75715e">// undefined
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>); <span style="color:#75715e">// 1
-</span><span style="color:#75715e"></span>}
-</code></pre></div><p>変数の巻き上げで注意すべきは巻き上げが発生してもエラーとして扱われない点です。<br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">var_pattern_4</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>); <span style="color:#75715e">// undefined
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>); <span style="color:#75715e">// 1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><p>変数の巻き上げで注意すべきは巻き上げが発生してもエラーとして扱われない点です。<br>
 変数の巻き上げに気づかず、そのまま処理を実行することにより期待しない処理が行われる可能性があります。<br>
 一方、後述する let・const キーワードでローカル変数を宣言した場合は変数の巻き上げは発生せずエラーが発生します。<br>
 <strong>変数の巻き上げを未然に防ぐためにも、変数は let・const キーワードで宣言するようにしましょう。</strong><br>
@@ -1802,73 +1878,73 @@
 <h4 id="let-キーワードの再宣言再代入">let キーワードの再宣言・再代入</h4>
 <p>letキーワードで宣言したローカル変数は再宣言することはできませんが、再代入することはできます。<br>
 letキーワードで宣言したローカル変数を再宣言するようにコーディングすると、保存する際に JavaScript の文法が間違っているという意味の<code>構文エラー（SyntaxError）</code>が発生します。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">let_pattern_1</span>() {
-  <span style="color:#75715e">// let での再宣言
-</span><span style="color:#75715e"></span>  <span style="color:#75715e">// 保存時にエラー発生　構文エラー: SyntaxError: Identifier &#39;value&#39; has already been declared
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-  <span style="color:#75715e">//let value = 2;
-</span><span style="color:#75715e"></span>}
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">let_pattern_2</span>() {
-  <span style="color:#75715e">// let での再代入
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-  <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
-}
-</code></pre></div><h4 id="let-キーワードのスコープ">let キーワードのスコープ</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">let_pattern_1</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// let での再宣言
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">// 保存時にエラー発生　構文エラー: SyntaxError: Identifier &#39;value&#39; has already been declared
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//let value = 2;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">let_pattern_2</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// let での再代入
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="let-キーワードのスコープ">let キーワードのスコープ</h4>
 <p>letキーワードで宣言したローカル変数は <code>ブロックスコープ</code> となります。<br>
 ブロックスコープの場合はブロック内であれば宣言したローカル変数を参照することができますが、同じ関数であってもブロック外からは参照することができません。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">let_pattern_3</span>() {
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">isLoop</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
-  <span style="color:#66d9ef">while</span>(<span style="color:#a6e22e">isLoop</span>) {
-    <span style="color:#75715e">// value 変数を宣言したのちループ処理を抜ける
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-    <span style="color:#a6e22e">isLoop</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
-  }
-  <span style="color:#75715e">// ブロックスコープが適用されるため value 変数を参照できない
-</span><span style="color:#75715e"></span>  <span style="color:#75715e">// 実行時にエラー発生 ReferenceError: value is not defined
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>);
-}
-</code></pre></div><h4 id="let-キーワードの変数の巻き戻し">let キーワードの変数の巻き戻し</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">let_pattern_3</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">isLoop</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">while</span>(<span style="color:#a6e22e">isLoop</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// value 変数を宣言したのちループ処理を抜ける
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">isLoop</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// ブロックスコープが適用されるため value 変数を参照できない
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">// 実行時にエラー発生 ReferenceError: value is not defined
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="let-キーワードの変数の巻き戻し">let キーワードの変数の巻き戻し</h4>
 <p>let キーワードでローカル変数を宣言した場合は変数の巻き戻しは発生しません。<br>
 代わりに実行する際に参照する変数が見つからないという意味の <code>参照エラー（ReferenceError）</code>が発生します。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">let_pattern_4</span>() {
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>);
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-  <span style="color:#75715e">// 実行時にエラー発生 ReferenceError: Cannot access &#39;value&#39; before initialization
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>);
-}
-</code></pre></div><h3 id="const-キーワード">const キーワード</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">let_pattern_4</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 実行時にエラー発生 ReferenceError: Cannot access &#39;value&#39; before initialization
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="const-キーワード">const キーワード</h3>
 <h4 id="const-キーワードの再宣言再代入">const キーワードの再宣言・再代入</h4>
 <p>constキーワードで宣言したローカル変数は再宣言・再代入ができません。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">const_pattern_3</span>() {
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">isLoop</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
-  <span style="color:#66d9ef">while</span>(<span style="color:#a6e22e">isLoop</span>) {
-    <span style="color:#75715e">// value 変数を宣言したのちループ処理を抜ける
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-    <span style="color:#a6e22e">isLoop</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
-  }
-  <span style="color:#75715e">// ブロックスコープが適用されるため value 変数を参照できない
-</span><span style="color:#75715e"></span>  <span style="color:#75715e">// 実行時にエラー発生 ReferenceError: value is not defined
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>);
-}
-</code></pre></div><h4 id="const-キーワードのスコープ">const キーワードのスコープ</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">const_pattern_3</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">isLoop</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">while</span>(<span style="color:#a6e22e">isLoop</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// value 変数を宣言したのちループ処理を抜ける
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">isLoop</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// ブロックスコープが適用されるため value 変数を参照できない
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">// 実行時にエラー発生 ReferenceError: value is not defined
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="const-キーワードのスコープ">const キーワードのスコープ</h4>
 <p>constキーワードで宣言したローカル変数は、letキーワードと同じく <code>ブロックスコープ</code> となります。<br>
 そのため、ブロック内であれば宣言したローカル変数を参照することができますが、同じ関数であってもブロック外からは参照することができません。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">const_pattern_4</span>() {
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>);
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-  <span style="color:#75715e">// 実行時にエラー発生 ReferenceError: Cannot access &#39;value&#39; before initialization
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>);
-}
-</code></pre></div><h4 id="const-キーワードの変数の巻き戻し">const キーワードの変数の巻き戻し</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">const_pattern_4</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 実行時にエラー発生 ReferenceError: Cannot access &#39;value&#39; before initialization
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="const-キーワードの変数の巻き戻し">const キーワードの変数の巻き戻し</h4>
 <p>let キーワードと同様に、const キーワードでローカル変数を宣言した場合は変数の巻き戻しは発生しません。<br>
 代わりに実行する際に参照する変数が見つからないという意味の <code>参照エラー（ReferenceError）</code>が発生します。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">const_pattern_4</span>() {
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>);
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-  <span style="color:#75715e">// 実行時にエラー発生 ReferenceError: Cannot access &#39;value&#39; before initialization
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>);
-}
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">const_pattern_4</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 実行時にエラー発生 ReferenceError: Cannot access &#39;value&#39; before initialization
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
 
 <footer class="footline">
 	
@@ -2775,6 +2851,54 @@ letキーワードで宣言したローカル変数を再宣言するように�
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
             
             
@@ -2976,19 +3100,19 @@ letキーワードで宣言したローカル変数を再宣言するように�
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/gas-education/js/clipboard.min.js?1628505123"></script>
-    <script src="/gas-education/js/perfect-scrollbar.min.js?1628505123"></script>
-    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1628505123"></script>
-    <script src="/gas-education/js/jquery.sticky.js?1628505123"></script>
-    <script src="/gas-education/js/featherlight.min.js?1628505123"></script>
-    <script src="/gas-education/js/highlight.pack.js?1628505123"></script>
+    <script src="/gas-education/js/clipboard.min.js?1660526089"></script>
+    <script src="/gas-education/js/perfect-scrollbar.min.js?1660526089"></script>
+    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1660526089"></script>
+    <script src="/gas-education/js/jquery.sticky.js?1660526089"></script>
+    <script src="/gas-education/js/featherlight.min.js?1660526089"></script>
+    <script src="/gas-education/js/highlight.pack.js?1660526089"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1628505123"></script>
-    <script src="/gas-education/js/learn.js?1628505123"></script>
-    <script src="/gas-education/js/hugo-learn.js?1628505123"></script>
+    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1660526089"></script>
+    <script src="/gas-education/js/learn.js?1660526089"></script>
+    <script src="/gas-education/js/hugo-learn.js?1660526089"></script>
     
         
-            <script src="/gas-education/mermaid/mermaid.js?1628505123"></script>
+            <script src="/gas-education/mermaid/mermaid.js?1660526089"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

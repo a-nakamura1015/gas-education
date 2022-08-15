@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.83.1" />
+    <meta name="generator" content="Hugo 0.94.2" />
     <meta name="description" content="">
 
 
@@ -12,22 +12,22 @@
     <title>シートを操作する :: GAS Edu</title>
 
     
-    <link href="/gas-education/css/nucleus.css?1628505123" rel="stylesheet">
-    <link href="/gas-education/css/fontawesome-all.min.css?1628505123" rel="stylesheet">
-    <link href="/gas-education/css/hybrid.css?1628505123" rel="stylesheet">
-    <link href="/gas-education/css/featherlight.min.css?1628505123" rel="stylesheet">
-    <link href="/gas-education/css/perfect-scrollbar.min.css?1628505123" rel="stylesheet">
-    <link href="/gas-education/css/auto-complete.css?1628505123" rel="stylesheet">
-    <link href="/gas-education/css/atom-one-dark-reasonable.css?1628505123" rel="stylesheet">
-    <link href="/gas-education/css/theme.css?1628505123" rel="stylesheet">
-    <link href="/gas-education/css/tabs.css?1628505123" rel="stylesheet">
-    <link href="/gas-education/css/hugo-theme.css?1628505123" rel="stylesheet">
+    <link href="/gas-education/css/nucleus.css?1660526090" rel="stylesheet">
+    <link href="/gas-education/css/fontawesome-all.min.css?1660526090" rel="stylesheet">
+    <link href="/gas-education/css/hybrid.css?1660526090" rel="stylesheet">
+    <link href="/gas-education/css/featherlight.min.css?1660526090" rel="stylesheet">
+    <link href="/gas-education/css/perfect-scrollbar.min.css?1660526090" rel="stylesheet">
+    <link href="/gas-education/css/auto-complete.css?1660526090" rel="stylesheet">
+    <link href="/gas-education/css/atom-one-dark-reasonable.css?1660526090" rel="stylesheet">
+    <link href="/gas-education/css/theme.css?1660526090" rel="stylesheet">
+    <link href="/gas-education/css/tabs.css?1660526090" rel="stylesheet">
+    <link href="/gas-education/css/hugo-theme.css?1660526090" rel="stylesheet">
     
-    <link href="/gas-education/css/theme-blue.css?1628505123" rel="stylesheet">
+    <link href="/gas-education/css/theme-blue.css?1660526090" rel="stylesheet">
     
     
 
-    <script src="/gas-education/js/jquery-3.3.1.min.js?1628505123"></script>
+    <script src="/gas-education/js/jquery-3.3.1.min.js?1660526090"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -72,14 +72,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/gas-education/js/lunr.min.js?1628505123"></script>
-<script type="text/javascript" src="/gas-education/js/auto-complete.js?1628505123"></script>
+<script type="text/javascript" src="/gas-education/js/lunr.min.js?1660526090"></script>
+<script type="text/javascript" src="/gas-education/js/auto-complete.js?1660526090"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/a-nakamura1015.github.io\/gas-education";
     
 </script>
-<script type="text/javascript" src="/gas-education/js/search.js?1628505123"></script>
+<script type="text/javascript" src="/gas-education/js/search.js?1660526090"></script>
 
     
   </div>
@@ -1293,13 +1293,89 @@
  
   
     
+    <li data-nav-id="/gas-education/calendar/" title="Google カレンダー編" class="dd-item
+        
+        
+        
+        ">
+      <a href="/gas-education/calendar/">
+          <b>4. </b>Google カレンダー編
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/calendar/page_2/" title="Calendarサービス" class="dd-item ">
+        <a href="/gas-education/calendar/page_2/">
+        <b>2. </b>Calendarサービス
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/calendar/page_1/" title="はじめに" class="dd-item ">
+        <a href="/gas-education/calendar/page_1/">
+        <b>1. </b>はじめに
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
     <li data-nav-id="/gas-education/web/" title="Webアプリ編" class="dd-item
         
         
         
         ">
       <a href="/gas-education/web/">
-          <b>4. </b>Webアプリ編
+          <b>5. </b>Webアプリ編
           
       </a>
       
@@ -1480,7 +1556,7 @@
         
         ">
       <a href="/gas-education/local/">
-          <b>5. </b>ローカル開発編
+          <b>6. </b>ローカル開発編
           
       </a>
       
@@ -1702,53 +1778,53 @@
 <p><strong>Sheetクラス</strong> は、シートを操作する機能を提供するクラスです。<br>
 シートの情報を取得するメソッドや行・列の操作、シート上のセルを取得するなどのメソッドが提供されています。<br>
 早速、次のサンプルを実行し、シートの様々な情報を取得してみましょう。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">spreadsheet_5</span>() {
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sheet</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">SpreadsheetApp</span>.<span style="color:#a6e22e">getActiveSheet</span>();
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getIndex</span>()); <span style="color:#75715e">// シートのインデックス
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getName</span>());　<span style="color:#75715e">// シートの名前
-</span><span style="color:#75715e"></span>}
-</code></pre></div><h3 id="セルを取得する">セルを取得する</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">spreadsheet_5</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sheet</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">SpreadsheetApp</span>.<span style="color:#a6e22e">getActiveSheet</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getIndex</span>()); <span style="color:#75715e">// シートのインデックス
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getName</span>());　<span style="color:#75715e">// シートの名前
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><h3 id="セルを取得する">セルを取得する</h3>
 <p>Sheetクラスはシートのセルを取得する機能が備わっていることが大きな特徴です。<br>
 セルを取得するいくつかのメソッドが用意されていますが、その中でも最もスタンダードなメソッドが <strong>getRangeメソッド</strong> です。<br>
 getRangeメソッドは引数の数によって様々なパターンのセルを取得することができます。<br>
 一番シンプルなのは、引数に「A1」や「A1:C3」のようなセルのアドレスを文字列で渡して取得する方法です。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">Sheetオブジェクト</span>.<span style="color:#a6e22e">getRange</span>(<span style="color:#a6e22e">アドレス</span>)
-</code></pre></div><p>他のパターンとしては、行番号・列番号・行数・列数を引数に指定することでセルを取得する方法です。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">Sheetオブジェクト</span>.<span style="color:#a6e22e">getRange</span>(<span style="color:#a6e22e">行番号</span>, <span style="color:#a6e22e">列番号</span>[, <span style="color:#a6e22e">行数</span>, <span style="color:#a6e22e">列数</span>])
-</code></pre></div><p>※ []は任意のため省略可能です。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">Sheetオブジェクト</span>.<span style="color:#a6e22e">getRange</span>(<span style="color:#a6e22e">アドレス</span>)
+</span></span></code></pre></div><p>他のパターンとしては、行番号・列番号・行数・列数を引数に指定することでセルを取得する方法です。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">Sheetオブジェクト</span>.<span style="color:#a6e22e">getRange</span>(<span style="color:#a6e22e">行番号</span>, <span style="color:#a6e22e">列番号</span>[, <span style="color:#a6e22e">行数</span>, <span style="color:#a6e22e">列数</span>])
+</span></span></code></pre></div><p>※ []は任意のため省略可能です。</p>
 <p>行番号から行数分、列番号から列数分の範囲を指定して取得することができます。<br>
 行数と列数は省略することができ、省略した場合はそれぞれの値は1となります。<br>
 各値は数値で設定するため、セルを動的に取得したい場合はこの方法を用います。<br>
 それでは、次のサンプルを実行してセルを取得できているか確認してみましょう。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">spreadsheet_6</span>() {
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sheet</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">SpreadsheetApp</span>.<span style="color:#a6e22e">getActiveSheet</span>();
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getRange</span>(<span style="color:#e6db74">&#39;A1&#39;</span>).<span style="color:#a6e22e">getA1Notation</span>()); <span style="color:#75715e">// A1
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getRange</span>(<span style="color:#e6db74">&#39;B2:D5&#39;</span>).<span style="color:#a6e22e">getA1Notation</span>()); <span style="color:#75715e">// B2:D5
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getRange</span>(<span style="color:#e6db74">&#39;2:2&#39;</span>).<span style="color:#a6e22e">getA1Notation</span>()); <span style="color:#75715e">// 2:2
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getRange</span>(<span style="color:#e6db74">&#39;B:B&#39;</span>).<span style="color:#a6e22e">getA1Notation</span>()); <span style="color:#75715e">// B:B
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getRange</span>(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>).<span style="color:#a6e22e">getA1Notation</span>()); <span style="color:#75715e">// C3
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getRange</span>(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>).<span style="color:#a6e22e">getA1Notation</span>()); <span style="color:#75715e">// C3:C4
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getRange</span>(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>).<span style="color:#a6e22e">getA1Notation</span>()); <span style="color:#75715e">// C3:D4
-</span><span style="color:#75715e"></span>}
-</code></pre></div><p>サンプル内で実行しているgetA1Notationメソッドはセル範囲のアドレスをA1形式で取得するメソッドです。<br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">spreadsheet_6</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sheet</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">SpreadsheetApp</span>.<span style="color:#a6e22e">getActiveSheet</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getRange</span>(<span style="color:#e6db74">&#39;A1&#39;</span>).<span style="color:#a6e22e">getA1Notation</span>()); <span style="color:#75715e">// A1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getRange</span>(<span style="color:#e6db74">&#39;B2:D5&#39;</span>).<span style="color:#a6e22e">getA1Notation</span>()); <span style="color:#75715e">// B2:D5
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getRange</span>(<span style="color:#e6db74">&#39;2:2&#39;</span>).<span style="color:#a6e22e">getA1Notation</span>()); <span style="color:#75715e">// 2:2
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getRange</span>(<span style="color:#e6db74">&#39;B:B&#39;</span>).<span style="color:#a6e22e">getA1Notation</span>()); <span style="color:#75715e">// B:B
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getRange</span>(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>).<span style="color:#a6e22e">getA1Notation</span>()); <span style="color:#75715e">// C3
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getRange</span>(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>).<span style="color:#a6e22e">getA1Notation</span>()); <span style="color:#75715e">// C3:C4
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getRange</span>(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span>).<span style="color:#a6e22e">getA1Notation</span>()); <span style="color:#75715e">// C3:D4
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><p>サンプル内で実行しているgetA1Notationメソッドはセル範囲のアドレスをA1形式で取得するメソッドです。<br>
 A1形式のアドレス指定であれば行または列全体の取得も可能です。<br>
 また、行番号・列番号・行数・列数は変数で指定することも可能です。</p>
 <h3 id="シートのデータ範囲を取得する">シートのデータ範囲を取得する</h3>
 <p>アドレスや行番号、列番号がわからない場合や、シートに値が追加されていって取得するセル範囲が変化する場合はどのようにして取得するとよいでしょう？<br>
 このようなときに <strong>getDataRangeメソッド</strong> は非常に便利で、シート上のデータが存在する範囲をすべて取得してくれます。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">Sheetオブジェクト</span>.<span style="color:#a6e22e">getDataRange</span>()
-</code></pre></div><p>また、セルの範囲ではなく、データが存在する最後の行番号を取得する <strong>getLastRowメソッド</strong> や、<br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">Sheetオブジェクト</span>.<span style="color:#a6e22e">getDataRange</span>()
+</span></span></code></pre></div><p>また、セルの範囲ではなく、データが存在する最後の行番号を取得する <strong>getLastRowメソッド</strong> や、<br>
 データが存在する最後の列を取得する <strong>getLastColumメソッド</strong> も便利なメソッドです。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">Sheetオブジェクト</span>.<span style="color:#a6e22e">getLastRow</span>()
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">Sheetオブジェクト</span>.<span style="color:#a6e22e">getLastColumn</span>()
-</code></pre></div><p>これらのメソッドの使用例を次のサンプルで確認してみましょう。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">spreadsheet_7</span>() {
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sheet</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">SpreadsheetApp</span>.<span style="color:#a6e22e">getActiveSheet</span>();
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getDataRange</span>().<span style="color:#a6e22e">getA1Notation</span>());
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getlastRow</span>());
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getlastColumn</span>());
-}
-</code></pre></div><p>getDataRangeメソッドの取得範囲の起点はA1セルで、そこからデータが入っている最終行および最終列までの範囲を取得します。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">Sheetオブジェクト</span>.<span style="color:#a6e22e">getLastRow</span>()
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">Sheetオブジェクト</span>.<span style="color:#a6e22e">getLastColumn</span>()
+</span></span></code></pre></div><p>これらのメソッドの使用例を次のサンプルで確認してみましょう。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">spreadsheet_7</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sheet</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">SpreadsheetApp</span>.<span style="color:#a6e22e">getActiveSheet</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getDataRange</span>().<span style="color:#a6e22e">getA1Notation</span>());
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getlastRow</span>());
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getlastColumn</span>());
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>getDataRangeメソッドの取得範囲の起点はA1セルで、そこからデータが入っている最終行および最終列までの範囲を取得します。</p>
 
 
 <footer class="footline">
@@ -2655,6 +2731,54 @@ A1形式のアドレス指定であれば行または列全体の取得も可能
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
             
             
@@ -2856,19 +2980,19 @@ A1形式のアドレス指定であれば行または列全体の取得も可能
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/gas-education/js/clipboard.min.js?1628505123"></script>
-    <script src="/gas-education/js/perfect-scrollbar.min.js?1628505123"></script>
-    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1628505123"></script>
-    <script src="/gas-education/js/jquery.sticky.js?1628505123"></script>
-    <script src="/gas-education/js/featherlight.min.js?1628505123"></script>
-    <script src="/gas-education/js/highlight.pack.js?1628505123"></script>
+    <script src="/gas-education/js/clipboard.min.js?1660526090"></script>
+    <script src="/gas-education/js/perfect-scrollbar.min.js?1660526090"></script>
+    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1660526090"></script>
+    <script src="/gas-education/js/jquery.sticky.js?1660526090"></script>
+    <script src="/gas-education/js/featherlight.min.js?1660526090"></script>
+    <script src="/gas-education/js/highlight.pack.js?1660526090"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1628505123"></script>
-    <script src="/gas-education/js/learn.js?1628505123"></script>
-    <script src="/gas-education/js/hugo-learn.js?1628505123"></script>
+    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1660526090"></script>
+    <script src="/gas-education/js/learn.js?1660526090"></script>
+    <script src="/gas-education/js/hugo-learn.js?1660526090"></script>
     
         
-            <script src="/gas-education/mermaid/mermaid.js?1628505123"></script>
+            <script src="/gas-education/mermaid/mermaid.js?1660526090"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

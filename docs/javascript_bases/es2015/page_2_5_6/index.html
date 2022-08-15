@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.83.1" />
+    <meta name="generator" content="Hugo 0.94.2" />
     <meta name="description" content="">
 
 
@@ -12,22 +12,22 @@
     <title>for...of文 :: GAS Edu</title>
 
     
-    <link href="/gas-education/css/nucleus.css?1628505123" rel="stylesheet">
-    <link href="/gas-education/css/fontawesome-all.min.css?1628505123" rel="stylesheet">
-    <link href="/gas-education/css/hybrid.css?1628505123" rel="stylesheet">
-    <link href="/gas-education/css/featherlight.min.css?1628505123" rel="stylesheet">
-    <link href="/gas-education/css/perfect-scrollbar.min.css?1628505123" rel="stylesheet">
-    <link href="/gas-education/css/auto-complete.css?1628505123" rel="stylesheet">
-    <link href="/gas-education/css/atom-one-dark-reasonable.css?1628505123" rel="stylesheet">
-    <link href="/gas-education/css/theme.css?1628505123" rel="stylesheet">
-    <link href="/gas-education/css/tabs.css?1628505123" rel="stylesheet">
-    <link href="/gas-education/css/hugo-theme.css?1628505123" rel="stylesheet">
+    <link href="/gas-education/css/nucleus.css?1660526089" rel="stylesheet">
+    <link href="/gas-education/css/fontawesome-all.min.css?1660526089" rel="stylesheet">
+    <link href="/gas-education/css/hybrid.css?1660526089" rel="stylesheet">
+    <link href="/gas-education/css/featherlight.min.css?1660526089" rel="stylesheet">
+    <link href="/gas-education/css/perfect-scrollbar.min.css?1660526089" rel="stylesheet">
+    <link href="/gas-education/css/auto-complete.css?1660526089" rel="stylesheet">
+    <link href="/gas-education/css/atom-one-dark-reasonable.css?1660526089" rel="stylesheet">
+    <link href="/gas-education/css/theme.css?1660526089" rel="stylesheet">
+    <link href="/gas-education/css/tabs.css?1660526089" rel="stylesheet">
+    <link href="/gas-education/css/hugo-theme.css?1660526089" rel="stylesheet">
     
-    <link href="/gas-education/css/theme-blue.css?1628505123" rel="stylesheet">
+    <link href="/gas-education/css/theme-blue.css?1660526089" rel="stylesheet">
     
     
 
-    <script src="/gas-education/js/jquery-3.3.1.min.js?1628505123"></script>
+    <script src="/gas-education/js/jquery-3.3.1.min.js?1660526089"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -72,14 +72,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/gas-education/js/lunr.min.js?1628505123"></script>
-<script type="text/javascript" src="/gas-education/js/auto-complete.js?1628505123"></script>
+<script type="text/javascript" src="/gas-education/js/lunr.min.js?1660526089"></script>
+<script type="text/javascript" src="/gas-education/js/auto-complete.js?1660526089"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/a-nakamura1015.github.io\/gas-education";
     
 </script>
-<script type="text/javascript" src="/gas-education/js/search.js?1628505123"></script>
+<script type="text/javascript" src="/gas-education/js/search.js?1660526089"></script>
 
     
   </div>
@@ -1293,13 +1293,89 @@
  
   
     
+    <li data-nav-id="/gas-education/calendar/" title="Google カレンダー編" class="dd-item
+        
+        
+        
+        ">
+      <a href="/gas-education/calendar/">
+          <b>4. </b>Google カレンダー編
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/calendar/page_2/" title="Calendarサービス" class="dd-item ">
+        <a href="/gas-education/calendar/page_2/">
+        <b>2. </b>Calendarサービス
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/gas-education/calendar/page_1/" title="はじめに" class="dd-item ">
+        <a href="/gas-education/calendar/page_1/">
+        <b>1. </b>はじめに
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
     <li data-nav-id="/gas-education/web/" title="Webアプリ編" class="dd-item
         
         
         
         ">
       <a href="/gas-education/web/">
-          <b>4. </b>Webアプリ編
+          <b>5. </b>Webアプリ編
           
       </a>
       
@@ -1480,7 +1556,7 @@
         
         ">
       <a href="/gas-education/local/">
-          <b>5. </b>ローカル開発編
+          <b>6. </b>ローカル開発編
           
       </a>
       
@@ -1704,49 +1780,49 @@
 <p>Chapter2-3の「JavaScriptの制御構文」で for文 に触れましたが、<br>
 ES2015からはよりシンプルに書くことができる<strong>for&hellip;of文</strong>を使えるようになりました。<br>
 構文は以下の通りで、宣言した変数の中には配列の要素が代入され、配列の先頭の要素から最後の要素まで繰り返されます。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">for</span> (<span style="color:#a6e22e">変数名</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">配列</span>) {
-  <span style="color:#75715e">// 繰り返す処理
-</span><span style="color:#75715e"></span>}
-</code></pre></div><p>以下のサンプルコードでfor&hellip;of文を試してみましょう。<br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#a6e22e">変数名</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">配列</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 繰り返す処理
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><p>以下のサンプルコードでfor&hellip;of文を試してみましょう。<br>
 配列の要素が<code>value</code>変数に代入されることが確認できます。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">for_of_1</span>() {
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">values</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#e6db74">&#39;C&#39;</span>];
-  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">value</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">values</span>) {
-    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>);
-  }
-}
-<span style="color:#e6db74">```Â
-</span></code></pre></div><p>A<br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">for_of_1</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">values</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#e6db74">&#39;C&#39;</span>];
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">value</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">values</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">```Â
+</span></span></span></code></pre></div><p>A<br>
 B<br>
 C</p>
-<pre><code>for...of文は原則最後の要素まで繰り返し処理を行いますが、  
+<pre tabindex="0"><code>for...of文は原則最後の要素まで繰り返し処理を行いますが、  
 `break文`で繰り返し処理を抜けることができます。
 ```js
 function for_of_2() {
-  const values = ['A', 'B', 'C'];
+  const values = [&#39;A&#39;, &#39;B&#39;, &#39;C&#39;];
   for (const value of values) {
     console.log(value);
     break;
   }
 }
-</code></pre><pre><code>A
+</code></pre><pre tabindex="0"><code>A
 </code></pre><h2 id="indexin文">index&hellip;in文</h2>
 <p>index&hellip;of文とよく似た構文で<strong>index&hellip;in文</strong>があります。<br>
 index&hellip;of文と同じく、配列の先頭の要素から最後の要素まで繰り返されますが、<br>
 宣言した変数には<strong>インデックス番号</strong>が代入されます。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">for</span> (<span style="color:#a6e22e">変数名</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">配列</span>) {
-  <span style="color:#75715e">// 繰り返す処理
-</span><span style="color:#75715e"></span>}
-</code></pre></div><p>以下のサンプルコードで宣言した変数にインデックス番号が代入されていることを確認してみましょう。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">for_in_1</span>() {
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">values</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#e6db74">&#39;C&#39;</span>];
-  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">index</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">values</span>) {
-    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">index</span>);
-    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">values</span>[<span style="color:#a6e22e">index</span>]);
-    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;---&#39;</span>);
-  }
-}
-</code></pre></div><pre><code>0
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (<span style="color:#a6e22e">変数名</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">配列</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 繰り返す処理
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><p>以下のサンプルコードで宣言した変数にインデックス番号が代入されていることを確認してみましょう。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">for_in_1</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">values</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#e6db74">&#39;C&#39;</span>];
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">index</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">values</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">index</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">values</span>[<span style="color:#a6e22e">index</span>]);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;---&#39;</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><pre tabindex="0"><code>0
 A
 ---
 1
@@ -1756,19 +1832,19 @@ B
 C
 ---
 </code></pre><p>また、配列ではなく連想配列を指定すると、宣言した変数にはキー（オブジェクトのプロパティ名）が代入されます。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">for_in_2</span>() {
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">account</span> <span style="color:#f92672">=</span> {
-    <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
-    <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Taro&#39;</span>,
-    <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">20</span>
-  }
-  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">property</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">account</span>) {
-    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">property</span>);
-    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">account</span>[<span style="color:#a6e22e">property</span>]);
-    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;---&#39;</span>);
-  }
-}
-</code></pre></div><pre><code>id
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">for_in_2</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">account</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Taro&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">property</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">account</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">property</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">account</span>[<span style="color:#a6e22e">property</span>]);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;---&#39;</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><pre tabindex="0"><code>id
 1
 ---
 name
@@ -2687,6 +2763,54 @@ age
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
             
             
@@ -2888,19 +3012,19 @@ age
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/gas-education/js/clipboard.min.js?1628505123"></script>
-    <script src="/gas-education/js/perfect-scrollbar.min.js?1628505123"></script>
-    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1628505123"></script>
-    <script src="/gas-education/js/jquery.sticky.js?1628505123"></script>
-    <script src="/gas-education/js/featherlight.min.js?1628505123"></script>
-    <script src="/gas-education/js/highlight.pack.js?1628505123"></script>
+    <script src="/gas-education/js/clipboard.min.js?1660526089"></script>
+    <script src="/gas-education/js/perfect-scrollbar.min.js?1660526089"></script>
+    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1660526089"></script>
+    <script src="/gas-education/js/jquery.sticky.js?1660526089"></script>
+    <script src="/gas-education/js/featherlight.min.js?1660526089"></script>
+    <script src="/gas-education/js/highlight.pack.js?1660526089"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1628505123"></script>
-    <script src="/gas-education/js/learn.js?1628505123"></script>
-    <script src="/gas-education/js/hugo-learn.js?1628505123"></script>
+    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1660526089"></script>
+    <script src="/gas-education/js/learn.js?1660526089"></script>
+    <script src="/gas-education/js/hugo-learn.js?1660526089"></script>
     
         
-            <script src="/gas-education/mermaid/mermaid.js?1628505123"></script>
+            <script src="/gas-education/mermaid/mermaid.js?1660526089"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
