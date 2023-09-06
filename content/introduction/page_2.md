@@ -14,7 +14,7 @@ Google Apps Scriptは、Google が提供するローコードプラットフォ�
 GAS を使うことで、Gmail や Googleカレンダー、Google スプレッドシートなどの  
 Google が提供するアプリケーションをプログラミングによって操作することができるようになります。
 
-各アプリケーション単体の動作はもちろん、アプリケーション同士の連携させて動作させることもできます。
+各アプリケーション単体の動作はもちろん、アプリケーション同士を連携させて動作させることもできます。
 
 また、HTMLやCSS、JavaScriptでWebアプリケーションを作成し、公開することもできます。
 
@@ -34,7 +34,7 @@ JavaScriptはブラウザ上で動作する標準のスクリプト言語とし�
 #### GASはクラウド上で動く！
 GASの特徴は、コーディングをする場所もプログラムが実行される場所も全てGoogleのクラウドサーバー上にあります。
 
-例えば、Excel VBA の場合はコーディングやプログラムの実行をPC内で行われます。
+例えば、Excel VBA の場合はコーディングやプログラムの実行はPC内で行われます。
 
 一方、GASはブラウザ上でコーディングを行い、プログラムの実行はクラウドサーバー上で行われます。
 
@@ -67,14 +67,14 @@ GASの門戸は常に開かれています。
 
 皆さんはGoogleアカウントを無料で作成してサービスを利用することができます。
 
-その一方で、これらのサービスを企業や組織向けに提供されている有償版のサービスもあります。
-これは G Suite と呼ばれており、企業や組織向けのサービスを利用することができます。
+その一方で、これらのサービスが企業や組織向けに提供されている有償版のサービスもあります。
+これは G Suite と呼ばれており、企業や組織向けのサービスとして利用することができます。
 
-G Suite のプランにはBasic/Bussinessというプランが用意されています。
+G Suite のプランにはBasic/Businessというプランが用意されています。
 
 無料アカウントと G Suite の各プランの違いは下記の通りとなっております。
 
-| 項目 | 無料アカウント | G Suite for Basic | G Suite for Bussiness |
+| 項目 | 無料アカウント | G Suite for Basic | G Suite for Business |
 | --- | ---------- | --- | --- |
 | 料金 | 無料 | 680円/月額 | 1,360円/月額 |
 | メールアドレス | ドメイン名はgmail.comのみ | 独自ドメインを設定できる |独自ドメインを設定できる|
@@ -88,7 +88,7 @@ G Suite のプランにはBasic/Bussinessというプランが用意されてい
 その一例は下記の通りです。
 [公式ガイド](https://developers.google.com/apps-script/guides/services/quotas)
 
-| 項目 | 無料アカウント | G Suite for Basic | G Suite for Bussiness |
+| 項目 | 無料アカウント | G Suite for Basic | G Suite for Business |
 | --- | ---------- | --- | --- |
 | スクリプト実行時間 | 6分/実行 | 6分/実行 | 30分/実行 |
 | カスタム関数実行時間 | 30秒/実行 | 30秒/実行 | 30秒/実行 |
@@ -118,7 +118,7 @@ G Suite のすべてのサービスを操作できるわけではないのです
 - Document：ドキュメント
 - Drive：ドライブ
 - Forms：フォーム
-- Gmail
+- Gmail：メール
 - Groups：グループ
 - Language：翻訳
 - Maps：マップ
@@ -142,11 +142,11 @@ Script Servicesでは、GAS 全般で横断的に利用するユーティリテ�
 - Url Fetch
 
 #### Advanced Google Services
-GASには G Suite Service に含まれないアプリケーションや、より高度な操作を可能にするサービスが提供されています。
+GASには G Suite Services に含まれないアプリケーションや、より高度な操作を可能にするサービスが提供されています。
 
 これらは ***拡張サービス***（Advanced Google Services）と呼ばれていて、
-G Suite Serviceでは操作ができないBigQueryやAdminSDKが操作することができ、
-G Suite Serviceで用意されている GmailやDriveなどのアプリケーションに対してより高度な処理を行うことができます。
+G Suite Servicesでは操作ができないBigQueryやAdminSDKを操作することができ、
+G Suite Servicesで用意されているGmailやDriveなどのアプリケーションに対して、より高度な処理を行うことができます。
 
 デフォルトでは無効になっているため、利用したいサービスごとに有効にする必要があります。
 
@@ -180,7 +180,7 @@ alert('Hello World!')
 [公式ガイド](https://developers.google.com/apps-script/guides/services/quotas)
 
 特に気をつけるべきは ***スクリプトの実行時間*** で、無料アカウントや G Suite for Basic の場合は6分、
-G Suite for Bussiness の場合は30分で処理が強制終了してしまいます。
+G Suite for Business の場合は30分で処理が強制終了してしまいます。
 
 そのため、GASで開発を行う際は扱うデータ量と処理速度に注意をする必要があります。
 
