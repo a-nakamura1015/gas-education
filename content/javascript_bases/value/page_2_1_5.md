@@ -44,8 +44,8 @@ console.log('Good Night!');
 {{< /tabs >}}
 ```
 Good Morning!
-Hello!
 Good Night!
+Hello!
 ```
 {{% notice warning %}}
 異なるgsファイルに記述されていたとしても、プロジェクト内の任意の関数の呼び出しにより、グローバル領域に記述される全てのステートメントが実行されます。  

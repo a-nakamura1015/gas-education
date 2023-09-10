@@ -122,7 +122,7 @@ arrow function: 3
 {{< tabs groupId="es2022_18" >}}
 {{% tab name="コード.gs" %}}
 ```js
-// ゴローバル両機にthis.nameを宣言
+// グローバル領域にthis.nameを宣言
 this.name = 'Ichiro';
 function arrow_functions_5() {
   const person1 = {

@@ -35,7 +35,7 @@ CalendarAppクラスの [getAllCalendars メソッド](https://developers.google
 | --- |  --- | --- | ---------- |
 | getAllCalendars | なし | [Calendar[]] 取得したカレンダーの配列 | ユーザーが所有または購読しているすべてのカレンダーを取得します。 |
 
-以下のサンプルコードは CalendarApp.getAllCalendar() の戻り値をループ処理で一つずつ取得して処理をしています。
+以下のサンプルコードは CalendarApp.getAllCalendars() の戻り値をループ処理で一つずつ取得して処理をしています。
 
 {{< tabs groupId="calendar_3_2" >}}
 {{% tab name="コード.gs" %}}
@@ -58,7 +58,7 @@ function getAllCalendar() {
 
 サンプルコードの変数**calendar**には Calendarクラスのオブジェクトが格納されています。  
 Calendarクラスはカレンダーの情報を取得するためのメソッドを提供しています。  
-サンプルコードを実行すると、カレンダーのID、名前、説明をログで表示されますので確認してみましょう。
+サンプルコードを実行すると、カレンダーのID、名前、説明がログで表示されますので確認してみましょう。
 
 | メソッド名 | パラメータ | 戻り値 | 説明 |
 | --- |  --- | --- | ---------- |
@@ -138,7 +138,7 @@ function updateCalendar() {
 カレンダーを特定することができれば、カレンダーを削除することもできます。 
 Calendarクラスの [deleteCalendar メソッド](https://developers.google.com/apps-script/reference/calendar/calendar#deletecalendar)  はカレンダーを削除することができます。  
 
-以下のサンプルコードを実行すると特定したカレンダーを削除されます。 
+以下のサンプルコードを実行すると特定したカレンダーが削除されます。 
 **'カレンダーのID'** には先ほど更新した **Updated Calendar** カレンダーのIDを指定しましょう。
 {{< tabs groupId="calendar_3_5" >}}
 {{% tab name="コード.gs" %}}

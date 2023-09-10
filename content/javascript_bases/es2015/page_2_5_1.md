@@ -6,12 +6,12 @@ weight: 1
 ---
 ## 新しい変数の宣言
 これまで変数を宣言する際は var キーワードを使用してきましたが、es2015からは let キーワードと const キーワードで宣言することができるようになりました。  
-ここでは、それぞれのキーワードで宣言した場合の違いに学んでいきましょう。
+ここでは、それぞれのキーワードで宣言した場合の違いについて学んでいきましょう。
 
 ## 変数宣言の種類
 これから var ・ let ・ const の違いを確認していきますが、今後のコーディングは以下の前提で行うようにしましょう。
 - 原則 const で宣言しましょう。
-- ループ処理などの変数を更新する場合限っては let で宣言しましょう。
+- ループ処理などの変数を更新する場合に限っては let で宣言しましょう。
 - var では宣言しないようにしましょう。
 
 以下の表は、var ・ let ・ const の違いを一覧にまとめたものです。
@@ -67,7 +67,7 @@ function var_pattern_3() {
 先述の通り、 var キーワードで宣言されたローカル変数は同関数内であれば参照することができます。
 実は宣言の前からでも参照することができるのです。  
 この事象は「巻き上げ（hosting）」と呼ばれています。  
-以下のサンプルコードをでは、1回目の`console.log()`でパラメーターに value 変数を渡していますが、実行時点では value 変数は宣言されていません。  
+以下のサンプルコードでは、1回目の`console.log()`でパラメーターに value 変数を渡していますが、実行時点では value 変数は宣言されていません。  
 実行してもエラーは発生しませんが、1回目の`console.log()`でログに表示されるのは`undefined`となります。  
 {{< tabs groupId="es2022_3" >}}
 {{% tab name="コード.gs" %}}
@@ -149,6 +149,7 @@ function let_pattern_4() {
 ### const キーワード
 #### const キーワードの再宣言・再代入
 constキーワードで宣言したローカル変数は再宣言・再代入ができません。
+<!--
 {{< tabs groupId="es2022_7" >}}
 {{% tab name="コード.gs" %}}
 ```js
@@ -166,6 +167,7 @@ function const_pattern_3() {
 ```
 {{% /tab %}}
 {{< /tabs >}}
+-->
 
 #### const キーワードのスコープ
 constキーワードで宣言したローカル変数は、letキーワードと同じく `ブロックスコープ` となります。  
@@ -173,10 +175,15 @@ constキーワードで宣言したローカル変数は、letキーワードと
 {{< tabs groupId="es2022_8" >}}
 {{% tab name="コード.gs" %}}
 ```js
-function const_pattern_4() {
-  console.log(value);
-  const value = 1;
-  // 実行時にエラー発生 ReferenceError: Cannot access 'value' before initialization
+function const_pattern_3() {
+  let isLoop = true;
+  while(isLoop) {
+    // value 変数を宣言したのちループ処理を抜ける
+    const value = 1;
+    isLoop = false;
+  }
+  // ブロックスコープが適用されるため value 変数を参照できない
+  // 実行時にエラー発生 ReferenceError: value is not defined
   console.log(value);
 }
 ```

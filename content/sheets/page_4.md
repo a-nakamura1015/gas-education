@@ -71,8 +71,8 @@ Sheetオブジェクト.getLastColumn()
 function spreadsheet_7() {
   var sheet = SpreadsheetApp.getActiveSheet();
   console.log(sheet.getDataRange().getA1Notation());
-  console.log(sheet.getlastRow());
-  console.log(sheet.getlastColumn());
+  console.log(sheet.getLastRow());
+  console.log(sheet.getLastColumn());
 }
 ```
 getDataRangeメソッドの取得範囲の起点はA1セルで、そこからデータが入っている最終行および最終列までの範囲を取得します。

@@ -5,7 +5,7 @@ pre: "<b>2. </b>"
 weight: 2
 ---
 ### Spreadsheetサービスとは
-**Spreadsheetサービス** は、GASでスプレッドシートを操作するためのメソッドやスプレッドシートの情報をを提供するサービスです。  
+**Spreadsheetサービス** は、GASでスプレッドシートを操作するためのメソッドやスプレッドシートの情報を提供するサービスです。  
 Spreadsheetサービスの中でよく使うクラスを下記にまとめています。
 
 | クラス名 | 概要 |
@@ -54,7 +54,7 @@ getActiveSpreadsheetメソッドをはじめ、「アクティブ」なオブジ
 その方法としては、IDで特定して取得するopenByIdメソッドと、URLで特定して取得するopenByUrlメソッドがあります。
 
 ```js
-SpreaadsheetApp.openById(スプレッドシートのID);
+SpreadsheetApp.openById(スプレッドシートのID);
 ```
 ```js
 SpreadsheetApp.openByUrl(スプレッドシートのURL);
@@ -76,14 +76,17 @@ https://docs.google.com/Spreadsheets/d/{ID}/edit#gid=0
 ```js
 function spreadsheet_1() {
   var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
-  SpreaadsheetApp.openById(スプレッドシートのID) // はじめてのGAS
+  SpreadsheetApp.openById(スプレッドシートのID) // はじめてのGAS
+  console.log(spreadsheet.getName());
 
   var url = 'https://docs.google.com/Spreadsheets/d/XXXX/edit#gid=0';
   spreadsheet = SpreadsheetApp.openByUrl(url);
-  SpreaadsheetApp.openById(スプレッドシートのID); // バインドしていないスプレッドシート
+  SpreadsheetApp.openById(スプレッドシートのID); // バインドしていないスプレッドシート
+  console.log(spreadsheet.getName());
 
   var id = 'XXXX';
-  spreadhsheet = SpreaadsheetApp.openById(id); // バインドしていないスプレッドシート
+  spreadhsheet = SpreadsheetApp.openById(id); // バインドしていないスプレッドシート
+  console.log(spreadsheet.getName());
 }
 ```
 ```
@@ -101,7 +104,7 @@ GASには実行時間に関する制限がありますので、**処理速度を
 ```js
 SpreadsheetApp.getActiveSheet()
 ```
-SpreadsheetAppから直接取得できるので、次のサンプルのように簡潔に記述することができます。また、スプレッドシートへアクセスするメソッドの実行回数が減らすこともできます。
+SpreadsheetAppから直接取得できるので、次のサンプルのように簡潔に記述することができます。また、スプレッドシートへアクセスするメソッドの実行回数を減らすこともできます。
 
 ```js
 function spreadsheet_2() {
@@ -113,5 +116,5 @@ function spreadsheet_2() {
 シート1
 ```
 {{% notice tip %}}
-Google Apps へのアクセスは事項時間が遅いので、できる限りアクセスするメソッドの実行回数は少なくなるようにしましょう。
+Google Apps へのアクセスは実行時間が遅いので、できる限りアクセスするメソッドの実行回数は少なくなるようにしましょう。
 {{% /notice %}}
