@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.94.2" />
+    <meta name="generator" content="Hugo 0.117.0">
     <meta name="description" content="">
 
 
@@ -12,22 +12,22 @@
     <title>関数 :: GAS Edu</title>
 
     
-    <link href="/gas-education/css/nucleus.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/fontawesome-all.min.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/hybrid.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/featherlight.min.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/perfect-scrollbar.min.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/auto-complete.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/atom-one-dark-reasonable.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/theme.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/tabs.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/hugo-theme.css?1660556130" rel="stylesheet">
+    <link href="/gas-education/css/nucleus.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/fontawesome-all.min.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/hybrid.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/featherlight.min.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/perfect-scrollbar.min.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/auto-complete.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/atom-one-dark-reasonable.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/theme.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/tabs.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/hugo-theme.css?1695907164" rel="stylesheet">
     
-    <link href="/gas-education/css/theme-blue.css?1660556130" rel="stylesheet">
+    <link href="/gas-education/css/theme-blue.css?1695907164" rel="stylesheet">
     
     
 
-    <script src="/gas-education/js/jquery-3.3.1.min.js?1660556130"></script>
+    <script src="/gas-education/js/jquery-3.3.1.min.js?1695907164"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -137,14 +137,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/gas-education/js/lunr.min.js?1660556130"></script>
-<script type="text/javascript" src="/gas-education/js/auto-complete.js?1660556130"></script>
+<script type="text/javascript" src="/gas-education/js/lunr.min.js?1695907164"></script>
+<script type="text/javascript" src="/gas-education/js/auto-complete.js?1695907164"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/a-nakamura1015.github.io\/gas-education";
     
 </script>
-<script type="text/javascript" src="/gas-education/js/search.js?1660556130"></script>
+<script type="text/javascript" src="/gas-education/js/search.js?1695907164"></script>
 
     
   </div>
@@ -1913,17 +1913,17 @@
 「関数（function）」　は文が集まったもので、プログラムを構成する部品の役割をする「サブプログラム」です。<br>
 JavaScriptでは関数はとても重要な役割を果たしますが、本章ではその基本的な機能と使い方を紹介します。</p>
 <h3 id="関数の構文">関数の構文</h3>
-<p>関数を実行する際は関数名を指定して呼び出すことにより、関数を実行することができます。<br>
-関数を作り方にはルールがあり、以下のように <strong>function キーワード</strong> で定義します。</p>
+<p>関数を実行する際は関数名を指定して呼び出します。<br>
+関数の作り方にはルールがあり、以下のように <strong>function キーワード</strong> で定義します。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">関数名</span>() {
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">処理</span>
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>ここまではデフォルトの「myFunction」という名前の関数を実行してきましたが、関数名は任意でつけることができます。<br>
+</span></span></code></pre></div><p>ここまではデフォルトの「myFunction」という名前の関数を実行してきましたが、関数名は任意につけることができます。<br>
 関数名はその関数がどのような処理を行うかがイメージしやすい名前をつけるようにしましょう。<br>
 例えば、「ユーザー名を取得する関数」であれば、「getUserName」とするとわかりやすいですよね。<br>
 また、波括弧（<code>{}</code>）で囲った箇所は、複数のステートメントをまとめたもので <strong>ブロック</strong> といいます。<br>
 このブロックは今後の説明する構文で重要な役割を果たします。<br>
-ブロックは改行しないで記述することはできますが、改行を入れたほうが読みやすいコードになります。<br>
+ブロックは改行しないで記述することもできますが、改行を入れたほうが読みやすいコードになります。<br>
 下記の例で見比べると一目瞭然ですね。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">myFunction</span>() {<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Hello GAS&#39;</span>);}
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">myFunction</span>() {
@@ -3199,19 +3199,19 @@ JavaScriptでは関数はとても重要な役割を果たしますが、本章�
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/gas-education/js/clipboard.min.js?1660556130"></script>
-    <script src="/gas-education/js/perfect-scrollbar.min.js?1660556130"></script>
-    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1660556130"></script>
-    <script src="/gas-education/js/jquery.sticky.js?1660556130"></script>
-    <script src="/gas-education/js/featherlight.min.js?1660556130"></script>
-    <script src="/gas-education/js/highlight.pack.js?1660556130"></script>
+    <script src="/gas-education/js/clipboard.min.js?1695907164"></script>
+    <script src="/gas-education/js/perfect-scrollbar.min.js?1695907164"></script>
+    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1695907164"></script>
+    <script src="/gas-education/js/jquery.sticky.js?1695907164"></script>
+    <script src="/gas-education/js/featherlight.min.js?1695907164"></script>
+    <script src="/gas-education/js/highlight.pack.js?1695907164"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1660556130"></script>
-    <script src="/gas-education/js/learn.js?1660556130"></script>
-    <script src="/gas-education/js/hugo-learn.js?1660556130"></script>
+    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1695907164"></script>
+    <script src="/gas-education/js/learn.js?1695907164"></script>
+    <script src="/gas-education/js/hugo-learn.js?1695907164"></script>
     
         
-            <script src="/gas-education/mermaid/mermaid.js?1660556130"></script>
+            <script src="/gas-education/mermaid/mermaid.js?1695907164"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

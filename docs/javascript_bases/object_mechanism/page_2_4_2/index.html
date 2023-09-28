@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.94.2" />
+    <meta name="generator" content="Hugo 0.117.0">
     <meta name="description" content="">
 
 
@@ -12,22 +12,22 @@
     <title>インスタンス化 :: GAS Edu</title>
 
     
-    <link href="/gas-education/css/nucleus.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/fontawesome-all.min.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/hybrid.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/featherlight.min.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/perfect-scrollbar.min.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/auto-complete.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/atom-one-dark-reasonable.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/theme.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/tabs.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/hugo-theme.css?1660556130" rel="stylesheet">
+    <link href="/gas-education/css/nucleus.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/fontawesome-all.min.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/hybrid.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/featherlight.min.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/perfect-scrollbar.min.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/auto-complete.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/atom-one-dark-reasonable.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/theme.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/tabs.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/hugo-theme.css?1695907164" rel="stylesheet">
     
-    <link href="/gas-education/css/theme-blue.css?1660556130" rel="stylesheet">
+    <link href="/gas-education/css/theme-blue.css?1695907164" rel="stylesheet">
     
     
 
-    <script src="/gas-education/js/jquery-3.3.1.min.js?1660556130"></script>
+    <script src="/gas-education/js/jquery-3.3.1.min.js?1695907164"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -137,14 +137,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/gas-education/js/lunr.min.js?1660556130"></script>
-<script type="text/javascript" src="/gas-education/js/auto-complete.js?1660556130"></script>
+<script type="text/javascript" src="/gas-education/js/lunr.min.js?1695907164"></script>
+<script type="text/javascript" src="/gas-education/js/auto-complete.js?1695907164"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/a-nakamura1015.github.io\/gas-education";
     
 </script>
-<script type="text/javascript" src="/gas-education/js/search.js?1660556130"></script>
+<script type="text/javascript" src="/gas-education/js/search.js?1695907164"></script>
 
     
   </div>
@@ -1961,13 +1961,13 @@ personオブジェクトが定義されており、nameとageというプロパ�
 <p>オブジェクトをスクリプトの部品として捉えると、その再利用性や可読性が高まりますし、<br>
 「ひな型」自体に変更を加えないので、オリジナルのオブジェクト構造についての安全性が高まります。</p>
 <h3 id="コンストラクタとnew演算子によるインスタンス化">コンストラクタとnew演算子によるインスタンス化</h3>
-<p>では、クラスを定義してインスタンス化をする方法について順を追ってみていきましょう。<br>
+<p>では、クラスを定義してインスタンス化をする方法について順を追って見ていきましょう。<br>
 まず、既にクラスが定義されているとして、<br>
 そのクラスをインスタンス化するには、以下のように <strong>new演算子</strong> を使って記述します。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">変数名</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">コンストラクタ名</span>(<span style="color:#a6e22e">引数１</span>, <span style="color:#a6e22e">引数２</span>, ...);
 </span></span></code></pre></div><p>コンストラクタというのは、クラスをインスタンス化する際に最初に呼び出される関数で、生成したオブジェクトの初期化処理をするという特別な役割を持ちます。<br>
-そして、コンストラクトにより初期化されたオブジェクトが変数に代入されます。<br>
-コンストラクトを定義するには一般の関数と同様で、次のように定義することができます。</p>
+そして、コンストラクタにより初期化されたオブジェクトが変数に代入されます。<br>
+コンストラクタは一般の関数と同様で、次のように定義することができます。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">コンストラクタ名</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">仮引数１</span>, <span style="color:#a6e22e">仮引数２</span>, ...) {
 </span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 処理
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
@@ -1985,7 +1985,7 @@ personオブジェクトが定義されており、nameとageというプロパ�
 <p>thisキーワードは生成したインスタンス自体を表します。<br>
 そのため、このthisキーワードを用いてインスタンスのメンバーを変更したり、その値を代入することができます。<br>
 thisキーワードは次の書式でコンストラク内に記述します。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">プロパティ名</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">値</span><span style="color:#960050;background-color:#1e0010">；</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">プロパティ名</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">値</span>;
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">メソッド名</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">仮引数１</span>, <span style="color:#a6e22e">仮引数２</span>, ...) {
 </span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 処理
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">値</span>;
@@ -2017,7 +2017,7 @@ new演算子によって、Personコンストラクタにnameおよびageを引�
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">age</span>;
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">greet</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;My name is &#39;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;. I am &#39;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">age</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;years old.&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;My name is &#39;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;. I am &#39;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">age</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39; years old.&#39;</span>
 </span></span><span style="display:flex;"><span>  };
 </span></span><span style="display:flex;"><span>};
 </span></span><span style="display:flex;"><span>
@@ -2063,7 +2063,7 @@ new演算子によって、Personコンストラクタにnameおよびageを引�
 </span></span><span style="display:flex;"><span>};
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">outputObj_5</span>() {
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">person</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Person</span>(<span style="color:#e6db74">&#39;Nobuo&#39;</span>, <span style="color:#e6db74">&#39;20&#39;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">person</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Person</span>(<span style="color:#e6db74">&#39;Nobuo&#39;</span>, <span style="color:#ae81ff">20</span>);
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">person</span>.<span style="color:#a6e22e">age</span> <span style="color:#f92672">+=</span> <span style="color:#ae81ff">5</span>;
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">person</span>.<span style="color:#a6e22e">jobs</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Engineer&#39;</span>;
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">person</span>);
@@ -2074,7 +2074,7 @@ new演算子によって、Personコンストラクタにnameおよびageを引�
     </div>
 </div>
 </p>
-<pre tabindex="0"><code> { jobs=&#39;Engineer&#39;, name=&#39;Nobuo&#39;, age=25 }
+<pre tabindex="0"><code> { name: &#39;Nobuo&#39;, age: 25 , jobs: &#39;Engineer&#39; }
 </code></pre>
 
 <footer class="footline">
@@ -3282,19 +3282,19 @@ new演算子によって、Personコンストラクタにnameおよびageを引�
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/gas-education/js/clipboard.min.js?1660556130"></script>
-    <script src="/gas-education/js/perfect-scrollbar.min.js?1660556130"></script>
-    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1660556130"></script>
-    <script src="/gas-education/js/jquery.sticky.js?1660556130"></script>
-    <script src="/gas-education/js/featherlight.min.js?1660556130"></script>
-    <script src="/gas-education/js/highlight.pack.js?1660556130"></script>
+    <script src="/gas-education/js/clipboard.min.js?1695907164"></script>
+    <script src="/gas-education/js/perfect-scrollbar.min.js?1695907164"></script>
+    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1695907164"></script>
+    <script src="/gas-education/js/jquery.sticky.js?1695907164"></script>
+    <script src="/gas-education/js/featherlight.min.js?1695907164"></script>
+    <script src="/gas-education/js/highlight.pack.js?1695907164"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1660556130"></script>
-    <script src="/gas-education/js/learn.js?1660556130"></script>
-    <script src="/gas-education/js/hugo-learn.js?1660556130"></script>
+    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1695907164"></script>
+    <script src="/gas-education/js/learn.js?1695907164"></script>
+    <script src="/gas-education/js/hugo-learn.js?1695907164"></script>
     
         
-            <script src="/gas-education/mermaid/mermaid.js?1660556130"></script>
+            <script src="/gas-education/mermaid/mermaid.js?1695907164"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.94.2" />
+    <meta name="generator" content="Hugo 0.117.0">
     <meta name="description" content="">
 
 
@@ -12,22 +12,22 @@
     <title>クライアントサイドのJavaScriptを学ぼう :: GAS Edu</title>
 
     
-    <link href="/gas-education/css/nucleus.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/fontawesome-all.min.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/hybrid.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/featherlight.min.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/perfect-scrollbar.min.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/auto-complete.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/atom-one-dark-reasonable.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/theme.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/tabs.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/hugo-theme.css?1660556130" rel="stylesheet">
+    <link href="/gas-education/css/nucleus.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/fontawesome-all.min.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/hybrid.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/featherlight.min.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/perfect-scrollbar.min.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/auto-complete.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/atom-one-dark-reasonable.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/theme.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/tabs.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/hugo-theme.css?1695907164" rel="stylesheet">
     
-    <link href="/gas-education/css/theme-blue.css?1660556130" rel="stylesheet">
+    <link href="/gas-education/css/theme-blue.css?1695907164" rel="stylesheet">
     
     
 
-    <script src="/gas-education/js/jquery-3.3.1.min.js?1660556130"></script>
+    <script src="/gas-education/js/jquery-3.3.1.min.js?1695907164"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -137,14 +137,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/gas-education/js/lunr.min.js?1660556130"></script>
-<script type="text/javascript" src="/gas-education/js/auto-complete.js?1660556130"></script>
+<script type="text/javascript" src="/gas-education/js/lunr.min.js?1695907164"></script>
+<script type="text/javascript" src="/gas-education/js/auto-complete.js?1695907164"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/a-nakamura1015.github.io\/gas-education";
     
 </script>
-<script type="text/javascript" src="/gas-education/js/search.js?1660556130"></script>
+<script type="text/javascript" src="/gas-education/js/search.js?1695907164"></script>
 
     
   </div>
@@ -1906,7 +1906,7 @@
 
 
 <h3 id="クライアントサイドのjavascript">クライアントサイドのJavaScript</h3>
-<p>ここまではGSファイルにJavaScriptを書いてきましたが、実はHTMLファイルにもJavaScritを書くことができます。<br>
+<p>ここまではGSファイルにJavaScriptを書いてきましたが、実はHTMLファイルにもJavaScriptを書くことができます。<br>
 HTMLファイルでJavaScriptを書ける場所は決まっており、<strong>scriptタグ</strong> の中に書くことができます。<br>
 また、このscriptタグも書くことができる場所が決まっています。</p>
 <h4 id="javascriptを書くことができる場所">JavaScriptを書くことができる場所</h4>
@@ -2034,9 +2034,9 @@ inputタグの <code>onclick</code> に<code>viewMessage()</code>を設定して
 画面の値や色を変えたりなどの画面側の処理を行うことができません。<br>
 画面側の処理を行いたい場合は .gs ではなくHTMLのスクリプトタグ内にコーディングをしていきます。</p>
 <h3 id="htmlの要素を操作する">HTMLの要素を操作する</h3>
-<p>クライアントサイドのJavaScriptで画面を操作するには対象の画面の部品を特定する必要があります。<br>
+<p>クライアントサイドのJavaScriptで画面を操作するには、対象の画面の部品を特定する必要があります。<br>
 画面の各部品には<code>id</code>を設定することができるため、この<code>id</code>で部品を特定することができます。<br>
-以下のサンプルでは<code>viewMessage()</code>でテキストボックスの入力した値を取得してコンソールログに出力していますが、<br>
+以下のサンプルでは<code>viewMessage()</code>でテキストボックスに入力した値を取得してコンソールログに出力していますが、<br>
 <code>document.getElementById()</code>で対象のテキストボックスを取得しています。</p>
 <p>
 
@@ -2217,11 +2217,11 @@ inputタグの <code>onclick</code> に<code>viewMessage()</code>を設定して
 </span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">head</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">base</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_top&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">head</span>&gt;
-</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">body</span> <span style="color:#a6e22e">onload</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;showAlert()&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">dialog</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alert&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alert-message&#34;</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
 </span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">div</span>&gt;
-</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alert-closeBtn&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;閉じる&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alert-closeBtn&#34;</span>&gt;閉じる&lt;/<span style="color:#f92672">button</span>&gt;
 </span></span><span style="display:flex;"><span>      &lt;/<span style="color:#f92672">div</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">dialog</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">script</span>&gt;
@@ -2230,6 +2230,7 @@ inputタグの <code>onclick</code> に<code>viewMessage()</code>を設定して
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">dialogMsg</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;alert-message&#39;</span>);
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">dialogCloseBtn</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;alert-closeBtn&#39;</span>);
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">dialogMsg</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;こんにちは！&#39;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">dialog</span>.<span style="color:#a6e22e">show</span>();
 </span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 閉じるボタンをクリックした時の処理
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">closedFnc</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>() {
 </span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">dialog</span>.<span style="color:#a6e22e">close</span>();
@@ -3456,19 +3457,19 @@ inputタグの <code>onclick</code> に<code>viewMessage()</code>を設定して
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/gas-education/js/clipboard.min.js?1660556130"></script>
-    <script src="/gas-education/js/perfect-scrollbar.min.js?1660556130"></script>
-    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1660556130"></script>
-    <script src="/gas-education/js/jquery.sticky.js?1660556130"></script>
-    <script src="/gas-education/js/featherlight.min.js?1660556130"></script>
-    <script src="/gas-education/js/highlight.pack.js?1660556130"></script>
+    <script src="/gas-education/js/clipboard.min.js?1695907164"></script>
+    <script src="/gas-education/js/perfect-scrollbar.min.js?1695907164"></script>
+    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1695907164"></script>
+    <script src="/gas-education/js/jquery.sticky.js?1695907164"></script>
+    <script src="/gas-education/js/featherlight.min.js?1695907164"></script>
+    <script src="/gas-education/js/highlight.pack.js?1695907164"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1660556130"></script>
-    <script src="/gas-education/js/learn.js?1660556130"></script>
-    <script src="/gas-education/js/hugo-learn.js?1660556130"></script>
+    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1695907164"></script>
+    <script src="/gas-education/js/learn.js?1695907164"></script>
+    <script src="/gas-education/js/hugo-learn.js?1695907164"></script>
     
         
-            <script src="/gas-education/mermaid/mermaid.js?1660556130"></script>
+            <script src="/gas-education/mermaid/mermaid.js?1695907164"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.94.2" />
+    <meta name="generator" content="Hugo 0.117.0">
     <meta name="description" content="">
 
 
@@ -12,22 +12,22 @@
     <title>処理を分岐させる :: GAS Edu</title>
 
     
-    <link href="/gas-education/css/nucleus.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/fontawesome-all.min.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/hybrid.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/featherlight.min.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/perfect-scrollbar.min.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/auto-complete.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/atom-one-dark-reasonable.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/theme.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/tabs.css?1660556130" rel="stylesheet">
-    <link href="/gas-education/css/hugo-theme.css?1660556130" rel="stylesheet">
+    <link href="/gas-education/css/nucleus.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/fontawesome-all.min.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/hybrid.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/featherlight.min.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/perfect-scrollbar.min.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/auto-complete.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/atom-one-dark-reasonable.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/theme.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/tabs.css?1695907164" rel="stylesheet">
+    <link href="/gas-education/css/hugo-theme.css?1695907164" rel="stylesheet">
     
-    <link href="/gas-education/css/theme-blue.css?1660556130" rel="stylesheet">
+    <link href="/gas-education/css/theme-blue.css?1695907164" rel="stylesheet">
     
     
 
-    <script src="/gas-education/js/jquery-3.3.1.min.js?1660556130"></script>
+    <script src="/gas-education/js/jquery-3.3.1.min.js?1695907164"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -137,14 +137,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/gas-education/js/lunr.min.js?1660556130"></script>
-<script type="text/javascript" src="/gas-education/js/auto-complete.js?1660556130"></script>
+<script type="text/javascript" src="/gas-education/js/lunr.min.js?1695907164"></script>
+<script type="text/javascript" src="/gas-education/js/auto-complete.js?1695907164"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/a-nakamura1015.github.io\/gas-education";
     
 </script>
-<script type="text/javascript" src="/gas-education/js/search.js?1660556130"></script>
+<script type="text/javascript" src="/gas-education/js/search.js?1695907164"></script>
 
     
   </div>
@@ -2086,7 +2086,7 @@ JavaScriptで使用できる比較演算子は下記の通りです。</p>
 </tr>
 <tr>
 <td>&gt;=</td>
-<td>左辺が右辺以上場合はtrue</td>
+<td>左辺が右辺以上の場合はtrue</td>
 <td>10 &gt;= 9</td>
 </tr>
 <tr>
@@ -2095,7 +2095,7 @@ JavaScriptで使用できる比較演算子は下記の通りです。</p>
 <td>10 === 10</td>
 </tr>
 <tr>
-<td>===</td>
+<td>!==</td>
 <td>左辺と右辺が値もデータ型も等しくない場合はtrue</td>
 <td>10 !== &lsquo;10&rsquo;</td>
 </tr>
@@ -2241,9 +2241,9 @@ JavaScriptで使用できる比較演算子は下記の通りです。</p>
         
         <div data-tab-item="コード.gs" data-tab-group="value_2_2_1_7" class="tab-item active">
             <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">outputLogical_1</span>() {
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">x</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">x</span> <span style="color:#f92672">=&lt;</span> <span style="color:#ae81ff">20</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">11</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#ae81ff">10</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">x</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">x</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">20</span>) {
 </span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;xは10よりも大きく、20以下です。&#39;</span>);
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>  }
@@ -2304,11 +2304,11 @@ JavaScriptで使用できる論理演算子は下記の通りです。</p>
         
         <div data-tab-item="コード.gs" data-tab-group="value_2_2_1_8" class="tab-item active">
             <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">outputLogical_2</span>() {
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">x</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">x</span><span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">20</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">11</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#ae81ff">10</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">x</span><span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">20</span>) {
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;xは10よりも大きく、20以下です。&#39;</span>);
 </span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">x</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">x</span><span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">20</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#ae81ff">10</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">x</span><span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">20</span>) {
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;xは10よりも大きい、または20以下です。&#39;</span>);
 </span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>(<span style="color:#a6e22e">x</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>)) {
@@ -2362,7 +2362,7 @@ switch文は、ある式が複数の値のいずれかと一致するかの判�
         <div data-tab-item="コード.gs" data-tab-group="value_2_2_1_9" class="tab-item active">
             <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">outputBranch_5</span>() {
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">fruit</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;apple&#39;</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">swich</span>(<span style="color:#a6e22e">fruit</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">switch</span>(<span style="color:#a6e22e">fruit</span>) {
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;apple&#39;</span><span style="color:#f92672">:</span>
 </span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;りんご&#39;</span>);
 </span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">break</span>;
@@ -2402,9 +2402,9 @@ switch文は、ある式が複数の値のいずれかと一致するかの判�
     <div class="tab-content">
         
         <div data-tab-item="コード.gs" data-tab-group="value_2_2_1_10" class="tab-item active">
-            <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">outputBranch_5</span>() {
+            <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">outputBranch_6</span>() {
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">fruit</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;apple&#39;</span>;
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">swich</span>(<span style="color:#a6e22e">fruit</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">switch</span>(<span style="color:#a6e22e">fruit</span>) {
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;apple&#39;</span><span style="color:#f92672">:</span>
 </span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;りんご&#39;</span>);
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;grape&#39;</span><span style="color:#f92672">:</span>
@@ -2427,9 +2427,9 @@ switch文は、ある式が複数の値のいずれかと一致するかの判�
 知らないフルーツです！
 </code></pre><p>実行してみると値が一致している「&lsquo;apple&rsquo;」のcase節だけではなく、その他のcase節のログも出力されてしまいます。<br>
 実は、<strong>switch文は式に該当するcase節の処理以降の全ての処理を実行する</strong> という仕様になっているのです。<br>
-あえて、値が一致したcase節の以降を全て実行させたい場合はbreak文を書く必要はないのですが、各case節ごとでswich文をに抜けたい場合はbreak文を使用します。</p>
+あえて、値が一致したcase節の以降を全て実行させたい場合はbreak文を書く必要はないのですが、各case節ごとでswitch文を抜けたい場合はbreak文を使用します。</p>
 
-<div class="notices note" ><p>swich文はbreak文がない限りブロックから抜け出すことはありません。</p>
+<div class="notices note" ><p>switch文はbreak文がない限りブロックから抜け出すことはありません。</p>
 </div>
 
 
@@ -3636,19 +3636,19 @@ switch文は、ある式が複数の値のいずれかと一致するかの判�
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/gas-education/js/clipboard.min.js?1660556130"></script>
-    <script src="/gas-education/js/perfect-scrollbar.min.js?1660556130"></script>
-    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1660556130"></script>
-    <script src="/gas-education/js/jquery.sticky.js?1660556130"></script>
-    <script src="/gas-education/js/featherlight.min.js?1660556130"></script>
-    <script src="/gas-education/js/highlight.pack.js?1660556130"></script>
+    <script src="/gas-education/js/clipboard.min.js?1695907164"></script>
+    <script src="/gas-education/js/perfect-scrollbar.min.js?1695907164"></script>
+    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1695907164"></script>
+    <script src="/gas-education/js/jquery.sticky.js?1695907164"></script>
+    <script src="/gas-education/js/featherlight.min.js?1695907164"></script>
+    <script src="/gas-education/js/highlight.pack.js?1695907164"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1660556130"></script>
-    <script src="/gas-education/js/learn.js?1660556130"></script>
-    <script src="/gas-education/js/hugo-learn.js?1660556130"></script>
+    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1695907164"></script>
+    <script src="/gas-education/js/learn.js?1695907164"></script>
+    <script src="/gas-education/js/hugo-learn.js?1695907164"></script>
     
         
-            <script src="/gas-education/mermaid/mermaid.js?1660556130"></script>
+            <script src="/gas-education/mermaid/mermaid.js?1695907164"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
