@@ -8,7 +8,7 @@ weight: 4
 いよいよカレンダーの予定を作ってみましょう。  
 カレンダーの予定を作るには、まず予定を作成するカレンダーを取得する必要があります。
 カレンダーを取得できたら、Calendarクラスの [createEvent メソッド]で予定を作りましょう。  
-Calendar.createEventメソッド実行するには以下の３つの引数を指定する必要があります。
+Calendar.createEventメソッドを実行するには以下の３つの引数を指定する必要があります。
 - 予定のタイトル
 - 予定の開始日時
 - 予定の終了日時
@@ -66,7 +66,7 @@ function getEvents() {
 #### Calendar クラスのメソッド
 | メソッド名 | パラメータ | 戻り値 | 説明 |
 | --- |  --- | --- | ---------- |
-| getEvents | [Date] 取得する予定の範囲の開始日時、[Date] 取得する予定の範囲の予定の終了日時 | [CalendarEvent[]] 指定した時間範囲内で作成されたイベント | 特定の時間範囲内に発生するすべてのイベントを取得します。 |
+| getEvents | [Date] 取得する予定の範囲の開始日時、[Date] 取得する予定の範囲の終了日時 | [CalendarEvent[]] 指定した時間範囲内で作成されたイベント | 特定の時間範囲内に発生するすべてのイベントを取得します。 |
 
 #### CalendarEvent クラスのメソッド
 | メソッド名 | パラメータ | 戻り値 | 説明 |
@@ -115,7 +115,7 @@ function updateEvent() {
 ### 予定を削除しよう
 最後に GAS で予定を削除してみましょう。  
 Calendarクラスの [deleteEvent メソッド](https://developers.google.com/apps-script/reference/calendar/calendar-event#deleteevent)を実行すると、対象の予定を削除することができます。  
-以下のサンプルコードは2022年9月1日の予定のうち、タイトルが New Event の予定が削除されます。  
+以下のサンプルコードは2022年9月1日の予定のうち、タイトルが Updated Event の予定が削除されます。  
 サンプルコードの **'カレンダーのID'** には任意のカレンダーのIDを指定しましょう。 
 {{< tabs groupId="calendar_4_3" >}}
 {{% tab name="コード.gs" %}}
@@ -128,7 +128,7 @@ function deleteEvent() {
   for (let i = 0; i < events.length; i++) {
     // カレンダーの予定を取得する
 	const event = events[i];
-    if (event.getTitle() === 'New Event') {
+    if (event.getTitle() === 'Updated Event') {
 	    event.deleteEvent();
     }
   }

@@ -41,7 +41,7 @@ function outputArray_1() {
 {{% /tab %}}
 {{< /tabs >}}
 ```
-'apple', 'grape', 'orange'
+['apple', 'grape', 'orange']
 ```
 
 ### 配列の特徴

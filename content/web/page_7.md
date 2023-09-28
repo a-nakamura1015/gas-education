@@ -6,7 +6,7 @@ weight: 7
 ---
 ### Scriptletについて
 GASで生成した値を画面に出力したいときは　**Scriptlet** を使用すると簡単に出力することができます。  
-Scriptletには「Standard scriptlets」と「Printing scriptlets」の２種類あります。
+Scriptletには「Standard scriptlets」と「Printing scriptlets」の２種類があります。
 
 #### Standard scriptlets
 スクリプトとして実行しますが、結果は画面に出力されません。  
@@ -30,7 +30,7 @@ Code.gs
 function doGet(e) {
   var template = HtmlService.createTemplateFromFile('index');
   var sheet = SpreadsheetApp.openById('XXXX').getSheetByName('XXXX');
-  var values = sheet.getRange(2, 1, sheet.getLastRow() - 1, sheet.getLastColumn() - 1).getValues();
+  var values = sheet.getRange(2, 1, sheet.getLastRow() - 1, sheet.getLastColumn()).getValues();
   template.values = values; // シートから取得した値を画面に渡します
   return template.evaluate();
 }
@@ -73,7 +73,7 @@ index.html
 ```
 
 注目する点は index.html の以下の処理です。  
-Scriptlet を活用してスプレッドシートから取得した値（`values`）を設定してします。  
+Scriptlet を活用してスプレッドシートから取得した値（`values`）を設定しています。  
 
 ```
 <? for (var i = 0; i < values.length; i++) { ?>

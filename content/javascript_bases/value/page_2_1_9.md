@@ -50,7 +50,7 @@ var person = {name: 'Taro', age: 22, gendar: 'male'};
 function outputObject_1() {
   var person = {name: 'Taro', age: 22, gendar: 'male'};
   console.log(person.name); // Taro
-  console.log(person.age);  // 22
+  console.log(person['age']);  // 22
 }
 ```
 {{% /tab %}}
@@ -73,11 +73,11 @@ for in 文 によるループ内でプロパティの値を取り出す際など
 {{% tab name="コード.gs" %}}
 ```js
 function outputObject_2() {
-  var person = {name: 'Taro', age: 22, gendar: 'male'};
+  var person = {name: 'Taro', age: 22, gender: 'male'};
   person.name = 'Hanako';
-  person['gendar'] = 'female';
+  person['gender'] = 'female';
   person.job = 'Engineer';
-  console.log(person);  // {name='Taro', age=22, gendar='female', job='Engineer'}
+  console.log(person);  // {name:'Hanako', age:22, gender:'female', job:'Engineer'}
 }
 ```
 {{% /tab %}}

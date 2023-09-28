@@ -44,15 +44,15 @@ function outputObj_3() {
 「ひな型」自体に変更を加えないので、オリジナルのオブジェクト構造についての安全性が高まります。
 
 ### コンストラクタとnew演算子によるインスタンス化
-では、クラスを定義してインスタンス化をする方法について順を追ってみていきましょう。
+では、クラスを定義してインスタンス化をする方法について順を追って見ていきましょう。
 まず、既にクラスが定義されているとして、
 そのクラスをインスタンス化するには、以下のように **new演算子** を使って記述します。
 ```js
 var 変数名 = new コンストラクタ名(引数１, 引数２, ...);
 ```
 コンストラクタというのは、クラスをインスタンス化する際に最初に呼び出される関数で、生成したオブジェクトの初期化処理をするという特別な役割を持ちます。
-そして、コンストラクトにより初期化されたオブジェクトが変数に代入されます。
-コンストラクトを定義するには一般の関数と同様で、次のように定義することができます。
+そして、コンストラクタにより初期化されたオブジェクトが変数に代入されます。
+コンストラクタは一般の関数と同様で、次のように定義することができます。
 ```js
 var コンストラクタ名 = function(仮引数１, 仮引数２, ...) {
   // 処理
@@ -75,7 +75,7 @@ thisキーワードは生成したインスタンス自体を表します。
 そのため、このthisキーワードを用いてインスタンスのメンバーを変更したり、その値を代入することができます。
 thisキーワードは次の書式でコンストラク内に記述します。
 ```js
-this.プロパティ名 = 値；
+this.プロパティ名 = 値;
 ```
 ```js
 this.メソッド名 = function(仮引数１, 仮引数２, ...) {
@@ -97,7 +97,7 @@ var Person = function(name, age) {
   this.name = name;
   this.age = age;
   this.greet = function() {
-    return 'My name is ' + this.name + '. I am ' + this.age + 'years old.'
+    return 'My name is ' + this.name + '. I am ' + this.age + ' years old.'
   };
 };
 
@@ -129,7 +129,7 @@ var Person = function(name, age) {
 };
 
 function outputObj_5() {
-  var person = new Person('Nobuo', '20');
+  var person = new Person('Nobuo', 20);
   person.age += 5;
   person.jobs = 'Engineer';
   console.log(person);
@@ -138,5 +138,5 @@ function outputObj_5() {
 {{% /tab %}}
 {{< /tabs >}}
 ```
- { jobs='Engineer', name='Nobuo', age=25 }
+ { name: 'Nobuo', age: 25 , jobs: 'Engineer' }
 ```

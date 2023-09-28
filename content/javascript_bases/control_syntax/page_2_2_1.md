@@ -118,9 +118,9 @@ JavaScriptで使用できる比較演算子は下記の通りです。
 | < | 左辺が右辺より小さい場合はtrue | 10 < 11 |
 | <= | 左辺が右辺以下の場合はtrue | 10 <= 11 |
 | > | 左辺が右辺より大きい場合はtrue | 10 > 9 |
-| >= | 左辺が右辺以上場合はtrue | 10 >= 9 |
+| >= | 左辺が右辺以上の場合はtrue | 10 >= 9 |
 | === | 左辺と右辺が値もデータ型も等しい場合はtrue | 10 === 10 |
-| === | 左辺と右辺が値もデータ型も等しくない場合はtrue | 10 !== '10' |
+| !== | 左辺と右辺が値もデータ型も等しくない場合はtrue | 10 !== '10' |
 
 この比較演算子には注意すべき点があります。
 下記のサンプルを実行するとログにはtrueとfalseのどちらが出力されるでしょうか？
@@ -206,9 +206,9 @@ if文の複数の条件式を同時に判定させたいケースがあります
 {{% tab name="コード.gs" %}}
 ```js
 function outputLogical_1() {
-  var x = 10;
-  if (x < 10) {
-    if (x =< 20) {
+  var x = 11;
+  if (10 < x) {
+    if (x <= 20) {
       console.log('xは10よりも大きく、20以下です。');
     }
   }
@@ -236,11 +236,11 @@ JavaScriptで使用できる論理演算子は下記の通りです。
 {{% tab name="コード.gs" %}}
 ```js
 function outputLogical_2() {
-  var x = 10;
-  if (x < 10 && x<= 20) {
+  var x = 11;
+  if (10 < x && x<= 20) {
     console.log('xは10よりも大きく、20以下です。');
   }
-  if (x < 10 || x<= 20) {
+  if (10 < x || x<= 20) {
     console.log('xは10よりも大きい、または20以下です。');
   }
   if (!(x < 10)) {
@@ -285,7 +285,7 @@ switch文では、式の結果と一致する値を、値１、値２・・・�
 ```js
 function outputBranch_5() {
   var fruit = 'apple';
-  swich(fruit) {
+  switch(fruit) {
     case 'apple':
       console.log('りんご');
       break;
@@ -312,9 +312,9 @@ function outputBranch_5() {
 {{< tabs groupId="value_2_2_1_10" >}}
 {{% tab name="コード.gs" %}}
 ```js
-function outputBranch_5() {
+function outputBranch_6() {
   var fruit = 'apple';
-  swich(fruit) {
+  switch(fruit) {
     case 'apple':
       console.log('りんご');
     case 'grape':
@@ -337,8 +337,8 @@ function outputBranch_5() {
 
 実行してみると値が一致している「'apple'」のcase節だけではなく、その他のcase節のログも出力されてしまいます。
 実は、**switch文は式に該当するcase節の処理以降の全ての処理を実行する** という仕様になっているのです。
-あえて、値が一致したcase節の以降を全て実行させたい場合はbreak文を書く必要はないのですが、各case節ごとでswich文をに抜けたい場合はbreak文を使用します。
+あえて、値が一致したcase節の以降を全て実行させたい場合はbreak文を書く必要はないのですが、各case節ごとでswitch文を抜けたい場合はbreak文を使用します。
 
 {{% notice note %}}
-swich文はbreak文がない限りブロックから抜け出すことはありません。
+switch文はbreak文がない限りブロックから抜け出すことはありません。
 {{% /notice %}}

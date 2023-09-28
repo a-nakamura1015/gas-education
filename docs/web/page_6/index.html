@@ -12,22 +12,22 @@
     <title>Web画面からGASの関数を実行してみましょう :: GAS Edu</title>
 
     
-    <link href="/gas-education/css/nucleus.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/fontawesome-all.min.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/hybrid.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/featherlight.min.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/perfect-scrollbar.min.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/auto-complete.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/atom-one-dark-reasonable.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/theme.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/tabs.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/hugo-theme.css?1694007722" rel="stylesheet">
+    <link href="/gas-education/css/nucleus.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/fontawesome-all.min.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/hybrid.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/featherlight.min.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/perfect-scrollbar.min.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/auto-complete.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/atom-one-dark-reasonable.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/theme.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/tabs.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/hugo-theme.css?1695908257" rel="stylesheet">
     
-    <link href="/gas-education/css/theme-blue.css?1694007722" rel="stylesheet">
+    <link href="/gas-education/css/theme-blue.css?1695908257" rel="stylesheet">
     
     
 
-    <script src="/gas-education/js/jquery-3.3.1.min.js?1694007722"></script>
+    <script src="/gas-education/js/jquery-3.3.1.min.js?1695908257"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -137,14 +137,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/gas-education/js/lunr.min.js?1694007722"></script>
-<script type="text/javascript" src="/gas-education/js/auto-complete.js?1694007722"></script>
+<script type="text/javascript" src="/gas-education/js/lunr.min.js?1695908257"></script>
+<script type="text/javascript" src="/gas-education/js/auto-complete.js?1695908257"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/a-nakamura1015.github.io\/gas-education";
     
 </script>
-<script type="text/javascript" src="/gas-education/js/search.js?1694007722"></script>
+<script type="text/javascript" src="/gas-education/js/search.js?1695908257"></script>
 
     
   </div>
@@ -1961,7 +1961,7 @@ Google Apps Script のサーバーサイドは<code>.gsファイル</code>にコ
 </div>
 
 <p>これで Google Apps Script の関数は用意できました。<br>
-次は用意した関数がクライアントサイドから呼び出してみましょう。</p>
+次は用意した関数をクライアントサイドから呼び出してみましょう。</p>
 <hr>
 <h3 id="googlescriptrun-について">google.script.run について</h3>
 <p>クライアントサイドで<code>google.script.run</code>を使用すると、サーバーサイドの Google Apps Script 関数を実行することができます。<br>
@@ -2054,7 +2054,7 @@ Google Apps Script のサーバーサイドは<code>.gsファイル</code>にコ
 
 <p>変更したのちWeb画面を更新して、対象のシートのA1セルに<code>こんにちは！</code>と出力されているかを確認しましょう。</p>
 <h4 id="画面で入力した値をスプレッドシートに出力する">画面で入力した値をスプレッドシートに出力する</h4>
-<p>先ほど実行した関数によって、クライアントサイドから値を渡すことができることを確認できました。<br>
+<p>先ほど実行した関数によって、クライアントサイドから値を渡すことができることを確認しました。<br>
 次はクライアントサイドで入力した値をサーバーサイドに渡してみましょう。</p>
 
 
@@ -2087,12 +2087,12 @@ Google Apps Script のサーバーサイドは<code>.gsファイル</code>にコ
     </div>
 </div>
 
-<p>変更したのちWeb画面を更新して、対象のシートのA1セルにテキストボックスに入力した値が出力されているかを確認しましょう。</p>
+<p>変更したのちWeb画面を更新して、対象のシートのA1セルに、テキストボックスに入力した値が出力されているかを確認しましょう。</p>
 <hr>
 <h3 id="同期処理と非同期処理について">同期処理と非同期処理について</h3>
 <p>次はサーバーサイドから値を取得してみましょう。<br>
 先ほどコーディングした<code>getSheetData()</code>を実行してみます。<br>
-<code>index.html</code>を下記の通りに変更したのち、Web画面を更新してコンソールログ値が表示されるかを確認してみましょう。</p>
+<code>index.html</code>を下記の通りに変更したのち、Web画面を更新してコンソールログに値が表示されるかを確認してみましょう。</p>
 
 
 <div class="tab-panel">
@@ -2124,7 +2124,7 @@ Google Apps Script のサーバーサイドは<code>.gsファイル</code>にコ
 <p>コンソールログには<code>undefined</code>と表示されました。<br>
 これは<code>console.log(result)</code>で表示しようとしているresult変数の中身が空っぽということになります。</p>
 <p><code>getSheetData()</code>が実行されなかったのでしょうか。<br>
-実は<code>getSheetData()</code>が実行されていますが、その戻り値が返ってくる前に<code>console.log(result)</code>が実行されているのです。</p>
+実は<code>getSheetData()</code>は実行されていますが、その戻り値が返ってくる前に<code>console.log(result)</code>が実行されているのです。</p>
 <p>このような事象が起きるのは、JavaScriptのアプリケーションが「シングルスレッド」で実行されているためです。<br>
 「シングルスレッド」を端的に説明すると、 <strong>一度にひとつのことを実行していく処理</strong> ということです。<br>
 つまり、1度に1つの処理しかできない（並列処理ができない）のです。<br>
@@ -2194,15 +2194,15 @@ Google Apps Script のサーバーサイドは<code>.gsファイル</code>にコ
 <p><code>getSheetData()</code>でブラウザから Google サーバーに処理を行うように命令をしています。（具体的にはシートから値を取得するように命令しています。）<br>
 しかし、このように外部（Google サーバー）に処理を行うように命令した場合は、その処理結果（戻り値）を待たずにクライアントサイドのJavaScriptは順次処理を続行してしまいます。<br>
 これが<strong>非同期処理</strong>です。</p>
-<p>しかし、GAS関数の戻り値を受けとって同期処理を行いたいですよね。<br>
+<p>しかし、GAS関数の戻り値を受け取って同期処理を行いたいですよね。<br>
 それを実現するのが<code>withSuccessHandler</code>メソッドと<code>withFailureHandler</code>メソッドです。</p>
 <hr>
 <h3 id="withsuccesshandler-について">withSuccessHandler について</h3>
-<p><code>withSuccessHandler</code>メソッドの特徴は <strong>「クライアントサイドからGAS関数を呼び出したのちの処理を設定できる」</strong> ことです。<br>
+<p><code>withSuccessHandler</code>メソッドの特徴は <strong>「クライアントサイドからGAS関数を呼び出した後の処理を設定できる」</strong> ことです。<br>
 これらのメソッドを活用することでGAS関数で取得した結果をクライアントサイドに表示することができます。<br>
 しかし、活用するには <strong>コールバック関数</strong> を理解する必要があります。</p>
 <h4 id="コールバック関数とは">コールバック関数とは</h4>
-<p>日常生活でコールバックと言いますと、「かかってきた電話にたいして電話をかけ直す（折り返し電話をする）」という意味で使われますね。<br>
+<p>日常生活でコールバックと言いますと、「かかってきた電話に対して電話をかけ直す（折り返し電話をする）」という意味で使われますね。<br>
 JavaScriptでコールバックは「後々呼び出すために定義した関数」という意味で使われます。<br>
 ただ、このコールバックされる関数は特別なことは何もなく、普通のJavaScriptの関数です。<br>
 では、具体的にどのように使用するのかを下記のようにHTMLを修正して確認してみましょう。</p>
@@ -2241,11 +2241,11 @@ JavaScriptでコールバックは「後々呼び出すために定義した関�
 </div>
 
 <p>上記では<code>getNumber</code>関数というコールバック関数をコーディングしています。<br>
-このコールバック関数を<code>alert(getNumber());</code>で呼び出して実行しています。<br>
+このコールバック関数を<code>console.log(getNumber());</code>で呼び出して実行しています。<br>
 このように <strong>即時実行するのではなく、後々実行するための関数を定義することができます。</strong></p>
 <p>これが<code>withSuccessHandler</code>メソッドとどのように関係があるのか？といいますと、<br>
-これらのメソッドは　<strong>クライアントサイドからGAS関数を呼び出したのちの処理を設定できる</strong> のですが、<br>
-GAS関数を呼び出したのちの処理をコールバック関数で定義することができるのです。</p>
+これらのメソッドは　<strong>クライアントサイドからGAS関数を呼び出した後の処理を設定できる</strong> のですが、<br>
+GAS関数を呼び出した後の処理をコールバック関数で定義することができるのです。</p>
 <h4 id="withsuccesshandlerとは">withSuccessHandlerとは</h4>
 <p>GAS関数（サーバーサイドの関数）が <strong>正常に完了</strong> して戻り値が返ってきた場合に、<br>
 実行する関数を定義することができます。<br>
@@ -3513,19 +3513,19 @@ GAS関数を呼び出したのちの処理をコールバック関数で定義�
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/gas-education/js/clipboard.min.js?1694007722"></script>
-    <script src="/gas-education/js/perfect-scrollbar.min.js?1694007722"></script>
-    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1694007722"></script>
-    <script src="/gas-education/js/jquery.sticky.js?1694007722"></script>
-    <script src="/gas-education/js/featherlight.min.js?1694007722"></script>
-    <script src="/gas-education/js/highlight.pack.js?1694007722"></script>
+    <script src="/gas-education/js/clipboard.min.js?1695908257"></script>
+    <script src="/gas-education/js/perfect-scrollbar.min.js?1695908257"></script>
+    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1695908257"></script>
+    <script src="/gas-education/js/jquery.sticky.js?1695908257"></script>
+    <script src="/gas-education/js/featherlight.min.js?1695908257"></script>
+    <script src="/gas-education/js/highlight.pack.js?1695908257"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1694007722"></script>
-    <script src="/gas-education/js/learn.js?1694007722"></script>
-    <script src="/gas-education/js/hugo-learn.js?1694007722"></script>
+    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1695908257"></script>
+    <script src="/gas-education/js/learn.js?1695908257"></script>
+    <script src="/gas-education/js/hugo-learn.js?1695908257"></script>
     
         
-            <script src="/gas-education/mermaid/mermaid.js?1694007722"></script>
+            <script src="/gas-education/mermaid/mermaid.js?1695908257"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

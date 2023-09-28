@@ -29,11 +29,11 @@ Rangeオブジェクト.getValue()
 ```js
 Rangeオブジェクト.setValue(値)
 ```
-このメソッドには注意すべきことがありまして、セルを1つ1つに処理していくため、  
+このメソッドには注意すべきことがありまして、セルを1つ1つ処理していくため、  
 そのセルの数の分だけスプレッドシートへのアクセス回数がかさんでしまいます。  
 アクセス回数がかさむと処理速度も遅くなります。
 そのため、複数のセル範囲を取得・設定する場合は、  
-セル範囲が対象の場合はセル範囲の値を取得する **getValuesメソッド** を、  
+セル範囲の値を取得する **getValuesメソッド** と、  
 セル範囲の値を設定する **setValuesメソッド** を使用するようにしましょう。
 
 ```js
@@ -50,7 +50,7 @@ setValuesメソッドでは、対象となるセル範囲の「行数×列数」
 function spreadsheet_9() {
   var sheet = SpreadsheetApp.getActiveSheet();
   sheet.getRange('A1').setValue('Google');
-  console.log(sheet.getRange('A1').getValue()); // google
+  console.log(sheet.getRange('A1').getValue()); // Google
   var values = [
     ['Taro', 22, '東京'],
     ['Hanako', 25, '大阪']

@@ -5,7 +5,7 @@ pre: "<b>5. </b>"
 weight: 5
 ---
 ### クライアントサイドのJavaScript
-ここまではGSファイルにJavaScriptを書いてきましたが、実はHTMLファイルにもJavaScritを書くことができます。  
+ここまではGSファイルにJavaScriptを書いてきましたが、実はHTMLファイルにもJavaScriptを書くことができます。  
 HTMLファイルでJavaScriptを書ける場所は決まっており、**scriptタグ** の中に書くことができます。  
 また、このscriptタグも書くことができる場所が決まっています。  
 #### JavaScriptを書くことができる場所
@@ -116,9 +116,9 @@ inputタグの `onclick` に`viewMessage()`を設定しています。
 画面側の処理を行いたい場合は .gs ではなくHTMLのスクリプトタグ内にコーディングをしていきます。
 
 ### HTMLの要素を操作する
-クライアントサイドのJavaScriptで画面を操作するには対象の画面の部品を特定する必要があります。  
+クライアントサイドのJavaScriptで画面を操作するには、対象の画面の部品を特定する必要があります。  
 画面の各部品には`id`を設定することができるため、この`id`で部品を特定することができます。  
-以下のサンプルでは`viewMessage()`でテキストボックスの入力した値を取得してコンソールログに出力していますが、  
+以下のサンプルでは`viewMessage()`でテキストボックスに入力した値を取得してコンソールログに出力していますが、  
 `document.getElementById()`で対象のテキストボックスを取得しています。
 
 {{< tabs groupId="web_5_3" >}}
@@ -238,11 +238,11 @@ inputタグの `onclick` に`viewMessage()`を設定しています。
   <head>
     <base target="_top">
   </head>
-  <body>
+  <body onload="showAlert()">
     <dialog id="alert">
       <p id="alert-message"></p>
       <div>
-        <button id="alert-closeBtn" value="閉じる">
+        <button id="alert-closeBtn">閉じる</button>
       </div>
     </dialog>
     <script>
@@ -251,6 +251,7 @@ inputタグの `onclick` に`viewMessage()`を設定しています。
         var dialogMsg = document.getElementById('alert-message');
         var dialogCloseBtn = document.getElementById('alert-closeBtn');
         dialogMsg.innerHTML = 'こんにちは！';
+        dialog.show();
         // 閉じるボタンをクリックした時の処理
         var closedFnc = function() {
           dialog.close();

@@ -15,7 +15,7 @@ function spreadsheet_3() {
   var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
   console.log(spreadsheet.getId()); // スプレッドシートのID
   console.log(spreadsheet.getName()); // スプレッドシートの名前
-  console.log(spreadsheet.getURL()); // スプレッドシートのURL
+  console.log(spreadsheet.getUrl()); // スプレッドシートのURL
 }
 ```
 ### シートを取得する
@@ -51,11 +51,11 @@ getSheetsメソッドは、スプレッドシートに含まれるシートの�
 function spreadsheet_4() {
   var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
   var sheet = spreadsheet.getSheetByName('シート1');
-  conosole.log(sheet.getName());
+  console.log(sheet.getName());
 
-  var sheets = spreadsheetApp.getSheets();
-  console.log(sheet[0].getName());
-  console.log(sheet[1].getName());
+  var sheets = spreadsheet.getSheets();
+  console.log(sheets[0].getName());
+  console.log(sheets[1].getName());
 }
 ```
 

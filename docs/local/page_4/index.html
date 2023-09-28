@@ -12,22 +12,22 @@
     <title>clasp を使ってみよう :: GAS Edu</title>
 
     
-    <link href="/gas-education/css/nucleus.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/fontawesome-all.min.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/hybrid.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/featherlight.min.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/perfect-scrollbar.min.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/auto-complete.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/atom-one-dark-reasonable.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/theme.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/tabs.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/hugo-theme.css?1694007722" rel="stylesheet">
+    <link href="/gas-education/css/nucleus.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/fontawesome-all.min.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/hybrid.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/featherlight.min.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/perfect-scrollbar.min.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/auto-complete.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/atom-one-dark-reasonable.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/theme.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/tabs.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/hugo-theme.css?1695908257" rel="stylesheet">
     
-    <link href="/gas-education/css/theme-blue.css?1694007722" rel="stylesheet">
+    <link href="/gas-education/css/theme-blue.css?1695908257" rel="stylesheet">
     
     
 
-    <script src="/gas-education/js/jquery-3.3.1.min.js?1694007722"></script>
+    <script src="/gas-education/js/jquery-3.3.1.min.js?1695908257"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -137,14 +137,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/gas-education/js/lunr.min.js?1694007722"></script>
-<script type="text/javascript" src="/gas-education/js/auto-complete.js?1694007722"></script>
+<script type="text/javascript" src="/gas-education/js/lunr.min.js?1695908257"></script>
+<script type="text/javascript" src="/gas-education/js/auto-complete.js?1695908257"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/a-nakamura1015.github.io\/gas-education";
     
 </script>
-<script type="text/javascript" src="/gas-education/js/search.js?1694007722"></script>
+<script type="text/javascript" src="/gas-education/js/search.js?1695908257"></script>
 
     
   </div>
@@ -1907,7 +1907,7 @@
 
 
 <h3 id="ログインログアウト">ログイン・ログアウト</h3>
-<p>Webエディタを使用する際と同様に Google アカウント でログインする必要があります。<br>
+<p>Webエディタを使用する際と同様に Google アカウントでログインする必要があります。<br>
 Webエディタにアクセスできない Google アカウントでログインをすると clasp でも利用することができないため、<br>
 どの Google アカウントでログインしているかを意識するようにしましょう。</p>
 <pre tabindex="0"><code>clasp login
@@ -1964,12 +1964,12 @@ Webエディタ上には拡張子が .gs と .htmlのファイルと appsscript.
 </code></pre><p>.claspignore の内容は適宜必要に応じて変更する必要がありますが、<br>
 以下の内容で .js と appsscript.json 以外のファイルがpushされないようにすることができます。</p>
 <pre tabindex="0"><code>**/**
-!.js
+!*.js
 !appsscript.json
 </code></pre><p>1行目の<code>**/**</code>はカレントフォルダ配下にあるフォルダ・ファイルを全て対象にするという意味です。<br>
 これで全てのファイルがpush対象ではなくなります。<br>
 ただこれでは何もWebエディタ上に送ることができないため、2行目以降で送りたいファイルを指定します。<br>
-2行目の !.js は拡張子が.jsのファイルを除外対象にしないという意味です。<br>
+2行目の !*.js は拡張子が.jsのファイルを除外対象にしないという意味です。<br>
 .js のみですと .js をpushしない対象にするという意味になるため、<br>
 それを否定する！を先頭につけることで、.jsのファイルを除外対象にしないという意味になります。<br>
 同様に3行目で !appsscript.json は appsscript.json を除外対象にしないという意味になります。</p>
@@ -1980,9 +1980,9 @@ pushする際はWebエディタ上にあるファイルを確認したうえで�
 仮にsrcフォルダ内にファイルをまとめるように変更した場合は、<br>
 .claspignore を以下のように変更することでpushできるようになります。</p>
 <pre tabindex="0"><code>**/**
-!src/.js
+!src/*.js
 !appsscript.json
-</code></pre><p>先ほど違うのは2行目で<code>!src/.js</code>とすることでsrcフォルダ配下の .js ファイルを除外対象にしないようにしています。<br>
+</code></pre><p>先ほど違うのは2行目で<code>!src/*.js</code>とすることでsrcフォルダ配下の .js ファイルを除外対象にしないようにしています。<br>
 <code>clasp push</code> をしてWebブラウザを確認してみましょう。<br>
 注目して欲しいのはファイル名で フォルダ名/ファイル名 の形式に変わっています。<br>
 これにより、<code>clasp pull</code> をした際もsrcフォルダ内のファイルを更新することができます。</p>
@@ -1995,7 +1995,7 @@ pushする際はWebエディタ上にあるファイルを確認したうえで�
 </span></span></code></pre></div><h3 id="既存のgasプロジェクトからクローンする">既存のGASプロジェクトからクローンする</h3>
 <p>ここまでは clasp で新規作成をしてみましたが、既存のGASプロジェクトとローカル環境を紐づけることもできます。<br>
 Google Drive上に新規のスクリプトエディタを作成したのち、以下のコマンドを実行してみましょう。<br>
-対象のスクリプトエディタ内のコードがローカル環境に落とすことができれば成功です。</p>
+対象のスクリプトエディタ内のコードをローカル環境に落とすことができれば成功です。</p>
 <pre tabindex="0"><code>clasp clone XXXXXX
 </code></pre><p>コマンドの最後の<code>XXXXXX</code>には対象のスクリプトエディタのスクリプトIDを設定してください。<br>
 スクリプトIDはスクリプトエディタの <code>プロジェクトの設定</code> で確認することができます。</p>
@@ -3202,19 +3202,19 @@ Google Drive上に新規のスクリプトエディタを作成したのち、�
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/gas-education/js/clipboard.min.js?1694007722"></script>
-    <script src="/gas-education/js/perfect-scrollbar.min.js?1694007722"></script>
-    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1694007722"></script>
-    <script src="/gas-education/js/jquery.sticky.js?1694007722"></script>
-    <script src="/gas-education/js/featherlight.min.js?1694007722"></script>
-    <script src="/gas-education/js/highlight.pack.js?1694007722"></script>
+    <script src="/gas-education/js/clipboard.min.js?1695908257"></script>
+    <script src="/gas-education/js/perfect-scrollbar.min.js?1695908257"></script>
+    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1695908257"></script>
+    <script src="/gas-education/js/jquery.sticky.js?1695908257"></script>
+    <script src="/gas-education/js/featherlight.min.js?1695908257"></script>
+    <script src="/gas-education/js/highlight.pack.js?1695908257"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1694007722"></script>
-    <script src="/gas-education/js/learn.js?1694007722"></script>
-    <script src="/gas-education/js/hugo-learn.js?1694007722"></script>
+    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1695908257"></script>
+    <script src="/gas-education/js/learn.js?1695908257"></script>
+    <script src="/gas-education/js/hugo-learn.js?1695908257"></script>
     
         
-            <script src="/gas-education/mermaid/mermaid.js?1694007722"></script>
+            <script src="/gas-education/mermaid/mermaid.js?1695908257"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

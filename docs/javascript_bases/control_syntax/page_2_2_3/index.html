@@ -12,22 +12,22 @@
     <title>例外処理でエラーを検知する :: GAS Edu</title>
 
     
-    <link href="/gas-education/css/nucleus.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/fontawesome-all.min.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/hybrid.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/featherlight.min.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/perfect-scrollbar.min.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/auto-complete.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/atom-one-dark-reasonable.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/theme.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/tabs.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/hugo-theme.css?1694007722" rel="stylesheet">
+    <link href="/gas-education/css/nucleus.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/fontawesome-all.min.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/hybrid.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/featherlight.min.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/perfect-scrollbar.min.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/auto-complete.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/atom-one-dark-reasonable.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/theme.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/tabs.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/hugo-theme.css?1695908257" rel="stylesheet">
     
-    <link href="/gas-education/css/theme-blue.css?1694007722" rel="stylesheet">
+    <link href="/gas-education/css/theme-blue.css?1695908257" rel="stylesheet">
     
     
 
-    <script src="/gas-education/js/jquery-3.3.1.min.js?1694007722"></script>
+    <script src="/gas-education/js/jquery-3.3.1.min.js?1695908257"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -137,14 +137,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/gas-education/js/lunr.min.js?1694007722"></script>
-<script type="text/javascript" src="/gas-education/js/auto-complete.js?1694007722"></script>
+<script type="text/javascript" src="/gas-education/js/lunr.min.js?1695908257"></script>
+<script type="text/javascript" src="/gas-education/js/auto-complete.js?1695908257"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/a-nakamura1015.github.io\/gas-education";
     
 </script>
-<script type="text/javascript" src="/gas-education/js/search.js?1694007722"></script>
+<script type="text/javascript" src="/gas-education/js/search.js?1695908257"></script>
 
     
   </div>
@@ -1947,7 +1947,7 @@ JavaScriptで例外処理を行う場合は<code>try catch finally文</code>を�
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>} <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">変数</span>) {
 </span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 例外が発生した際に実行する処理
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>} <span style="color:#66d9ef">finally</span> {
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 例外の起きても起きなくても実行される処理
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 例外が起きても起きなくても実行される処理
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
 </span></span></code></pre></div><p>例外が起こりうる（検知したい）処理をtryブロックに記述します。<br>
 tryブロック内で例外が発生した場合には、その時点で処理を中断してcatchブロックに処理が移ります。<br>
@@ -1984,7 +1984,7 @@ finallyブロックは例外が起きても起きなくても実行される処�
     </div>
 </div>
 </p>
-<pre tabindex="0"><code>例外が発生しました。:
+<pre tabindex="0"><code>例外が発生しました。: Browser.MsgBox is not a function
 スクリプトが完了しました！
 </code></pre><p>実行すると例外が発生するのですが、処理は止まらずにcatchブロック内の処理が実行され、その後finallyブロック内の処理が実行されます。</p>
 
@@ -2062,7 +2062,7 @@ throw文とtry catch文を組み合わせたのが次のサンプルです。<br
 </p>
 <pre tabindex="0"><code>例外が発生しました。: xに負の数が代入されました。
 </code></pre><h4 id="制御フローの例外">制御フローの例外</h4>
-<p>ここまで登場した制御フローの通常の処理を変えることができる文を整理してみましょう。</p>
+<p>ここまで登場した制御フローの、通常の処理を変えることができる文を整理してみましょう。</p>
 <table>
 <thead>
 <tr>
@@ -3296,19 +3296,19 @@ throw文とtry catch文を組み合わせたのが次のサンプルです。<br
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/gas-education/js/clipboard.min.js?1694007722"></script>
-    <script src="/gas-education/js/perfect-scrollbar.min.js?1694007722"></script>
-    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1694007722"></script>
-    <script src="/gas-education/js/jquery.sticky.js?1694007722"></script>
-    <script src="/gas-education/js/featherlight.min.js?1694007722"></script>
-    <script src="/gas-education/js/highlight.pack.js?1694007722"></script>
+    <script src="/gas-education/js/clipboard.min.js?1695908257"></script>
+    <script src="/gas-education/js/perfect-scrollbar.min.js?1695908257"></script>
+    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1695908257"></script>
+    <script src="/gas-education/js/jquery.sticky.js?1695908257"></script>
+    <script src="/gas-education/js/featherlight.min.js?1695908257"></script>
+    <script src="/gas-education/js/highlight.pack.js?1695908257"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1694007722"></script>
-    <script src="/gas-education/js/learn.js?1694007722"></script>
-    <script src="/gas-education/js/hugo-learn.js?1694007722"></script>
+    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1695908257"></script>
+    <script src="/gas-education/js/learn.js?1695908257"></script>
+    <script src="/gas-education/js/hugo-learn.js?1695908257"></script>
     
         
-            <script src="/gas-education/mermaid/mermaid.js?1694007722"></script>
+            <script src="/gas-education/mermaid/mermaid.js?1695908257"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

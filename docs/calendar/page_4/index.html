@@ -12,22 +12,22 @@
     <title>予定を操作しよう :: GAS Edu</title>
 
     
-    <link href="/gas-education/css/nucleus.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/fontawesome-all.min.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/hybrid.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/featherlight.min.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/perfect-scrollbar.min.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/auto-complete.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/atom-one-dark-reasonable.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/theme.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/tabs.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/hugo-theme.css?1694007722" rel="stylesheet">
+    <link href="/gas-education/css/nucleus.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/fontawesome-all.min.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/hybrid.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/featherlight.min.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/perfect-scrollbar.min.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/auto-complete.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/atom-one-dark-reasonable.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/theme.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/tabs.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/hugo-theme.css?1695908257" rel="stylesheet">
     
-    <link href="/gas-education/css/theme-blue.css?1694007722" rel="stylesheet">
+    <link href="/gas-education/css/theme-blue.css?1695908257" rel="stylesheet">
     
     
 
-    <script src="/gas-education/js/jquery-3.3.1.min.js?1694007722"></script>
+    <script src="/gas-education/js/jquery-3.3.1.min.js?1695908257"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -137,14 +137,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/gas-education/js/lunr.min.js?1694007722"></script>
-<script type="text/javascript" src="/gas-education/js/auto-complete.js?1694007722"></script>
+<script type="text/javascript" src="/gas-education/js/lunr.min.js?1695908257"></script>
+<script type="text/javascript" src="/gas-education/js/auto-complete.js?1695908257"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/a-nakamura1015.github.io\/gas-education";
     
 </script>
-<script type="text/javascript" src="/gas-education/js/search.js?1694007722"></script>
+<script type="text/javascript" src="/gas-education/js/search.js?1695908257"></script>
 
     
   </div>
@@ -1908,7 +1908,7 @@
 <p>いよいよカレンダーの予定を作ってみましょう。<br>
 カレンダーの予定を作るには、まず予定を作成するカレンダーを取得する必要があります。<br>
 カレンダーを取得できたら、Calendarクラスの [createEvent メソッド]で予定を作りましょう。<br>
-Calendar.createEventメソッド実行するには以下の３つの引数を指定する必要があります。</p>
+Calendar.createEventメソッドを実行するには以下の３つの引数を指定する必要があります。</p>
 <ul>
 <li>予定のタイトル</li>
 <li>予定の開始日時</li>
@@ -2024,7 +2024,7 @@ Calendar.getEvents メソッドは <strong>パラメータで取得する予定�
 <tbody>
 <tr>
 <td>getEvents</td>
-<td>[Date] 取得する予定の範囲の開始日時、[Date] 取得する予定の範囲の予定の終了日時</td>
+<td>[Date] 取得する予定の範囲の開始日時、[Date] 取得する予定の範囲の終了日時</td>
 <td>[CalendarEvent[]] 指定した時間範囲内で作成されたイベント</td>
 <td>特定の時間範囲内に発生するすべてのイベントを取得します。</td>
 </tr>
@@ -2159,7 +2159,7 @@ Calendar.getEvents メソッドは <strong>パラメータで取得する予定�
 <p>最後に GAS で予定を削除してみましょう。<br>
 Calendarクラスの <a href="https://developers.google.com/apps-script/reference/calendar/calendar-event#deleteevent" target="_blank">deleteEvent メソッド</a>
 を実行すると、対象の予定を削除することができます。<br>
-以下のサンプルコードは2022年9月1日の予定のうち、タイトルが New Event の予定が削除されます。<br>
+以下のサンプルコードは2022年9月1日の予定のうち、タイトルが Updated Event の予定が削除されます。<br>
 サンプルコードの <strong>&lsquo;カレンダーのID&rsquo;</strong> には任意のカレンダーのIDを指定しましょう。<br>
 
 
@@ -2185,7 +2185,7 @@ Calendarクラスの <a href="https://developers.google.com/apps-script/referenc
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">events</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">// カレンダーの予定を取得する
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">event</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">events</span>[<span style="color:#a6e22e">i</span>];
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">getTitle</span>() <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;New Event&#39;</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">getTitle</span>() <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;Updated Event&#39;</span>) {
 </span></span><span style="display:flex;"><span>	    <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">deleteEvent</span>();
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>  }
@@ -3418,19 +3418,19 @@ Calendarクラスの <a href="https://developers.google.com/apps-script/referenc
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/gas-education/js/clipboard.min.js?1694007722"></script>
-    <script src="/gas-education/js/perfect-scrollbar.min.js?1694007722"></script>
-    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1694007722"></script>
-    <script src="/gas-education/js/jquery.sticky.js?1694007722"></script>
-    <script src="/gas-education/js/featherlight.min.js?1694007722"></script>
-    <script src="/gas-education/js/highlight.pack.js?1694007722"></script>
+    <script src="/gas-education/js/clipboard.min.js?1695908257"></script>
+    <script src="/gas-education/js/perfect-scrollbar.min.js?1695908257"></script>
+    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1695908257"></script>
+    <script src="/gas-education/js/jquery.sticky.js?1695908257"></script>
+    <script src="/gas-education/js/featherlight.min.js?1695908257"></script>
+    <script src="/gas-education/js/highlight.pack.js?1695908257"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1694007722"></script>
-    <script src="/gas-education/js/learn.js?1694007722"></script>
-    <script src="/gas-education/js/hugo-learn.js?1694007722"></script>
+    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1695908257"></script>
+    <script src="/gas-education/js/learn.js?1695908257"></script>
+    <script src="/gas-education/js/hugo-learn.js?1695908257"></script>
     
         
-            <script src="/gas-education/mermaid/mermaid.js?1694007722"></script>
+            <script src="/gas-education/mermaid/mermaid.js?1695908257"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

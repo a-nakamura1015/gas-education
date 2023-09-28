@@ -12,22 +12,22 @@
     <title>Web画面にスプレッドシートの値を表示してみましょう :: GAS Edu</title>
 
     
-    <link href="/gas-education/css/nucleus.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/fontawesome-all.min.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/hybrid.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/featherlight.min.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/perfect-scrollbar.min.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/auto-complete.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/atom-one-dark-reasonable.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/theme.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/tabs.css?1694007722" rel="stylesheet">
-    <link href="/gas-education/css/hugo-theme.css?1694007722" rel="stylesheet">
+    <link href="/gas-education/css/nucleus.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/fontawesome-all.min.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/hybrid.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/featherlight.min.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/perfect-scrollbar.min.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/auto-complete.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/atom-one-dark-reasonable.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/theme.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/tabs.css?1695908257" rel="stylesheet">
+    <link href="/gas-education/css/hugo-theme.css?1695908257" rel="stylesheet">
     
-    <link href="/gas-education/css/theme-blue.css?1694007722" rel="stylesheet">
+    <link href="/gas-education/css/theme-blue.css?1695908257" rel="stylesheet">
     
     
 
-    <script src="/gas-education/js/jquery-3.3.1.min.js?1694007722"></script>
+    <script src="/gas-education/js/jquery-3.3.1.min.js?1695908257"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -137,14 +137,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/gas-education/js/lunr.min.js?1694007722"></script>
-<script type="text/javascript" src="/gas-education/js/auto-complete.js?1694007722"></script>
+<script type="text/javascript" src="/gas-education/js/lunr.min.js?1695908257"></script>
+<script type="text/javascript" src="/gas-education/js/auto-complete.js?1695908257"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/a-nakamura1015.github.io\/gas-education";
     
 </script>
-<script type="text/javascript" src="/gas-education/js/search.js?1694007722"></script>
+<script type="text/javascript" src="/gas-education/js/search.js?1695908257"></script>
 
     
   </div>
@@ -1904,7 +1904,7 @@
 
 <h3 id="scriptletについて">Scriptletについて</h3>
 <p>GASで生成した値を画面に出力したいときは　<strong>Scriptlet</strong> を使用すると簡単に出力することができます。<br>
-Scriptletには「Standard scriptlets」と「Printing scriptlets」の２種類あります。</p>
+Scriptletには「Standard scriptlets」と「Printing scriptlets」の２種類があります。</p>
 <h4 id="standard-scriptlets">Standard scriptlets</h4>
 <p>スクリプトとして実行しますが、結果は画面に出力されません。<br>
 for文などの処理をしたい場合に記述します。</p>
@@ -1919,7 +1919,7 @@ for文などの処理をしたい場合に記述します。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">doGet</span>(<span style="color:#a6e22e">e</span>) {
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">template</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">HtmlService</span>.<span style="color:#a6e22e">createTemplateFromFile</span>(<span style="color:#e6db74">&#39;index&#39;</span>);
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sheet</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">SpreadsheetApp</span>.<span style="color:#a6e22e">openById</span>(<span style="color:#e6db74">&#39;XXXX&#39;</span>).<span style="color:#a6e22e">getSheetByName</span>(<span style="color:#e6db74">&#39;XXXX&#39;</span>);
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">values</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getRange</span>(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getLastRow</span>() <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getLastColumn</span>() <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>).<span style="color:#a6e22e">getValues</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">values</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getRange</span>(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getLastRow</span>() <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">sheet</span>.<span style="color:#a6e22e">getLastColumn</span>()).<span style="color:#a6e22e">getValues</span>();
 </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">template</span>.<span style="color:#a6e22e">values</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">values</span>; <span style="color:#75715e">// シートから取得した値を画面に渡します
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">template</span>.<span style="color:#a6e22e">evaluate</span>();
 </span></span><span style="display:flex;"><span>}
@@ -1958,7 +1958,7 @@ for文などの処理をしたい場合に記述します。</p>
   &lt;/div&gt;
 &lt;/body&gt;
 </code></pre><p>注目する点は index.html の以下の処理です。<br>
-Scriptlet を活用してスプレッドシートから取得した値（<code>values</code>）を設定してします。</p>
+Scriptlet を活用してスプレッドシートから取得した値（<code>values</code>）を設定しています。</p>
 <pre tabindex="0"><code>&lt;? for (var i = 0; i &lt; values.length; i++) { ?&gt;
 &lt;tr&gt;
   &lt;td&gt;&lt;?= values[i][0]; ?&gt;&lt;/td&gt;
@@ -3170,19 +3170,19 @@ Scriptlet を活用してスプレッドシートから取得した値（<code>v
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/gas-education/js/clipboard.min.js?1694007722"></script>
-    <script src="/gas-education/js/perfect-scrollbar.min.js?1694007722"></script>
-    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1694007722"></script>
-    <script src="/gas-education/js/jquery.sticky.js?1694007722"></script>
-    <script src="/gas-education/js/featherlight.min.js?1694007722"></script>
-    <script src="/gas-education/js/highlight.pack.js?1694007722"></script>
+    <script src="/gas-education/js/clipboard.min.js?1695908257"></script>
+    <script src="/gas-education/js/perfect-scrollbar.min.js?1695908257"></script>
+    <script src="/gas-education/js/perfect-scrollbar.jquery.min.js?1695908257"></script>
+    <script src="/gas-education/js/jquery.sticky.js?1695908257"></script>
+    <script src="/gas-education/js/featherlight.min.js?1695908257"></script>
+    <script src="/gas-education/js/highlight.pack.js?1695908257"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1694007722"></script>
-    <script src="/gas-education/js/learn.js?1694007722"></script>
-    <script src="/gas-education/js/hugo-learn.js?1694007722"></script>
+    <script src="/gas-education/js/modernizr.custom-3.6.0.js?1695908257"></script>
+    <script src="/gas-education/js/learn.js?1695908257"></script>
+    <script src="/gas-education/js/hugo-learn.js?1695908257"></script>
     
         
-            <script src="/gas-education/mermaid/mermaid.js?1694007722"></script>
+            <script src="/gas-education/mermaid/mermaid.js?1695908257"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

@@ -15,9 +15,9 @@ num += 2;
 num += 10;
 ```
 そして、コーディングの途中で「これ同じことを繰り返していない？」と気づくと思います。
-繰り返す処理の数だけ行数を増えていき、コーディングをするのも大変ですし、後々コードを修正するときも大変です。
+繰り返す処理の数だけ行数が増えていき、コーディングをするのも大変ですし、後々コードを修正するときも大変です。
 実際にプログラミングをしているとこのように同じ処理を繰り返す場面が多々あります。
-実は、JavaScriptには繰り返し処理を実現する構文を用意されています。
+実は、JavaScriptには繰り返し処理を実現する構文が用意されています。
 そのうちの1つが **while文** です。
 while文は条件式を用いた繰り返しを実現することができます。
 ```js
@@ -136,11 +136,11 @@ function outputLoop_4() {
 {{% /tab %}}
 {{< /tabs >}}
 ```js
-1.0
-3.0
-5.0
-7.0
-9.0
+1
+3
+5
+7
+9
 ```
 
 ### 繰り返し処理と配列
@@ -210,7 +210,7 @@ function outputLoop_7() {
 function outputLoop_8() {
   var foods = [['apple', 'banana', 'orange'], ['beef', 'pork', 'chicken']];
   for (var i = 0; i < foods.length; i++) {
-    for (var j = 0; j < foods[i].length) {
+    for (var j = 0; j < foods[i].length; j++) {
       console.log(foods[i][j]);
     }
   }
